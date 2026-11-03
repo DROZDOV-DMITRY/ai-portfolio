@@ -1,0 +1,36 @@
+name: Export current portfolio preview
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/export-preview.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out current catalog
+        uses: actions/checkout@v4
+        with:
+          ref: 19d224a78b3d7f92bcb08f708359b88377921c07
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund
+      - name: Verify and build both modes
+        run: npm run build
+      - name: Export HTML and assets for review publication
+        uses: actions/upload-artifact@v4
+        with:
+          name: ai-portfolio-current-preview
+          path: dist-preview/
+          include-hidden-files: true
+          if-no-files-found: error
+          retention-days: 7
