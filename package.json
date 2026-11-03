@@ -1,7 +1,7 @@
 {
   "name": "ai-portfolio",
   "private": true,
-  "version": "0.5.1-stage",
+  "version": "0.5.2-stage",
   "type": "module",
   "scripts": {
     "dev": "astro dev",
@@ -11,9 +11,12 @@
     "check:content": "node scripts/check-content.mjs",
     "build:raw": "astro build",
     "check:dist": "node scripts/check-dist.mjs",
-    "test:catalog": "node --test tests/catalog-state.test.mjs"
+    "test:catalog": "node --test"
   },
   "dependencies": {
     "astro": "7.4.4"
+  },
+  "devDependencies": {
+    "jsdom": "24.1.1"
   }
 }
