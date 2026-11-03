@@ -1,7 +1,7 @@
 {
   "name": "ai-portfolio",
   "private": true,
-  "version": "0.5.2-stage",
+  "version": "0.5.3-stage",
   "type": "module",
   "scripts": {
     "dev": "astro dev",
