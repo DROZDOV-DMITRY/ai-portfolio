@@ -5,10 +5,9 @@ import {readState,queryFromState,selectRecords,paginate,cardBadges,productHref} 
  const $=id=>document.getElementById(id);
  const cards=$("cards"),search=$("search"),counter=$("count"),sort=$("sort");
  if(!cards||!search||!counter)return;
- const status=$("status"),sidebar=$("sidebar"),toggle=$("filter-toggle");
+ const status=null,sidebar=$("sidebar"),toggle=$("filter-toggle");
  const pager=$("pager"),loadMore=$("load-more"),pagerStatus=$("pager-status");
  const esc=s=>String(s??"").replace(/[&<>"']/g,ch=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[ch]));
- const accents={meta:"M",kontur:"◉",school:"AI·14",law:"§",dispatcher:"⌘",write:"W.",career:"↗",hr:"HR",net:"N",film:"F",lawbiz:"§",debt:"§",student:"G",research:"R",marketing:"→"};
  let state=readState(window.location.search),timer=0;
  function applyControls(){
   search.value=state.q;if(sort)sort.value=state.sort;if(status)status.value=state.status;
@@ -18,11 +17,11 @@ import {readState,queryFromState,selectRecords,paginate,cardBadges,productHref} 
  function card(record){
   const href=esc(productHref(record,window.location.pathname+window.location.search));
   const badges=cardBadges(record).map(t=>'<span class="foot-chip">'+esc(t)+'</span>').join("");
-  const graphic='<div class="card-graphic"><span class="ring r1"></span><span class="ring r2"></span><span class="ring r3"></span><span class="big-letter">'+esc(accents[record.cover]||"AI")+'</span><span class="visual-sub">'+esc(record.num)+' / AI LAB</span></div>';
-  return '<article class="product-card"><a class="card-visual '+esc(record.cover)+'" href="'+href+'" aria-label="Подробнее: '+esc(record.title)+'"><span class="card-badge">'+esc(record.kind)+'</span>'+graphic+'</a>'+
-   '<div class="product-info"><div class="product-top"><span>'+esc(record.category)+'</span><span>'+esc(record.version==="—"?"Версия уточняется":record.version)+'</span></div>'+
-   '<h3 class="product-name"><a href="'+href+'">'+esc(record.title)+'</a></h3><p class="product-description">'+esc(record.subtitle)+'</p>'+
-   '<div class="product-foot"><span class="foot-chip'+(record.status==="working"?" is-bright":"")+'">'+esc(record.statusLabel)+'</span>'+badges+'</div></div></article>';
+  const graphic='<div class="card-graphic"><span class="ring r1"></span><span class="ring r2"></span><img class="product-mark" src="'+esc(record.logo_path)+'" alt="" loading="lazy" decoding="async" width="138" height="138"/><span class="visual-sub">'+esc(record.num)+' / AI LAB</span></div>';
+  return '<article class="product-card"><a class="card-visual '+esc(record.cover)+'" href="'+href+'" aria-label="Подробнее: '+esc(record.title)+'"><span class="card-badge">'+esc(record.public_label||"ИИ-продукт")+'</span>'+graphic+'</a>'+
+   '<div class="product-info"><div class="product-top"><span>'+esc(record.category)+'</span><span>'+esc(record.version==="—"?"AI LAB":record.version)+'</span></div>'+
+   '<h3 class="product-name"><a href="'+href+'">'+esc(record.title)+'</a></h3><p class="product-description">'+esc(record.public_pitch||record.subtitle)+'</p>'+
+   '<div class="product-foot"><span class="foot-chip is-bright">ИИ-продукт</span>'+badges+'</div></div></article>';
  }
  function paint(){
   const rows=selectRecords(list,state,scope),page=paginate(rows,state.page);

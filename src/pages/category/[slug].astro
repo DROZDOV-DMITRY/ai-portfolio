@@ -24,13 +24,13 @@ const canonical="https://drozdov-dmitry.github.io/ai-portfolio/category/"+catego
 <nav class="navigation"><a href="/ai-portfolio/">Все решения</a><a href="/ai-portfolio/about/">О подходе</a></nav></header>
 <main class="shell"><section class="hero">
 <span class="eyebrow">НАПРАВЛЕНИЕ / {category.slug.toUpperCase()}</span>
-<h1>{category.name}</h1><p class="hero-summary">{category.description}</p>
+<div class="category-heading"><img src={`/ai-portfolio/marks/category-${category.slug}.svg`} width="96" height="96" alt="" /><h1>{category.name}</h1></div><p class="hero-summary">{category.description}</p>
 <form class="searchbar" id="hero-search-form"><span class="searchbar-icon">⌕</span><input id="search" type="search" placeholder="Найти по задаче" aria-label="Поиск по категории"/><button type="submit">Найти ↗</button></form>
 <p class="hero-note"><a href="/ai-portfolio/#categories">← Все направления</a></p></section>
-<section id="catalog"><div class="section-row"><div><span class="eyebrow">КАТАЛОГ</span><h2 class="section-heading">Разработки</h2></div><span class="section-meta">{records.length} записей</span></div>
+<section id="catalog"><div class="section-row"><div><span class="eyebrow">КАТАЛОГ</span><h2 class="section-heading">ИИ-продукты</h2></div><span class="section-meta">{records.length} ИИ-продуктов</span></div>
 <div class="catalog-layout"><aside class="sidebar" id="sidebar" aria-label="Фильтры">
 <div class="side-group"><div class="side-heading">Авторство</div>
-<label class="check-row"><input type="radio" name="author" value="all" checked/> Все</label>
+<label class="check-row"><input type="radio" name="author" value="all" checked/> Все продукты</label>
 <label class="check-row"><input type="radio" name="author" value="author"/> Авторские разработки</label>
 <label class="check-row"><input type="radio" name="author" value="student"/> Ученические работы</label></div>
 <div class="side-group"><div class="side-heading">Применение в школе</div>
@@ -39,7 +39,7 @@ const canonical="https://drozdov-dmitry.github.io/ai-portfolio/category/"+catego
 <label class="check-row"><input type="radio" name="school" value="support"/> В помощь школе</label></div>
 </aside><div class="catalog-main"><div class="controls"><span class="result-count" id="count" aria-live="polite"></span><div class="control-right">
 <button class="filter-toggle" id="filter-toggle" type="button" aria-expanded="false" aria-controls="sidebar">☷ Фильтры</button>
-<select class="sort-select" id="status" aria-label="Стадия"><option value="all">Все стадии</option><option value="working">Работает</option><option value="testing">Испытывается</option><option value="development">В разработке</option><option value="unverified">Не проверено</option><option value="historical">История</option></select>
+
 <select class="sort-select" id="sort" aria-label="Сортировка"><option value="editorial">По подборке</option><option value="name">По названию</option><option value="status">По стадии</option></select>
 <button class="clear-btn" id="clear-filters" type="button">Сброс</button></div></div>
 <div class="cards" id="cards" aria-live="polite"></div>

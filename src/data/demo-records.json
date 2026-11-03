@@ -47,7 +47,9 @@
     "editorial_review": "pending_fact_and_privacy_review",
     "logo_path": "/ai-portfolio/marks/meta.svg",
     "public_brand": "AI LAB",
-    "public_family": "ИИ-агенты и системы"
+    "public_family": "ИИ-агенты и системы",
+    "public_pitch": "Архитектура ИИ-систем: от задачи до проверяемого решения",
+    "public_label": "ИИ-продукт"
   },
   {
     "id": "kontur",
@@ -97,7 +99,9 @@
     "editorial_review": "pending_fact_and_privacy_review",
     "logo_path": "/ai-portfolio/marks/kontur.svg",
     "public_brand": "AI LAB",
-    "public_family": "ИИ-агенты и системы"
+    "public_family": "ИИ-агенты и системы",
+    "public_pitch": "Персональная операционная система задач, контекста и решений",
+    "public_label": "ИИ-продукт"
   },
   {
     "id": "course",
@@ -177,7 +181,9 @@
     },
     "logo_path": "/ai-portfolio/marks/course.svg",
     "public_brand": "AI LAB",
-    "public_family": "ИИ-агенты и системы"
+    "public_family": "ИИ-агенты и системы",
+    "public_pitch": "Практические ИИ-курсы для школьников, педагогов и взрослых",
+    "public_label": "ИИ-продукт"
   },
   {
     "id": "schoollaw",
@@ -227,7 +233,9 @@
     "editorial_review": "pending_fact_and_privacy_review",
     "logo_path": "/ai-portfolio/marks/schoollaw.svg",
     "public_brand": "AI LAB",
-    "public_family": "ИИ-агенты и системы"
+    "public_family": "ИИ-агенты и системы",
+    "public_pitch": "Правовой интеллект для ежедневных задач школы",
+    "public_label": "ИИ-продукт"
   },
   {
     "id": "dispatcher",
@@ -277,7 +285,9 @@
     "editorial_review": "pending_fact_and_privacy_review",
     "logo_path": "/ai-portfolio/marks/dispatcher.svg",
     "public_brand": "AI LAB",
-    "public_family": "ИИ-агенты и системы"
+    "public_family": "ИИ-агенты и системы",
+    "public_pitch": "Интеллектуальная диагностика и сопровождение Windows-ПК",
+    "public_label": "ИИ-продукт"
   },
   {
     "id": "write",
@@ -327,7 +337,9 @@
     "editorial_review": "pending_fact_and_privacy_review",
     "logo_path": "/ai-portfolio/marks/write.svg",
     "public_brand": "AI LAB",
-    "public_family": "ИИ-агенты и системы"
+    "public_family": "ИИ-агенты и системы",
+    "public_pitch": "Редакционный интеллект для сильных, точных текстов",
+    "public_label": "ИИ-продукт"
   },
   {
     "id": "career",
@@ -377,7 +389,9 @@
     "editorial_review": "pending_fact_and_privacy_review",
     "logo_path": "/ai-portfolio/marks/career.svg",
     "public_brand": "AI LAB",
-    "public_family": "ИИ-агенты и системы"
+    "public_family": "ИИ-агенты и системы",
+    "public_pitch": "Профессии, интересы и практические пробы для школьников",
+    "public_label": "ИИ-продукт"
   },
   {
     "id": "hr",
@@ -427,7 +441,9 @@
     "editorial_review": "pending_fact_and_privacy_review",
     "logo_path": "/ai-portfolio/marks/hr.svg",
     "public_brand": "AI LAB",
-    "public_family": "ИИ-агенты и системы"
+    "public_family": "ИИ-агенты и системы",
+    "public_pitch": "Кадровые документы и процессы в единой рабочей логике",
+    "public_label": "ИИ-продукт"
   },
   {
     "id": "netwibe",
@@ -477,7 +493,9 @@
     "editorial_review": "pending_fact_and_privacy_review",
     "logo_path": "/ai-portfolio/marks/netwibe.svg",
     "public_brand": "AI LAB",
-    "public_family": "ИИ-агенты и системы"
+    "public_family": "ИИ-агенты и системы",
+    "public_pitch": "Интеллектуальное сопровождение сетевой инфраструктуры",
+    "public_label": "ИИ-продукт"
   },
   {
     "id": "film",
@@ -527,7 +545,9 @@
     "editorial_review": "pending_fact_and_privacy_review",
     "logo_path": "/ai-portfolio/marks/film.svg",
     "public_brand": "AI LAB",
-    "public_family": "ИИ-агенты и системы"
+    "public_family": "ИИ-агенты и системы",
+    "public_pitch": "Сценарий, режиссура и подготовка кинопроизводства",
+    "public_label": "ИИ-продукт"
   },
   {
     "id": "lawbiz",
@@ -577,7 +597,9 @@
     "editorial_review": "pending_fact_and_privacy_review",
     "logo_path": "/ai-portfolio/marks/lawbiz.svg",
     "public_brand": "AI LAB",
-    "public_family": "ИИ-агенты и системы"
+    "public_family": "ИИ-агенты и системы",
+    "public_pitch": "Правовая навигация и документы для бизнеса",
+    "public_label": "ИИ-продукт"
   },
   {
     "id": "lawdebt",
@@ -627,7 +649,9 @@
     "editorial_review": "pending_fact_and_privacy_review",
     "logo_path": "/ai-portfolio/marks/lawdebt.svg",
     "public_brand": "AI LAB",
-    "public_family": "ИИ-агенты и системы"
+    "public_family": "ИИ-агенты и системы",
+    "public_pitch": "Разбор долговых ситуаций и процессуальных действий",
+    "public_label": "ИИ-продукт"
   },
   {
     "id": "student",
@@ -677,7 +701,9 @@
     "editorial_review": "pending_fact_and_privacy_review",
     "logo_path": "/ai-portfolio/marks/student.svg",
     "public_brand": "AI LAB",
-    "public_family": "ИИ-агенты и системы"
+    "public_family": "ИИ-агенты и системы",
+    "public_pitch": "Голосовой AI-помощник — ученическая разработка",
+    "public_label": "ИИ-продукт"
   },
   {
     "id": "dissert",
@@ -763,7 +789,9 @@
     },
     "logo_path": "/ai-portfolio/marks/dissert.svg",
     "public_brand": "AI LAB",
-    "public_family": "ИИ-агенты и системы"
+    "public_family": "ИИ-агенты и системы",
+    "public_pitch": "Исследование интеллектуальной экосистемы современной школы",
+    "public_label": "ИИ-продукт"
   },
   {
     "id": "g2m",
@@ -813,7 +841,9 @@
     "editorial_review": "pending_fact_and_privacy_review",
     "logo_path": "/ai-portfolio/marks/g2m.svg",
     "public_brand": "AI LAB",
-    "public_family": "ИИ-агенты и системы"
+    "public_family": "ИИ-агенты и системы",
+    "public_pitch": "Вывод продуктов на рынок: гипотезы, аудитории и стратегия",
+    "public_label": "ИИ-продукт"
   },
   {
     "id": "deepseek-school",
@@ -863,7 +893,9 @@
     "editorial_review": "pending_fact_and_privacy_review",
     "logo_path": "/ai-portfolio/marks/deepseek-school.svg",
     "public_brand": "AI LAB",
-    "public_family": "ИИ-агенты и системы"
+    "public_family": "ИИ-агенты и системы",
+    "public_pitch": "Учебные HTML-презентации с помощью ИИ",
+    "public_label": "ИИ-продукт"
   },
   {
     "id": "curriculum-spo",
@@ -913,7 +945,9 @@
     "editorial_review": "pending_fact_and_privacy_review",
     "logo_path": "/ai-portfolio/marks/curriculum-spo.svg",
     "public_brand": "AI LAB",
-    "public_family": "ИИ-агенты и системы"
+    "public_family": "ИИ-агенты и системы",
+    "public_pitch": "Проектирование образовательных программ об ИИ для СПО",
+    "public_label": "ИИ-продукт"
   },
   {
     "id": "attestation",
@@ -963,7 +997,9 @@
     "editorial_review": "pending_fact_and_privacy_review",
     "logo_path": "/ai-portfolio/marks/attestation.svg",
     "public_brand": "AI LAB",
-    "public_family": "ИИ-агенты и системы"
+    "public_family": "ИИ-агенты и системы",
+    "public_pitch": "Интеллектуальная подготовка аттестационных материалов",
+    "public_label": "ИИ-продукт"
   },
   {
     "id": "physics-experiment",
@@ -1013,7 +1049,9 @@
     "editorial_review": "pending_fact_and_privacy_review",
     "logo_path": "/ai-portfolio/marks/physics-experiment.svg",
     "public_brand": "AI LAB",
-    "public_family": "ИИ-агенты и системы"
+    "public_family": "ИИ-агенты и системы",
+    "public_pitch": "Физический эксперимент от гипотезы до графиков",
+    "public_label": "ИИ-продукт"
   },
   {
     "id": "3d-printer",
@@ -1063,7 +1101,9 @@
     "editorial_review": "pending_fact_and_privacy_review",
     "logo_path": "/ai-portfolio/marks/3d-printer.svg",
     "public_brand": "AI LAB",
-    "public_family": "ИИ-агенты и системы"
+    "public_family": "ИИ-агенты и системы",
+    "public_pitch": "Школьная 3D-мастерская и моделирование по описанию",
+    "public_label": "ИИ-продукт"
   },
   {
     "id": "github-v2",
@@ -1113,7 +1153,9 @@
     "editorial_review": "pending_fact_and_privacy_review",
     "logo_path": "/ai-portfolio/marks/github-v2.svg",
     "public_brand": "AI LAB",
-    "public_family": "ИИ-агенты и системы"
+    "public_family": "ИИ-агенты и системы",
+    "public_pitch": "Технический навигатор по GitHub Pages и репозиториям",
+    "public_label": "ИИ-продукт"
   },
   {
     "id": "yandex-bridge",
@@ -1163,7 +1205,9 @@
     "editorial_review": "pending_fact_and_privacy_review",
     "logo_path": "/ai-portfolio/marks/yandex-bridge.svg",
     "public_brand": "AI LAB",
-    "public_family": "ИИ-агенты и системы"
+    "public_family": "ИИ-агенты и системы",
+    "public_pitch": "Интеграция Яндекс Диска и Почты с AI-процессами",
+    "public_label": "ИИ-продукт"
   },
   {
     "id": "yougile-operator",
@@ -1213,7 +1257,9 @@
     "editorial_review": "pending_fact_and_privacy_review",
     "logo_path": "/ai-portfolio/marks/yougile-operator.svg",
     "public_brand": "AI LAB",
-    "public_family": "ИИ-агенты и системы"
+    "public_family": "ИИ-агенты и системы",
+    "public_pitch": "Интеграция YouGile, API и рабочих процессов",
+    "public_label": "ИИ-продукт"
   },
   {
     "id": "zcode-mentor",
@@ -1263,7 +1309,9 @@
     "editorial_review": "pending_fact_and_privacy_review",
     "logo_path": "/ai-portfolio/marks/zcode-mentor.svg",
     "public_brand": "AI LAB",
-    "public_family": "ИИ-агенты и системы"
+    "public_family": "ИИ-агенты и системы",
+    "public_pitch": "Перенос и сопровождение AI-систем в ZCode",
+    "public_label": "ИИ-продукт"
   },
   {
     "id": "school-iron",
@@ -1313,7 +1361,9 @@
     "editorial_review": "pending_fact_and_privacy_review",
     "logo_path": "/ai-portfolio/marks/school-iron.svg",
     "public_brand": "AI LAB",
-    "public_family": "ИИ-агенты и системы"
+    "public_family": "ИИ-агенты и системы",
+    "public_pitch": "Сервисная экосистема школьных компьютеров",
+    "public_label": "ИИ-продукт"
   },
   {
     "id": "pc-bridge",
@@ -1363,7 +1413,9 @@
     "editorial_review": "pending_fact_and_privacy_review",
     "logo_path": "/ai-portfolio/marks/pc-bridge.svg",
     "public_brand": "AI LAB",
-    "public_family": "ИИ-агенты и системы"
+    "public_family": "ИИ-агенты и системы",
+    "public_pitch": "Связь AI-помощника с локальными программами и файлами",
+    "public_label": "ИИ-продукт"
   },
   {
     "id": "pc-organizer",
@@ -1413,7 +1465,9 @@
     "editorial_review": "pending_fact_and_privacy_review",
     "logo_path": "/ai-portfolio/marks/pc-organizer.svg",
     "public_brand": "AI LAB",
-    "public_family": "ИИ-агенты и системы"
+    "public_family": "ИИ-агенты и системы",
+    "public_pitch": "Интеллектуальный порядок на компьютере",
+    "public_label": "ИИ-продукт"
   },
   {
     "id": "yougile-agent",
@@ -1463,7 +1517,9 @@
     "editorial_review": "pending_fact_and_privacy_review",
     "logo_path": "/ai-portfolio/marks/yougile-agent.svg",
     "public_brand": "AI LAB",
-    "public_family": "ИИ-агенты и системы"
+    "public_family": "ИИ-агенты и системы",
+    "public_pitch": "Операционный помощник управления задачами",
+    "public_label": "ИИ-продукт"
   },
   {
     "id": "ai-news",
@@ -1513,7 +1569,9 @@
     "editorial_review": "pending_fact_and_privacy_review",
     "logo_path": "/ai-portfolio/marks/ai-news.svg",
     "public_brand": "AI LAB",
-    "public_family": "ИИ-агенты и системы"
+    "public_family": "ИИ-агенты и системы",
+    "public_pitch": "Инженерные новости ИИ, аналитика и образовательные сигналы",
+    "public_label": "ИИ-продукт"
   },
   {
     "id": "meeting-summaries",
@@ -1563,7 +1621,9 @@
     "editorial_review": "pending_fact_and_privacy_review",
     "logo_path": "/ai-portfolio/marks/meeting-summaries.svg",
     "public_brand": "AI LAB",
-    "public_family": "ИИ-агенты и системы"
+    "public_family": "ИИ-агенты и системы",
+    "public_pitch": "Превращает встречи в решения и понятные действия",
+    "public_label": "ИИ-продукт"
   },
   {
     "id": "meeting-html",
@@ -1613,7 +1673,9 @@
     "editorial_review": "pending_fact_and_privacy_review",
     "logo_path": "/ai-portfolio/marks/meeting-html.svg",
     "public_brand": "AI LAB",
-    "public_family": "ИИ-агенты и системы"
+    "public_family": "ИИ-агенты и системы",
+    "public_pitch": "Профессиональное HTML-оформление итогов встреч",
+    "public_label": "ИИ-продукт"
   },
   {
     "id": "davinci",
@@ -1663,7 +1725,9 @@
     "editorial_review": "pending_fact_and_privacy_review",
     "logo_path": "/ai-portfolio/marks/davinci.svg",
     "public_brand": "AI LAB",
-    "public_family": "ИИ-агенты и системы"
+    "public_family": "ИИ-агенты и системы",
+    "public_pitch": "Монтаж, цвет и рабочие сценарии DaVinci Resolve",
+    "public_label": "ИИ-продукт"
   },
   {
     "id": "ffmpeg",
@@ -1713,7 +1777,9 @@
     "editorial_review": "pending_fact_and_privacy_review",
     "logo_path": "/ai-portfolio/marks/ffmpeg.svg",
     "public_brand": "AI LAB",
-    "public_family": "ИИ-агенты и системы"
+    "public_family": "ИИ-агенты и системы",
+    "public_pitch": "Точная обработка видео и аудио с FFmpeg",
+    "public_label": "ИИ-продукт"
   },
   {
     "id": "fairytale-illustrator",
@@ -1763,7 +1829,9 @@
     "editorial_review": "pending_fact_and_privacy_review",
     "logo_path": "/ai-portfolio/marks/fairytale-illustrator.svg",
     "public_brand": "AI LAB",
-    "public_family": "ИИ-агенты и системы"
+    "public_family": "ИИ-агенты и системы",
+    "public_pitch": "Иллюстрации сказок в едином художественном мире",
+    "public_label": "ИИ-продукт"
   },
   {
     "id": "comic-student",
@@ -1813,7 +1881,9 @@
     "editorial_review": "pending_fact_and_privacy_review",
     "logo_path": "/ai-portfolio/marks/comic-student.svg",
     "public_brand": "AI LAB",
-    "public_family": "ИИ-агенты и системы"
+    "public_family": "ИИ-агенты и системы",
+    "public_pitch": "Комиксы и визуальные истории — ученическая AI-разработка",
+    "public_label": "ИИ-продукт"
   },
   {
     "id": "presentation-master",
@@ -1863,7 +1933,9 @@
     "editorial_review": "pending_fact_and_privacy_review",
     "logo_path": "/ai-portfolio/marks/presentation-master.svg",
     "public_brand": "AI LAB",
-    "public_family": "ИИ-агенты и системы"
+    "public_family": "ИИ-агенты и системы",
+    "public_pitch": "Презентации, в которых смысл определяет дизайн",
+    "public_label": "ИИ-продукт"
   },
   {
     "id": "video-descriptions",
@@ -1913,7 +1985,9 @@
     "editorial_review": "pending_fact_and_privacy_review",
     "logo_path": "/ai-portfolio/marks/video-descriptions.svg",
     "public_brand": "AI LAB",
-    "public_family": "ИИ-агенты и системы"
+    "public_family": "ИИ-агенты и системы",
+    "public_pitch": "Описания видеороликов с ясным смыслом и метаданными",
+    "public_label": "ИИ-продукт"
   },
   {
     "id": "fairytales",
@@ -1963,7 +2037,9 @@
     "editorial_review": "pending_fact_and_privacy_review",
     "logo_path": "/ai-portfolio/marks/fairytales.svg",
     "public_brand": "AI LAB",
-    "public_family": "ИИ-агенты и системы"
+    "public_family": "ИИ-агенты и системы",
+    "public_pitch": "Сюжеты, персонажи и истории для будущих книг",
+    "public_label": "ИИ-продукт"
   },
   {
     "id": "syntx-video",
@@ -2013,7 +2089,9 @@
     "editorial_review": "pending_fact_and_privacy_review",
     "logo_path": "/ai-portfolio/marks/syntx-video.svg",
     "public_brand": "AI LAB",
-    "public_family": "ИИ-агенты и системы"
+    "public_family": "ИИ-агенты и системы",
+    "public_pitch": "Видеостратегия, AI-генерация и визуальный промпт",
+    "public_label": "ИИ-продукт"
   },
   {
     "id": "commercial-proposal",
@@ -2063,7 +2141,9 @@
     "editorial_review": "pending_fact_and_privacy_review",
     "logo_path": "/ai-portfolio/marks/commercial-proposal.svg",
     "public_brand": "AI LAB",
-    "public_family": "ИИ-агенты и системы"
+    "public_family": "ИИ-агенты и системы",
+    "public_pitch": "Коммерческие предложения с ясной логикой ценности",
+    "public_label": "ИИ-продукт"
   },
   {
     "id": "career-advisor",
@@ -2113,7 +2193,9 @@
     "editorial_review": "pending_fact_and_privacy_review",
     "logo_path": "/ai-portfolio/marks/career-advisor.svg",
     "public_brand": "AI LAB",
-    "public_family": "ИИ-агенты и системы"
+    "public_family": "ИИ-агенты и системы",
+    "public_pitch": "Карьерная стратегия и профессиональное позиционирование",
+    "public_label": "ИИ-продукт"
   },
   {
     "id": "drone-permit",
@@ -2163,7 +2245,9 @@
     "editorial_review": "pending_fact_and_privacy_review",
     "logo_path": "/ai-portfolio/marks/drone-permit.svg",
     "public_brand": "AI LAB",
-    "public_family": "ИИ-агенты и системы"
+    "public_family": "ИИ-агенты и системы",
+    "public_pitch": "Документы и сценарии согласования полётов БВС",
+    "public_label": "ИИ-продукт"
   },
   {
     "id": "home-cook",
@@ -2213,7 +2297,9 @@
     "editorial_review": "pending_fact_and_privacy_review",
     "logo_path": "/ai-portfolio/marks/home-cook.svg",
     "public_brand": "AI LAB",
-    "public_family": "ИИ-агенты и системы"
+    "public_family": "ИИ-агенты и системы",
+    "public_pitch": "Умная домашняя кухня: от продуктов к готовому блюду",
+    "public_label": "ИИ-продукт"
   },
   {
     "id": "bread-baker",
@@ -2263,7 +2349,9 @@
     "editorial_review": "pending_fact_and_privacy_review",
     "logo_path": "/ai-portfolio/marks/bread-baker.svg",
     "public_brand": "AI LAB",
-    "public_family": "ИИ-агенты и системы"
+    "public_family": "ИИ-агенты и системы",
+    "public_pitch": "Мастерская хлебопечения: рецепты и технология",
+    "public_label": "ИИ-продукт"
   },
   {
     "id": "cv-editor",
@@ -2313,7 +2401,9 @@
     "editorial_review": "pending_fact_and_privacy_review",
     "logo_path": "/ai-portfolio/marks/cv-editor.svg",
     "public_brand": "AI LAB",
-    "public_family": "ИИ-агенты и системы"
+    "public_family": "ИИ-агенты и системы",
+    "public_pitch": "Сильное резюме на основе реального опыта",
+    "public_label": "ИИ-продукт"
   },
   {
     "id": "composer",
@@ -2363,7 +2453,9 @@
     "editorial_review": "pending_fact_and_privacy_review",
     "logo_path": "/ai-portfolio/marks/composer.svg",
     "public_brand": "AI LAB",
-    "public_family": "ИИ-агенты и системы"
+    "public_family": "ИИ-агенты и системы",
+    "public_pitch": "Музыкальные замыслы, структура и авторские композиции",
+    "public_label": "ИИ-продукт"
   },
   {
     "id": "school-english",
@@ -2413,7 +2505,9 @@
     "editorial_review": "pending_fact_and_privacy_review",
     "logo_path": "/ai-portfolio/marks/school-english.svg",
     "public_brand": "AI LAB",
-    "public_family": "ИИ-агенты и системы"
+    "public_family": "ИИ-агенты и системы",
+    "public_pitch": "Цифровая среда изучения английского языка",
+    "public_label": "ИИ-продукт"
   },
   {
     "id": "school-tv",
@@ -2463,7 +2557,9 @@
     "editorial_review": "pending_fact_and_privacy_review",
     "logo_path": "/ai-portfolio/marks/school-tv.svg",
     "public_brand": "AI LAB",
-    "public_family": "ИИ-агенты и системы"
+    "public_family": "ИИ-агенты и системы",
+    "public_pitch": "Интеллектуальная платформа школьного телевидения",
+    "public_label": "ИИ-продукт"
   },
   {
     "id": "dota-student",
@@ -2513,7 +2609,9 @@
     "editorial_review": "pending_fact_and_privacy_review",
     "logo_path": "/ai-portfolio/marks/dota-student.svg",
     "public_brand": "AI LAB",
-    "public_family": "ИИ-агенты и системы"
+    "public_family": "ИИ-агенты и системы",
+    "public_pitch": "Игровой AI-помощник — ученическая разработка",
+    "public_label": "ИИ-продукт"
   },
   {
     "id": "gardener",
@@ -2563,7 +2661,9 @@
     "editorial_review": "pending_fact_and_privacy_review",
     "logo_path": "/ai-portfolio/marks/gardener.svg",
     "public_brand": "AI LAB",
-    "public_family": "ИИ-агенты и системы"
+    "public_family": "ИИ-агенты и системы",
+    "public_pitch": "Контроль изменений и развитие программных систем",
+    "public_label": "ИИ-продукт"
   },
   {
     "id": "school-equipment",
@@ -2613,7 +2713,9 @@
     "editorial_review": "pending_fact_and_privacy_review",
     "logo_path": "/ai-portfolio/marks/school-equipment.svg",
     "public_brand": "AI LAB",
-    "public_family": "ИИ-агенты и системы"
+    "public_family": "ИИ-агенты и системы",
+    "public_pitch": "Подбор и аналитика школьного оборудования",
+    "public_label": "ИИ-продукт"
   },
   {
     "id": "network-mixer",
@@ -2663,7 +2765,9 @@
     "editorial_review": "pending_fact_and_privacy_review",
     "logo_path": "/ai-portfolio/marks/network-mixer.svg",
     "public_brand": "AI LAB",
-    "public_family": "ИИ-агенты и системы"
+    "public_family": "ИИ-агенты и системы",
+    "public_pitch": "Управление приоритетами сетевого трафика Windows",
+    "public_label": "ИИ-продукт"
   },
   {
     "id": "reels-ideas",
@@ -2713,7 +2817,9 @@
     "editorial_review": "pending_fact_and_privacy_review",
     "logo_path": "/ai-portfolio/marks/reels-ideas.svg",
     "public_brand": "AI LAB",
-    "public_family": "ИИ-агенты и системы"
+    "public_family": "ИИ-агенты и системы",
+    "public_pitch": "Креативные концепции коротких видеороликов",
+    "public_label": "ИИ-продукт"
   },
   {
     "id": "html-presentation",
@@ -2763,7 +2869,9 @@
     "editorial_review": "pending_fact_and_privacy_review",
     "logo_path": "/ai-portfolio/marks/html-presentation.svg",
     "public_brand": "AI LAB",
-    "public_family": "ИИ-агенты и системы"
+    "public_family": "ИИ-агенты и системы",
+    "public_pitch": "Клиентские HTML-презентации с выразительным дизайном",
+    "public_label": "ИИ-продукт"
   },
   {
     "id": "voice-meta-smm",
@@ -2813,7 +2921,9 @@
     "editorial_review": "pending_fact_and_privacy_review",
     "logo_path": "/ai-portfolio/marks/voice-meta-smm.svg",
     "public_brand": "AI LAB",
-    "public_family": "ИИ-агенты и системы"
+    "public_family": "ИИ-агенты и системы",
+    "public_pitch": "От голосового описания к готовому контент-брифу",
+    "public_label": "ИИ-продукт"
   },
   {
     "id": "avitolog",
@@ -2863,7 +2973,9 @@
     "editorial_review": "pending_fact_and_privacy_review",
     "logo_path": "/ai-portfolio/marks/avitolog.svg",
     "public_brand": "AI LAB",
-    "public_family": "ИИ-агенты и системы"
+    "public_family": "ИИ-агенты и системы",
+    "public_pitch": "Создание понятных и убедительных объявлений",
+    "public_label": "ИИ-продукт"
   },
   {
     "id": "job-search",
@@ -2913,7 +3025,9 @@
     "editorial_review": "pending_fact_and_privacy_review",
     "logo_path": "/ai-portfolio/marks/job-search.svg",
     "public_brand": "AI LAB",
-    "public_family": "ИИ-агенты и системы"
+    "public_family": "ИИ-агенты и системы",
+    "public_pitch": "Карьерные отклики и анализ вакансий в России",
+    "public_label": "ИИ-продукт"
   },
   {
     "id": "triad",
@@ -2963,7 +3077,9 @@
     "editorial_review": "pending_fact_and_privacy_review",
     "logo_path": "/ai-portfolio/marks/triad.svg",
     "public_brand": "AI LAB",
-    "public_family": "ИИ-агенты и системы"
+    "public_family": "ИИ-агенты и системы",
+    "public_pitch": "AI-система личных целей, выбора и привычек",
+    "public_label": "ИИ-продукт"
   },
   {
     "id": "sage",
@@ -3013,7 +3129,9 @@
     "editorial_review": "pending_fact_and_privacy_review",
     "logo_path": "/ai-portfolio/marks/sage.svg",
     "public_brand": "AI LAB",
-    "public_family": "ИИ-агенты и системы"
+    "public_family": "ИИ-агенты и системы",
+    "public_pitch": "Осознанные привычки и последовательное развитие",
+    "public_label": "ИИ-продукт"
   },
   {
     "id": "derma-guide",
@@ -3063,7 +3181,9 @@
     "editorial_review": "pending_fact_and_privacy_review",
     "logo_path": "/ai-portfolio/marks/derma-guide.svg",
     "public_brand": "AI LAB",
-    "public_family": "ИИ-агенты и системы"
+    "public_family": "ИИ-агенты и системы",
+    "public_pitch": "Навигатор по дерматологической информации",
+    "public_label": "ИИ-продукт"
   },
   {
     "id": "pediatric-guide",
@@ -3113,7 +3233,9 @@
     "editorial_review": "pending_fact_and_privacy_review",
     "logo_path": "/ai-portfolio/marks/pediatric-guide.svg",
     "public_brand": "AI LAB",
-    "public_family": "ИИ-агенты и системы"
+    "public_family": "ИИ-агенты и системы",
+    "public_pitch": "Информационный AI-помощник по педиатрии",
+    "public_label": "ИИ-продукт"
   },
   {
     "id": "trauma-guide",
@@ -3163,7 +3285,9 @@
     "editorial_review": "pending_fact_and_privacy_review",
     "logo_path": "/ai-portfolio/marks/trauma-guide.svg",
     "public_brand": "AI LAB",
-    "public_family": "ИИ-агенты и системы"
+    "public_family": "ИИ-агенты и системы",
+    "public_pitch": "Навигация по травматологии и восстановлению",
+    "public_label": "ИИ-продукт"
   },
   {
     "id": "public-info-monitor",
@@ -3213,7 +3337,9 @@
     "editorial_review": "pending_fact_and_privacy_review",
     "logo_path": "/ai-portfolio/marks/public-info-monitor.svg",
     "public_brand": "AI LAB",
-    "public_family": "ИИ-агенты и системы"
+    "public_family": "ИИ-агенты и системы",
+    "public_pitch": "Сопоставление открытых источников и медиасообщений",
+    "public_label": "ИИ-продукт"
   },
   {
     "id": "gigaam-voice",
@@ -3263,7 +3389,9 @@
     "editorial_review": "pending_fact_and_privacy_review",
     "logo_path": "/ai-portfolio/marks/gigaam-voice.svg",
     "public_brand": "AI LAB",
-    "public_family": "ИИ-агенты и системы"
+    "public_family": "ИИ-агенты и системы",
+    "public_pitch": "Настольная голосовая AI-программа на базе GigaAM",
+    "public_label": "ИИ-продукт"
   },
   {
     "id": "gigaam-fast",
@@ -3313,7 +3441,9 @@
     "editorial_review": "pending_fact_and_privacy_review",
     "logo_path": "/ai-portfolio/marks/gigaam-fast.svg",
     "public_brand": "AI LAB",
-    "public_family": "ИИ-агенты и системы"
+    "public_family": "ИИ-агенты и системы",
+    "public_pitch": "Локальная расшифровка аудио с GigaAM",
+    "public_label": "ИИ-продукт"
   },
   {
     "id": "psych-assistant",
@@ -3363,7 +3493,9 @@
     "editorial_review": "pending_fact_and_privacy_review",
     "logo_path": "/ai-portfolio/marks/psych-assistant.svg",
     "public_brand": "AI LAB",
-    "public_family": "ИИ-агенты и системы"
+    "public_family": "ИИ-агенты и системы",
+    "public_pitch": "AI-помощник для безопасных рефлексивных диалогов",
+    "public_label": "ИИ-продукт"
   },
   {
     "id": "co-sensus",
@@ -3413,7 +3545,9 @@
     "editorial_review": "pending_fact_and_privacy_review",
     "logo_path": "/ai-portfolio/marks/co-sensus.svg",
     "public_brand": "AI LAB",
-    "public_family": "ИИ-агенты и системы"
+    "public_family": "ИИ-агенты и системы",
+    "public_pitch": "Интеллектуальная помощь в общении и взаимопонимании",
+    "public_label": "ИИ-продукт"
   },
   {
     "id": "psi-coach",
@@ -3463,6 +3597,8 @@
     "editorial_review": "pending_fact_and_privacy_review",
     "logo_path": "/ai-portfolio/marks/psi-coach.svg",
     "public_brand": "AI LAB",
-    "public_family": "ИИ-агенты и системы"
+    "public_family": "ИИ-агенты и системы",
+    "public_pitch": "Помощник для личных целей и полезных привычек",
+    "public_label": "ИИ-продукт"
   }
 ]

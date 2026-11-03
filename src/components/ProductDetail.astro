@@ -11,7 +11,7 @@ const canonical = `https://drozdov-dmitry.github.io/ai-portfolio/${record.route_
 <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
 <meta name="color-scheme" content="dark"/><meta name="robots" content={isEditorialPreview ? "noindex,nofollow" : "index,follow"}/>
 <title>{record.title} — AI / Портфолио</title>
-<meta name="description" content={record.long_description}/>
+<meta name="description" content={record.public_pitch}/>
 <link rel="canonical" href={canonical}/>
 <link rel="stylesheet" href="/ai-portfolio/assets/styles.css"/>
 <link rel="icon" type="image/svg+xml" href="/ai-portfolio/brand/mark.svg" />
@@ -27,13 +27,13 @@ const canonical = `https://drozdov-dmitry.github.io/ai-portfolio/${record.route_
 <meta property="og:image:height" content="630" />
 <meta name="twitter:card" content="summary_large_image" /></head><body>
 <div class="topline">{isEditorialPreview ? "РЕДАКЦИОННЫЙ ПРЕДПРОСМОТР · НЕ ПУБЛИКОВАТЬ" : "AI / ПОРТФОЛИО"}</div>
-<header class="header shell"><a class="brand" href="/ai-portfolio/"><img class="brand-emblem" src="/ai-portfolio/brand/mark.svg" alt="" width="39" height="39" aria-hidden="true" /><span class="brand-copy"><span class="brand-name">AI / ПОРТФОЛИО</span><span class="brand-sub">Авторские интеллектуальные системы</span></span></a><nav class="navigation"><a href="/ai-portfolio/">Все решения</a><a href="/ai-portfolio/#categories">Категории</a><a href="/ai-portfolio/#catalog">Проекты</a></nav><div class="nav-actions"><a class="small-outline" href="/ai-portfolio/" data-return-link>← Каталог решений</a></div></header>
+<header class="header shell"><a class="brand" href="/ai-portfolio/"><img class="brand-emblem" src="/ai-portfolio/brand/mark.svg" alt="" width="39" height="39" aria-hidden="true" /><span class="brand-copy"><span class="brand-name">AI LAB / ПОРТФОЛИО</span><span class="brand-sub">ИИ-агенты и системы</span></span></a><nav class="navigation"><a href="/ai-portfolio/">Все решения</a><a href="/ai-portfolio/#categories">Категории</a><a href="/ai-portfolio/#catalog">Продукты</a></nav><div class="nav-actions"><a class="small-outline" href="/ai-portfolio/" data-return-link>← Каталог решений</a></div></header>
 <main class="detail-main shell">
 <div class="breadcrumb"><a href="/ai-portfolio/">Все решения</a><span class="slash">/</span><a href={`/ai-portfolio/category/${record.cat}/`}>{category?.name ?? record.category}</a><span class="slash">/</span><span class="current">{record.title}</span></div>
-<section class="detail-hero"><div><div class="detail-overline"><span class="eyebrow">AI / {record.kind}</span><span class="prototype-flag">{record.statusLabel} · {record.audience === "student" ? "ученическая работа" : "по сведениям автора"}</span></div>
-<h1>{isMeta ? <>Метаархитектор<em> AI-систем.</em></> : record.title}</h1><p class="detail-lead">{record.long_description}</p>
-<div class="detail-statbar"><div><span>Тип системы</span><strong>{record.kind}</strong></div><div><span>Версия</span><strong>{record.version === "—" ? "Не установлена" : record.version}</strong></div><div><span>Доступ</span><strong>Описание без публичного запуска</strong></div></div>
-<div class="detail-actions"><a class="btn-primary" href="#tasks">Возможности <span>↗</span></a><a class="btn-secondary" href="#access">Статус и ограничения ↓</a></div>
+<section class="detail-hero"><div><div class="detail-overline"><img class="detail-micro-logo" src={record.logo_path} alt="" width="44" height="44"/><span class="eyebrow">AI LAB / ИИ-ПРОДУКТ</span><span class="prototype-flag">{record.audience==="student" ? "Ученическая разработка" : "Авторская AI-система"}</span></div>
+<h1>{isMeta ? <>Метаархитектор<em> AI-систем.</em></> : record.title}</h1><p class="detail-lead">{record.public_pitch}</p>
+<div class="detail-statbar"><div><span>Линейка</span><strong>ИИ-агенты и системы</strong></div><div><span>Направление</span><strong>{record.category}</strong></div>{record.version!=="—"&&<div><span>Редакция</span><strong>{record.version}</strong></div>}</div>
+<div class="detail-actions"><a class="btn-primary" href="#tasks">Возможности <span>↗</span></a><a class="btn-secondary" href="#audience">Кому полезно ↓</a></div>
 {record.public_showcase && <p class="showcase-hero-link"><a href={record.public_showcase.action_href} rel="noopener noreferrer" target="_blank">{record.public_showcase.action_label} <span aria-hidden="true">↗</span></a></p>}</div>
 {record.public_showcase ?
 <div class="detail-visual real-showcase" role="group" aria-label={record.public_showcase.label}>
@@ -41,20 +41,20 @@ const canonical = `https://drozdov-dmitry.github.io/ai-portfolio/${record.route_
 <div class="showcase-media"><img src={record.public_showcase.image_src} alt={record.public_showcase.image_alt} loading="lazy" decoding="async"/></div>
 <span class="showcase-image-note">{record.public_showcase.image_note}</span>
 </div> :
-<div class={`detail-visual ${record.cover}`} role="img" aria-label={`Концептуальная обложка разработки ${record.title}, не скриншот продукта`}><span class="visual-count">AI / PORTFOLIO</span><span class="meta-logo">{record.num}</span><span class="visual-caption">STAGING / 2026</span></div>}
+<div class={`detail-visual ${record.cover} detail-product-art`} role="img" aria-label={`Фирменный знак продукта ${record.title}`}><span class="visual-count">AI LAB / PRODUCT IDENTITY</span><img class="detail-product-logo" src={record.logo_path} alt="" width="260" height="260"/><span class="visual-caption">ИИ-АГЕНТЫ И СИСТЕМЫ / AI LAB</span></div>}
 </section>
 <section class="section-divider" id="problem"><div class="editorial-head"><div><span class="eyebrow">01 / КОНТЕКСТ</span><h2>Какую задачу решает</h2></div><p>{record.problem || record.long_description}</p></div></section>
-<section class="section-divider" id="tasks"><div class="editorial-head"><div><span class="eyebrow">02 / ВОЗМОЖНОСТИ</span><h2>Что делает</h2></div><p>{record.long_description}</p></div><div class="features">{record.capabilities.map((capability,i)=><div class="feature"><span class="feature-index">{String(i+1).padStart(2,"0")}</span><h3>{capability}</h3></div>)}</div></section>
+<section class="section-divider" id="tasks"><div class="editorial-head"><div><span class="eyebrow">02 / ВОЗМОЖНОСТИ</span><h2>Возможности продукта</h2></div><p>{record.public_pitch}</p></div><div class="features">{record.capabilities.map((capability,i)=><div class="feature"><span class="feature-index">{String(i+1).padStart(2,"0")}</span><h3>{capability}</h3></div>)}</div></section>
 {isMeta && <section class="section-divider" id="workflow">
 <div class="editorial-head"><div><span class="eyebrow">СЦЕНАРИЙ / МЕТААРХИТЕКТОР</span><h2>От задачи к системе</h2></div>
-<p>Пример рабочего процесса, а не утверждение о выполненном клиентском проекте.</p></div>
+<p>Последовательность работы системы — от входной задачи до результата.</p></div>
 <div class="pipeline">
 <div class="pipe-step"><span class="pipe-icon">01</span><h3>Вход</h3><p>Цель, роли, ограничения и исходные материалы.</p></div>
 <div class="pipe-step"><span class="pipe-icon">02</span><h3>Проектирование</h3><p>Архитектура инструкций, источников и проверок.</p></div>
 <div class="pipe-step"><span class="pipe-icon">03</span><h3>Результат</h3><p>Комплект документов, тестовые критерии и версионный выпуск.</p></div>
 </div></section>}
 
-{record.editorial_scenario && <section class="section-divider" id="workflow-example"><div class="editorial-head"><div><span class="eyebrow">ПРИМЕР СЦЕНАРИЯ</span><h2>Вход → работа → результат</h2></div><p>Иллюстрация принципа работы; не выдаётся за проведённое испытание или завершённый клиентский кейс.</p></div>
+{record.editorial_scenario && <section class="section-divider" id="workflow-example"><div class="editorial-head"><div><span class="eyebrow">ПРИМЕР СЦЕНАРИЯ</span><h2>Вход → работа → результат</h2></div><p>Один из сценариев применения продукта.</p></div>
 <div class="pipeline">
 <div class="pipe-step"><span class="pipe-icon">01 / ВХОД</span><h3>Что получает система</h3><p>{record.editorial_scenario.input}</p></div>
 <div class="pipe-step"><span class="pipe-icon">02 / ПРОЦЕСС</span><h3>Как действует</h3><p>{record.editorial_scenario.process}</p></div>
@@ -66,10 +66,14 @@ const canonical = `https://drozdov-dmitry.github.io/ai-portfolio/${record.route_
 <span class="evidence-kind">{a.kind}</span><strong>{a.title}</strong><p>{a.detail}</p><span class="evidence-open">Посмотреть материал ↗</span></a>)}
 </div><p class="evidence-disclaimer">{record.public_showcase.proof_method}</p>
 </section>}
-<section class="section-divider" id="access"><div class="editorial-head"><div><span class="eyebrow">03 / СОСТОЯНИЕ</span><h2>Статус и доступ</h2></div><p>Публикационный допуск пока не выдан. Статусы основаны на материалах разработки и сообщениях автора, а не на независимой сертификации.</p></div>
-<div class="detail-grid"><div class="text-panel"><h3>Состояние и подтверждённые результаты</h3><p>{record.result_state || record.statusLabel}</p>{record.evidence_note && <p class="evidence-note"><strong>Основание:</strong> {record.evidence_note}</p>}<ul><li>{record.statusLabel}</li><li>{record.category}</li><li>{record.school === "direct" ? "Предназначен для школы №14" : record.school === "support" ? "Может поддерживать школьную работу" : "Школьное применение не подтверждено"}</li></ul></div><div class="text-panel"><h3>Кому полезно и ограничения</h3>{record.audience_description && <p>{record.audience_description}</p>}<p>{record.limitations}</p><p>Закрытые инструкции и частные исходные данные не публикуются.</p></div></div><div class="warning">Редакционный черновик. Факт работоспособности, указанный со слов автора, не является независимой технической проверкой или разрешением на публичный доступ.</div></section>
-<section class="section-divider"><div class="editorial-head"><div><span class="eyebrow">04 / ДАЛЬШЕ</span><h2>Связанные направления</h2></div><p>Другие разработки этого направления.</p></div>{related.length > 0 && <div class="related-links">{related.map(r => <a class="related-link" href={r.detail}><strong>{r.title}</strong><span>{r.subtitle}</span></a>)}</div>}<div class="detail-actions"><a class="btn-secondary" href={`/ai-portfolio/category/${record.cat}/`}>Категория ↗</a><a class="btn-primary" href="/ai-portfolio/" data-return-link>Все решения ↗</a></div></section>
-</main><footer class="footer shell"><span>AI / ПОРТФОЛИО · V0.6.1</span><a href="/ai-portfolio/" data-return-link>← Назад</a></footer><script is:inline>
+<section class="section-divider" id="audience">
+<div class="editorial-head"><div><span class="eyebrow">03 / ПРИМЕНЕНИЕ</span><h2>Для кого создан</h2></div><p>{record.audience_description}</p></div>
+<div class="audience-panel"><div><span class="eyebrow">AI LAB / ИИ-ПРОДУКТ</span><h3>Решение под вашу задачу</h3><p>Разработку можно обсудить, адаптировать под контекст и подготовить к конкретному сценарию применения.</p></div><div class="audience-sign"><img src={record.logo_path} alt="" width="88" height="88"/><span>{record.audience==="student" ? "Ученическая разработка" : "Часть AI LAB"}</span></div></div>
+{(["derma-guide","pediatric-guide","trauma-guide","psych-assistant","psi-coach"].includes(record.id))&&<p class="scope-note">Медицинская и психологическая информация не заменяет консультацию профильного специалиста, диагностику или лечение.</p>}
+{(["schoollaw","lawbiz","lawdebt","drone-permit","hr"].includes(record.id))&&<p class="scope-note">Правовые документы и решения требуют проверки ответственным специалистом и учёта действующих требований.</p>}
+</section>
+<section class="section-divider"><div class="editorial-head"><div><span class="eyebrow">04 / ДАЛЬШЕ</span><h2>Связанные направления</h2></div><p>Другие разработки этого направления.</p></div>{related.length > 0 && <div class="related-links">{related.map(r => <a class="related-link" href={r.detail}><strong>{r.title}</strong><span>{r.public_pitch}</span></a>)}</div>}<div class="detail-actions"><a class="btn-secondary" href={`/ai-portfolio/category/${record.cat}/`}>Категория ↗</a><a class="btn-primary" href="/ai-portfolio/" data-return-link>Все решения ↗</a></div></section>
+</main><footer class="footer shell"><span>AI LAB · V0.7.0</span><a href="/ai-portfolio/" data-return-link>← Назад</a></footer><script is:inline>
 (()=>{
 const from=new URLSearchParams(location.search).get("from");
 if(!from||!from.startsWith("/ai-portfolio/")||from.includes(".."))return;
