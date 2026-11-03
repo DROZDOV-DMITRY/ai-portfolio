@@ -18,7 +18,10 @@ for(const [i,r] of records.entries()){
   check(["agent","project"].includes(r.route_kind),"Invalid route kind");
   check(r.detail===`/ai-portfolio/${r.route_kind}/${r.slug}/`,"Route mismatch");
   check(Array.isArray(r.capabilities)&&r.capabilities.length===3,"Expected exactly three capabilities");
-  check(r.visibility==="draft"&&r.publication_status==="design_preview_only"&&r.content_review==="pending"&&r.privacy_review==="pending","Unexpected publication state");
+  const ready = r.visibility === "public" && r.publication_status === "approved_public" && r.content_review === "approved" && r.privacy_review === "approved";
+  const hidden = r.visibility !== "public" && r.publication_status !== "approved_public";
+  check(ready || hidden,"Inconsistent publication approval");
+  check(["draft","private","public"].includes(r.visibility),"Unknown visibility");
   check(r.access_mode==="description_only","Unexpected public access");
   check(!Object.keys(r).some(k=>/(url|email|phone|token|password|secret|credential|private_path)/i.test(k)),"Sensitive property name");
   const text=[r.title,r.subtitle,r.long_description,r.problem,r.capabilities,r.limitations,r.result_state,r.tags].flat().join(" ");
@@ -28,4 +31,4 @@ for(const [i,r] of records.entries()){
 }
 if(records.length<30)failures.push("Content set unexpectedly small");
 if(failures.length){console.error(failures.join("\n"));process.exitCode=1}
-else console.log(`Content validation passed: ${records.length} editorial drafts, ${cats.size} categories, unique routes and no publication approvals`);
+else console.log("Content validation passed: "+records.length+" records and "+cats.size+" categories");

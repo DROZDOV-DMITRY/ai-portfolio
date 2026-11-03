@@ -1,14 +1,14 @@
 ---
-import { categoryBySlug, previewRecords } from "../lib/catalog.js";
+import { categoryBySlug, relatedRecords, isEditorialPreview } from "../lib/catalog.js";
 const { record } = Astro.props;
 const category = categoryBySlug(record.cat);
-const related = previewRecords().filter(r => r.id !== record.id && r.cat === record.cat && r.status !== "historical").slice(0, 3);
+const related = relatedRecords(record);
 const canonical = `https://drozdov-dmitry.github.io/ai-portfolio/${record.route_kind}/${record.slug}/`;
 ---
 <!doctype html>
 <html lang="ru"><head>
 <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
-<meta name="color-scheme" content="dark"/><meta name="robots" content="noindex,nofollow"/>
+<meta name="color-scheme" content="dark"/><meta name="robots" content={isEditorialPreview ? "noindex,nofollow" : "index,follow"}/>
 <title>{record.title} — AI / Портфолио</title>
 <meta name="description" content={record.long_description}/>
 <link rel="canonical" href={canonical}/>
@@ -25,7 +25,7 @@ const canonical = `https://drozdov-dmitry.github.io/ai-portfolio/${record.route_
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta name="twitter:card" content="summary_large_image" /></head><body>
-<div class="topline">РЕДАКЦИОННАЯ СБОРКА V0.4 · 03.11.2026 &nbsp; / &nbsp; <strong>не публичный релиз</strong></div>
+<div class="topline">{isEditorialPreview ? "РЕДАКЦИОННЫЙ ПРЕДПРОСМОТР · НЕ ПУБЛИКОВАТЬ" : "AI / ПОРТФОЛИО"}</div>
 <header class="header shell"><a class="brand" href="/ai-portfolio/"><img class="brand-emblem" src="/ai-portfolio/brand/mark.svg" alt="" width="39" height="39" aria-hidden="true" /><span class="brand-copy"><span class="brand-name">AI / ПОРТФОЛИО</span><span class="brand-sub">Авторские интеллектуальные системы</span></span></a><nav class="navigation"><a href="/ai-portfolio/">Все решения</a><a href="/ai-portfolio/#categories">Категории</a><a href="/ai-portfolio/#catalog">Проекты</a></nav><div class="nav-actions"><a class="small-outline" href="/ai-portfolio/">← Каталог решений</a></div></header>
 <main class="detail-main shell">
 <div class="breadcrumb"><a href="/ai-portfolio/">Все решения</a><span class="slash">/</span><a href={`/ai-portfolio/category/${record.cat}/`}>{category?.name ?? record.category}</a><span class="slash">/</span><span class="current">{record.title}</span></div>

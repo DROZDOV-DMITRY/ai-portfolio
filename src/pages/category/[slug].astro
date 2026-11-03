@@ -1,6 +1,6 @@
 ---
 import categories from "../../data/categories.json";
-import { categoryRecords } from "../../lib/catalog.js";
+import { categoryRecords, isEditorialPreview } from "../../lib/catalog.js";
 export function getStaticPaths() {
   return categories.map(category => ({ params: { slug: category.slug }, props: { category } }));
 }
@@ -14,7 +14,7 @@ const canonical = `https://drozdov-dmitry.github.io/ai-portfolio/category/${cate
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="color-scheme" content="dark" />
-  <meta name="robots" content="noindex,nofollow" />
+  <meta name="robots" content={isEditorialPreview ? "noindex,nofollow" : "index,follow"} />
   <title>{category.name} — AI / Портфолио</title>
   <meta name="description" content={category.description} />
   <link rel="canonical" href={canonical} />
@@ -32,7 +32,7 @@ const canonical = `https://drozdov-dmitry.github.io/ai-portfolio/category/${cate
 <meta property="og:image:height" content="630" />
 <meta name="twitter:card" content="summary_large_image" /></head>
 <body>
- <div class="topline">V0.4 · ЧЕРНОВИК КАРТОЧЕК · НЕ ПУБЛИКОВАТЬ</div>
+ <div class="topline">{isEditorialPreview ? "РЕДАКЦИОННЫЙ ПРЕДПРОСМОТР · НЕ ПУБЛИКОВАТЬ" : "AI / ПОРТФОЛИО"}</div>
  <header class="header shell">
  <a class="brand" href="/ai-portfolio/"><img class="brand-emblem" src="/ai-portfolio/brand/mark.svg" alt="" width="39" height="39" aria-hidden="true" /><span class="brand-copy"><span class="brand-name">AI / ПОРТФОЛИО</span><span class="brand-sub">Авторские интеллектуальные системы</span></span></a>
  <nav class="navigation" aria-label="Основная навигация"><a href="/ai-portfolio/">Все решения</a><a class="nav-current" href="/ai-portfolio/#categories">Категории</a></nav>

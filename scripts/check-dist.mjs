@@ -1,0 +1,25 @@
+import assert from "node:assert/strict";
+import {existsSync, readFileSync, readdirSync} from "node:fs";
+import {join} from "node:path";
+import records from "../src/data/demo-records.json" with {type:"json"};
+import categories from "../src/data/categories.json" with {type:"json"};
+const mode=process.argv[2];
+assert(["public","preview"].includes(mode),"Expected mode public or preview");
+const root=mode==="preview"?"dist-preview":"dist";
+const approved=records.filter(r=>r.visibility==="public"&&r.publication_status==="approved_public"&&r.content_review==="approved"&&r.privacy_review==="approved");
+const shown=mode==="preview"?records:approved;
+function walk(dir){return readdirSync(dir,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(join(dir,e.name)):[join(dir,e.name)]);}
+const outputs=walk(root);
+const html=readFileSync(join(root,"index.html"),"utf8");
+const products=outputs.filter(p=>/\/(agent|project)\/[^/]+\/index\.html$/.test(p.replaceAll("\\","/")));
+const cats=outputs.filter(p=>/\/category\/[^/]+\/index\.html$/.test(p.replaceAll("\\","/")));
+assert.equal(products.length,shown.length,"Product count "+mode);
+assert.equal(cats.length,categories.length,"Category count "+mode);
+assert(html.includes('id="cards"')&&html.includes('id="search"'),"Catalog UI missing");
+for(const item of shown)assert(existsSync(join(root,item.route_kind,item.slug,"index.html")),"Missing "+item.id);
+if(mode==="public"){
+ assert(!html.includes("РЕДАКЦИОННЫЙ ПРЕДПРОСМОТР"),"Preview in public HTML");
+ const publicText=outputs.filter(p=>/\.(?:html|js|json|xml|txt|css)$/i.test(p)).map(p=>readFileSync(p,"utf8")).join("\n");
+ for(const item of records.filter(x=>!approved.includes(x)))assert(!publicText.includes(item.title),"Draft leaked: "+item.id);
+}else assert(html.includes("РЕДАКЦИОННЫЙ ПРЕДПРОСМОТР"),"Preview banner absent");
+console.log("Verified "+mode+" output: "+products.length+" cards, "+cats.length+" categories");

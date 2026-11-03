@@ -16,7 +16,6 @@ const assets = [
 const pages = [
   "src/pages/index.astro",
   "src/pages/category/[slug].astro",
-  "src/pages/agent/metaarchitect/index.astro",
   "src/components/ProductDetail.astro",
   "src/pages/404.astro",
 ];
