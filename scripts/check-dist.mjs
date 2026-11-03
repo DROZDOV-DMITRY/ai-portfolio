@@ -23,6 +23,8 @@ assert.equal(searchIndex.schema,1,"Invalid search index schema");
 assert.equal(searchIndex.products.length,shown.length,"Search index must respect publication mode");
 assert(searchIndex.products.every(p=>Object.keys(p).every(k=>["id","title","href","category","description","keywords"].includes(k))),"Search index has unexpected fields");
 assert(!html.includes("<h1>ИИ-агенты."),"Main heading ends with period");
+if(!process.env.PUBLIC_AI_SEARCH_ENDPOINT)assert(!html.includes('id="ai-invoke"'),"Public site shows inert AI button without backend");
+assert(existsSync(join(root,"assets","gigachat-ui.js")),"Optional AI frontend script missing");
 for(const record of records){
  const logo=join(root,"marks",record.id+".svg");
  assert(existsSync(logo),"Product logo missing: "+record.id);

@@ -33,7 +33,13 @@ const canonical="https://drozdov-dmitry.github.io/ai-portfolio/category/"+catego
 <main class="shell"><section class="hero">
 <span class="eyebrow">НАПРАВЛЕНИЕ / {category.slug.toUpperCase()}</span>
 <div class="category-heading"><img src={`/ai-portfolio/marks/category-${category.slug}.svg`} width="96" height="96" alt="" /><h1>{category.name}</h1></div><p class="hero-summary">{category.description}</p>
-<form class="searchbar" id="hero-search-form"><span class="searchbar-icon">⌕</span><input id="search" type="search" placeholder="Найти по задаче" aria-label="Поиск по категории"/><button type="submit">Найти ↗</button></form>
+<form class="searchbar" id="hero-search-form"><span class="searchbar-icon">⌕</span><input id="search" type="search" placeholder="Найти по задаче" aria-label="Поиск по категории"/><button type="submit">Найти ↗</button></form>{aiEndpoint&&turnstileKey&&<div class="giga-search" aria-label="Поиск GigaChat">
+ <button type="button" class="giga-search-button" id="ai-invoke" aria-expanded="false" aria-controls="ai-search-panel"><span class="giga-search-spark">✧</span> Спросить GigaChat <span>↗</span></button>
+ <div class="giga-search-panel" id="ai-search-panel" hidden>
+  <p class="giga-search-hint">ИИ подбирает продукты только из каталога AI LAB · Перед отправкой подтвердите поисковый запрос</p>
+  <div id="ai-challenge"></div><div id="ai-result" aria-live="polite" aria-atomic="true"></div>
+ </div>
+</div>}
 <p class="hero-note"><a href="/ai-portfolio/#categories">← Все направления</a></p></section>
 <section id="catalog"><div class="section-row"><div><span class="eyebrow">КАТАЛОГ</span><h2 class="section-heading">ИИ-продукты</h2></div><span class="section-meta">{records.length} ИИ-продуктов</span></div>
 <div class="catalog-layout"><aside class="sidebar" id="sidebar" aria-label="Фильтры">
@@ -54,5 +60,5 @@ const canonical="https://drozdov-dmitry.github.io/ai-portfolio/category/"+catego
 <div class="catalog-more" id="pager" hidden><span id="pager-status"></span><button type="button" id="load-more">Показать ещё ↓</button></div>
 </div></div></section></main><footer class="footer shell"><span>AI / ПОРТФОЛИО</span><a href="/ai-portfolio/">Главная</a></footer>
 <script is:inline define:vars={{records:cardsForClient,scope:category.slug,aiEndpoint,turnstileKey}}>window.PORTFOLIO_RECORDS=records;window.PORTFOLIO_SCOPE=scope;window.AI_SEARCH_ENDPOINT=aiEndpoint;window.AI_TURNSTILE_SITE_KEY=turnstileKey;</script>
-<script is:inline type="module" src="/ai-portfolio/assets/catalog.js"></script>
+<script is:inline type="module" src="/ai-portfolio/assets/catalog.js"></script><script is:inline type="module" src="/ai-portfolio/assets/gigachat-ui.js"></script>
 </body></html>

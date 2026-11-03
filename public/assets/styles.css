@@ -98,3 +98,18 @@ a.evidence-artifact:hover{border-color:var(--accent)}
 .search-examples button:hover{background:#233b32;border-color:#9edec2;transform:translateY(-2px)}
 .search-examples button:focus-visible{outline:2px solid #c4f5df;outline-offset:3px}
 @media(max-width:580px){.search-examples{gap:6px}.search-examples button{font-size:10px;padding:8px 10px}.search-examples-label{width:100%;margin:0 0 3px}}
+
+/* Optional protected GigaChat search control · shown only when service is configured */
+.giga-search{display:flex;flex-direction:column;align-items:flex-start;margin:10px 0 4px}
+.giga-search-button{display:inline-flex;gap:10px;align-items:center;border:1px solid #689c88;background:linear-gradient(110deg,#1c3830,#213e43);color:#e7fbf2;border-radius:100px;padding:12px 19px;font-size:13px;font-weight:650;cursor:pointer;transition:transform .18s ease,box-shadow .18s,border-color .18s}
+.giga-search-button:hover{transform:translateY(-2px);border-color:#a1f1ce;box-shadow:0 7px 25px #82cfa126}
+.giga-search-spark{color:#9cf6cd;font-size:19px;line-height:1}
+.giga-search-panel{width:min(100%,710px);padding:21px 22px;margin-top:12px;border:1px solid #4b7967;background:#14221f;border-radius:17px}
+.giga-search-panel[hidden]{display:none}
+.giga-search-hint{font-size:12px;color:#b1c8bc;margin:0 0 15px;line-height:1.6}
+.giga-search-answer{font-size:14px;color:#e0f6e9;line-height:1.6;margin:17px 0}
+.giga-search-choice{display:flex;flex-direction:column;gap:5px;padding:13px;border-radius:11px;background:#20352e;color:#f4fff7;border:1px solid #476e60;text-decoration:none;margin-top:8px;transition:transform .18s ease}
+.giga-search-choice:hover{transform:translateY(-2px);border-color:#9cf0c6}
+.giga-search-choice strong{font-size:14px}.giga-search-choice span{font-size:12px;color:#b3c7bd}
+.giga-search-button:disabled{opacity:.55;cursor:wait}
+@media(prefers-reduced-motion:reduce){.giga-search-button,.giga-search-choice{transition:none}}
