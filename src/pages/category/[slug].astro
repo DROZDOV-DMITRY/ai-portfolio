@@ -1,0 +1,39 @@
+---
+import categories from "../../data/categories.json";
+import records from "../../data/demo-records.json";
+export function getStaticPaths() {
+  return categories.map(category => ({ params: { slug: category.slug }, props: { category } }));
+}
+const { category } = Astro.props;
+const items = records.filter(item => item.cat === category.slug);
+const canonical = `https://drozdov-dmitry.github.io/ai-portfolio/category/${category.slug}/`;
+---
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="dark" />
+  <title>{category.name} — AI / Портфолио</title>
+  <meta name="description" content={category.description} />
+  <link rel="canonical" href={canonical} />
+  <link rel="stylesheet" href="/ai-portfolio/assets/styles.css" />
+</head>
+<body>
+ <div class="topline">ДИЗАЙН-МАКЕТ · КОНТЕНТ НЕ УТВЕРЖДЁН ДЛЯ ПУБЛИКАЦИИ</div>
+ <header class="header shell">
+ <a class="brand" href="/ai-portfolio/"><span class="brand-emblem">A.</span><span class="brand-copy"><span class="brand-name">AI / ПОРТФОЛИО</span><span class="brand-sub">Авторские интеллектуальные системы</span></span></a>
+ <nav class="navigation" aria-label="Основная навигация"><a href="/ai-portfolio/">Все решения</a><a class="nav-current" href="/ai-portfolio/#categories">Категории</a></nav>
+ </header>
+ <main class="shell" style="min-height:70vh">
+ <section class="hero"><span class="eyebrow">КАТЕГОРИЯ / ДИЗАЙН-МАКЕТ</span><h1>{category.name}</h1><p class="hero-summary">{category.description}</p><a class="small-outline" href="/ai-portfolio/#categories">← Все категории</a></section>
+ <section id="catalog"><div class="section-row"><div><span class="eyebrow">ПРИМЕРЫ ИЗ РЕЕСТРА</span><h2 class="section-heading">Разработки</h2></div><span class="section-meta">{items.length} предварительных записей</span></div>
+ <div class="cards">
+ {items.map(item => (<article class="product-card">
+   <div class={`card-visual ${item.cover}`}><span class="card-badge">{item.kind}</span><div class="card-graphic"><span class="ring r1"></span><span class="ring r2"></span><span class="ring r3"></span><span class="big-letter">{item.num}</span><span class="visual-sub">AI LAB / КОНЦЕПТ</span></div></div>
+   <div class="product-info"><div class="product-top"><span>{item.category}</span><span>{item.version}</span></div><h3 class="product-name">{item.detail ? <a href={item.detail}>{item.title}</a> : item.title}</h3><p class="product-description">{item.subtitle}</p><div class="product-foot"><span class="foot-chip">{item.statusLabel}</span></div></div>
+ </article>))}
+ </div></section></main>
+ <footer class="footer shell">Этап разработки · Описание не является публичной карточкой агента</footer>
+</body>
+</html>
