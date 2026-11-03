@@ -1,39 +1,64 @@
 ---
 import categories from "../../data/categories.json";
-import records from "../../data/demo-records.json";
+const aiEndpoint=import.meta.env.PUBLIC_AI_SEARCH_ENDPOINT||"";
+const turnstileKey=import.meta.env.PUBLIC_TURNSTILE_SITE_KEY||"";
+import { categoryRecords, isEditorialPreview } from "../../lib/catalog.js";
 export function getStaticPaths() {
-  return categories.map(category => ({ params: { slug: category.slug }, props: { category } }));
+ return categories.map(category=>({params:{slug:category.slug},props:{category}}));
 }
-const { category } = Astro.props;
-const items = records.filter(item => item.cat === category.slug);
-const canonical = `https://drozdov-dmitry.github.io/ai-portfolio/category/${category.slug}/`;
+const {category}=Astro.props;
+const records=categoryRecords(category.slug);
+const cardsForClient = records.map(r=>({
+ id:r.id,title:r.title,subtitle:r.public_pitch,public_pitch:r.public_pitch,public_label:r.public_label,
+ cat:r.cat,category:r.category,kind:r.kind,audience:r.audience,school:r.school,
+ status:"all",version:r.version,cover:r.cover,num:r.num,tags:r.tags,problem:r.problem,
+ capabilities:r.capabilities,detail:r.detail,logo_path:r.logo_path
+}));
+const canonical="https://drozdov-dmitry.github.io/ai-portfolio/category/"+category.slug+"/";
 ---
-<!doctype html>
-<html lang="ru">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="color-scheme" content="dark" />
-  <title>{category.name} — AI / Портфолио</title>
-  <meta name="description" content={category.description} />
-  <link rel="canonical" href={canonical} />
-  <link rel="stylesheet" href="/ai-portfolio/assets/styles.css" />
-</head>
-<body>
- <div class="topline">ДИЗАЙН-МАКЕТ · КОНТЕНТ НЕ УТВЕРЖДЁН ДЛЯ ПУБЛИКАЦИИ</div>
- <header class="header shell">
- <a class="brand" href="/ai-portfolio/"><span class="brand-emblem">A.</span><span class="brand-copy"><span class="brand-name">AI / ПОРТФОЛИО</span><span class="brand-sub">Авторские интеллектуальные системы</span></span></a>
- <nav class="navigation" aria-label="Основная навигация"><a href="/ai-portfolio/">Все решения</a><a class="nav-current" href="/ai-portfolio/#categories">Категории</a></nav>
- </header>
- <main class="shell" style="min-height:70vh">
- <section class="hero"><span class="eyebrow">КАТЕГОРИЯ / ДИЗАЙН-МАКЕТ</span><h1>{category.name}</h1><p class="hero-summary">{category.description}</p><a class="small-outline" href="/ai-portfolio/#categories">← Все категории</a></section>
- <section id="catalog"><div class="section-row"><div><span class="eyebrow">ПРИМЕРЫ ИЗ РЕЕСТРА</span><h2 class="section-heading">Разработки</h2></div><span class="section-meta">{items.length} предварительных записей</span></div>
- <div class="cards">
- {items.map(item => (<article class="product-card">
-   <div class={`card-visual ${item.cover}`}><span class="card-badge">{item.kind}</span><div class="card-graphic"><span class="ring r1"></span><span class="ring r2"></span><span class="ring r3"></span><span class="big-letter">{item.num}</span><span class="visual-sub">AI LAB / КОНЦЕПТ</span></div></div>
-   <div class="product-info"><div class="product-top"><span>{item.category}</span><span>{item.version}</span></div><h3 class="product-name">{item.detail ? <a href={item.detail}>{item.title}</a> : item.title}</h3><p class="product-description">{item.subtitle}</p><div class="product-foot"><span class="foot-chip">{item.statusLabel}</span></div></div>
- </article>))}
- </div></section></main>
- <footer class="footer shell">Этап разработки · Описание не является публичной карточкой агента</footer>
-</body>
-</html>
+<!doctype html><html lang="ru"><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<meta name="robots" content={isEditorialPreview?"noindex,nofollow":"index,follow"}/>
+<title>{category.name} — AI / Портфолио</title><meta name="description" content={category.description}/>
+<link rel="canonical" href={canonical}/><link rel="stylesheet" href="/ai-portfolio/assets/styles.css"/>
+<link rel="icon" href="/ai-portfolio/brand/mark.svg" type="image/svg+xml"/>
+<link rel="icon" href="/ai-portfolio/brand/favicon-32.png" type="image/png" sizes="32x32"/>
+<link rel="icon" href="/ai-portfolio/brand/favicon-16.png" type="image/png" sizes="16x16"/>
+<link rel="apple-touch-icon" href="/ai-portfolio/brand/apple-touch-icon.png"/>
+<meta property="og:image" content="https://drozdov-dmitry.github.io/ai-portfolio/brand/og-cover.png"/>
+</head><body>
+<div class="topline">{isEditorialPreview?"РЕДАКЦИОННЫЙ ПРЕДПРОСМОТР · НЕ ПУБЛИКОВАТЬ":"AI / ПОРТФОЛИО"}</div>
+<header class="header shell"><a class="brand" href="/ai-portfolio/"><img class="brand-emblem" src="/ai-portfolio/brand/mark.svg" alt="" width="39" height="39"/><span class="brand-copy"><span class="brand-name">AI / ПОРТФОЛИО</span><span class="brand-sub">Авторские интеллектуальные системы</span></span></a>
+<nav class="navigation"><a href="/ai-portfolio/">Все решения</a><a href="/ai-portfolio/about/">О подходе</a></nav></header>
+<main class="shell"><section class="hero">
+<span class="eyebrow">НАПРАВЛЕНИЕ / {category.slug.toUpperCase()}</span>
+<div class="category-heading"><img src={`/ai-portfolio/marks/category-${category.slug}.svg`} width="96" height="96" alt="" /><h1>{category.name}</h1></div><p class="hero-summary">{category.description}</p>
+<form class="searchbar" id="hero-search-form"><span class="searchbar-icon">⌕</span><input id="search" type="search" placeholder="Найти по задаче" aria-label="Поиск по категории"/><button type="submit">Найти ↗</button></form>{aiEndpoint&&turnstileKey&&<div class="giga-search" aria-label="Поиск GigaChat">
+ <button type="button" class="giga-search-button" id="ai-invoke" aria-expanded="false" aria-controls="ai-search-panel"><span class="giga-search-spark">✧</span> Спросить GigaChat <span>↗</span></button>
+ <div class="giga-search-panel" id="ai-search-panel" hidden>
+  <p class="giga-search-hint">ИИ подбирает продукты только из каталога AI LAB · Перед отправкой подтвердите поисковый запрос</p>
+  <div id="ai-challenge"></div><div id="ai-result" aria-live="polite" aria-atomic="true"></div>
+ </div>
+</div>}
+<p class="hero-note"><a href="/ai-portfolio/#categories">← Все направления</a></p></section>
+<section id="catalog"><div class="section-row"><div><span class="eyebrow">КАТАЛОГ</span><h2 class="section-heading">ИИ-продукты</h2></div><span class="section-meta">{records.length} ИИ-продуктов</span></div>
+<div class="catalog-layout"><aside class="sidebar" id="sidebar" aria-label="Фильтры">
+<div class="side-group"><div class="side-heading">Авторство</div>
+<label class="check-row"><input type="radio" name="author" value="all" checked/> Все продукты</label>
+<label class="check-row"><input type="radio" name="author" value="author"/> Авторские разработки</label>
+<label class="check-row"><input type="radio" name="author" value="student"/> Ученические работы</label></div>
+<div class="side-group"><div class="side-heading">Применение в школе</div>
+<label class="check-row"><input type="radio" name="school" value="all" checked/> Все</label>
+<label class="check-row"><input type="radio" name="school" value="direct"/> Для школы №14</label>
+<label class="check-row"><input type="radio" name="school" value="support"/> В помощь школе</label></div>
+</aside><div class="catalog-main"><div class="controls"><span class="result-count" id="count" aria-live="polite"></span><div class="control-right">
+<button class="filter-toggle" id="filter-toggle" type="button" aria-expanded="false" aria-controls="sidebar">☷ Фильтры</button>
+
+<select class="sort-select" id="sort" aria-label="Сортировка"><option value="editorial">По подборке</option><option value="name">По названию</option><option value="status">По стадии</option></select>
+<button class="clear-btn" id="clear-filters" type="button">Сброс</button></div></div>
+<div class="cards" id="cards" aria-live="polite"></div>
+<div class="catalog-more" id="pager" hidden><span id="pager-status"></span><button type="button" id="load-more">Показать ещё ↓</button></div>
+</div></div></section></main><footer class="footer shell"><span>AI / ПОРТФОЛИО</span><a href="/ai-portfolio/">Главная</a></footer>
+<script is:inline define:vars={{records:cardsForClient,scope:category.slug,aiEndpoint,turnstileKey}}>window.PORTFOLIO_RECORDS=records;window.PORTFOLIO_SCOPE=scope;window.AI_SEARCH_ENDPOINT=aiEndpoint;window.AI_TURNSTILE_SITE_KEY=turnstileKey;</script>
+<script is:inline type="module" src="/ai-portfolio/assets/catalog.js"></script><script is:inline type="module" src="/ai-portfolio/assets/gigachat-ui.js"></script>
+</body></html>

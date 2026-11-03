@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" role="img" aria-label="Фирменный знак: Профориентация для школьников">
+ <defs><linearGradient id="metal" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#82E4BA"/><stop offset="1" stop-color="#1B7D69"/></linearGradient><radialGradient id="halo" cx="0.1875" cy="0.625" r=".95"><stop stop-color="#1B7D69" stop-opacity=".36"/><stop offset="1" stop-color="#071F21" stop-opacity="0"/></radialGradient></defs>
+ <rect width="128" height="128" rx="29" fill="#071F21"/><rect width="128" height="128" rx="29" fill="url(#halo)"/>
+ <rect x="1" y="1" width="126" height="126" rx="28" fill="none" stroke="#82E4BA" stroke-opacity=".18" stroke-width="2"/>
+ <g transform="rotate(-33 64 64)" fill="none" stroke="url(#metal)" stroke-width="5.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="64" cy="64" r="37"/><path d="M80 47L69 75L48 85L59 57Z"/><circle cx="64" cy="64" r="4"/></g>
+ <g fill="none" stroke="#82E4BA" stroke-width="2" stroke-linecap="round"><path d="M28 20H37M100 108H91" opacity=".34"/><circle cx="24" cy="80" r="2.3" fill="#82E4BA" stroke="none" opacity=".72"/></g>
+ <path d="M16 112H34" stroke="#82E4BA" stroke-opacity=".38" stroke-width="2" stroke-linecap="round"/>
+ </svg>

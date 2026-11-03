@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" role="img" aria-label="Фирменный знак: FFmpeg">
+ <defs><linearGradient id="metal" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#F7A3C6"/><stop offset="1" stop-color="#9B416E"/></linearGradient><radialGradient id="halo" cx="0.2421875" cy="0.203125" r=".95"><stop stop-color="#9B416E" stop-opacity=".36"/><stop offset="1" stop-color="#291526" stop-opacity="0"/></radialGradient></defs>
+ <rect width="128" height="128" rx="29" fill="#291526"/><rect width="128" height="128" rx="29" fill="url(#halo)"/>
+ <rect x="1" y="1" width="126" height="126" rx="28" fill="none" stroke="#F7A3C6" stroke-opacity=".18" stroke-width="2"/>
+ <g transform="rotate(0 64 64)" fill="none" stroke="url(#metal)" stroke-width="5.2" stroke-linecap="round" stroke-linejoin="round"><rect x="25" y="27" width="78" height="77" rx="4"/><path d="M41 27V104M87 27V104M25 45H41M25 63H41M25 82H41M87 45H103M87 63H103M87 82H103M57 46L77 65L57 83Z"/></g>
+ <g fill="none" stroke="#F7A3C6" stroke-width="2" stroke-linecap="round"><path d="M40 20H49M88 108H79" opacity=".34"/><circle cx="31" cy="26" r="2.3" fill="#F7A3C6" stroke="none" opacity=".72"/></g>
+ <path d="M16 112H34" stroke="#F7A3C6" stroke-opacity=".38" stroke-width="2" stroke-linecap="round"/>
+ </svg>

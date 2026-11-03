@@ -1,0 +1,84 @@
+---
+import { categoryBySlug, relatedRecords, isEditorialPreview } from "../lib/catalog.js";
+const { record } = Astro.props;
+const isMeta = record.id === "meta";
+const category = categoryBySlug(record.cat);
+const related = relatedRecords(record);
+const canonical = `https://drozdov-dmitry.github.io/ai-portfolio/${record.route_kind}/${record.slug}/`;
+---
+<!doctype html>
+<html lang="ru"><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<meta name="color-scheme" content="dark"/><meta name="robots" content={isEditorialPreview ? "noindex,nofollow" : "index,follow"}/>
+<title>{record.title} — AI / Портфолио</title>
+<meta name="description" content={record.public_pitch}/>
+<link rel="canonical" href={canonical}/>
+<link rel="stylesheet" href="/ai-portfolio/assets/styles.css"/>
+<link rel="icon" type="image/svg+xml" href="/ai-portfolio/brand/mark.svg" />
+<link rel="icon" type="image/png" sizes="32x32" href="/ai-portfolio/brand/favicon-32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/ai-portfolio/brand/favicon-16.png" />
+<link rel="shortcut icon" href="/ai-portfolio/brand/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/ai-portfolio/brand/apple-touch-icon.png" />
+<meta name="theme-color" content="#101212" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="AI / Портфолио" />
+<meta property="og:image" content="https://drozdov-dmitry.github.io/ai-portfolio/brand/og-cover.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" /></head><body>
+<div class="topline">{isEditorialPreview ? "РЕДАКЦИОННЫЙ ПРЕДПРОСМОТР · НЕ ПУБЛИКОВАТЬ" : "AI / ПОРТФОЛИО"}</div>
+<header class="header shell"><a class="brand" href="/ai-portfolio/"><img class="brand-emblem" src="/ai-portfolio/brand/mark.svg" alt="" width="39" height="39" aria-hidden="true" /><span class="brand-copy"><span class="brand-name">AI LAB / ПОРТФОЛИО</span><span class="brand-sub">ИИ-агенты и системы</span></span></a><nav class="navigation"><a href="/ai-portfolio/">Все решения</a><a href="/ai-portfolio/#categories">Категории</a><a href="/ai-portfolio/#catalog">Продукты</a></nav><div class="nav-actions"><a class="small-outline" href="/ai-portfolio/" data-return-link>← Каталог решений</a></div></header>
+<main class="detail-main shell">
+<div class="breadcrumb"><a href="/ai-portfolio/">Все решения</a><span class="slash">/</span><a href={`/ai-portfolio/category/${record.cat}/`}>{category?.name ?? record.category}</a><span class="slash">/</span><span class="current">{record.title}</span></div>
+<section class="detail-hero"><div><div class="detail-overline"><img class="detail-micro-logo" src={record.logo_path} alt="" width="44" height="44"/><span class="eyebrow">AI LAB / ИИ-ПРОДУКТ</span><span class="prototype-flag">{record.audience==="student" ? "Ученическая разработка" : "Авторская AI-система"}</span></div>
+<h1>{isMeta ? <>Метаархитектор<em> AI-систем.</em></> : record.title}</h1><p class="detail-lead">{record.public_pitch}</p>
+<div class="detail-statbar"><div><span>Линейка</span><strong>ИИ-агенты и системы</strong></div><div><span>Направление</span><strong>{record.category}</strong></div>{record.version!=="—"&&<div><span>Редакция</span><strong>{record.version}</strong></div>}</div>
+<div class="detail-actions"><a class="btn-primary" href="#tasks">Возможности <span>↗</span></a><a class="btn-secondary" href="#audience">Кому полезно ↓</a></div>
+{record.public_showcase && <p class="showcase-hero-link"><a href={record.public_showcase.action_href} rel="noopener noreferrer" target="_blank">{record.public_showcase.action_label} <span aria-hidden="true">↗</span></a></p>}</div>
+{record.public_showcase ?
+<div class="detail-visual real-showcase" role="group" aria-label={record.public_showcase.label}>
+<span class="showcase-eyebrow">ОРИГИНАЛЬНЫЙ МАТЕРИАЛ</span>
+<div class="showcase-media"><img src={record.public_showcase.image_src} alt={record.public_showcase.image_alt} loading="lazy" decoding="async"/></div>
+<span class="showcase-image-note">{record.public_showcase.image_note}</span>
+</div> :
+<div class={`detail-visual ${record.cover} detail-product-art`} role="img" aria-label={`Фирменный знак продукта ${record.title}`}><span class="visual-count">AI LAB / PRODUCT IDENTITY</span><img class="detail-product-logo" src={record.logo_path} alt="" width="260" height="260"/><span class="visual-caption">ИИ-АГЕНТЫ И СИСТЕМЫ / AI LAB</span></div>}
+</section>
+<section class="section-divider" id="problem"><div class="editorial-head"><div><span class="eyebrow">01 / КОНТЕКСТ</span><h2>Какую задачу решает</h2></div><p>{record.problem || record.long_description}</p></div></section>
+<section class="section-divider" id="tasks"><div class="editorial-head"><div><span class="eyebrow">02 / ВОЗМОЖНОСТИ</span><h2>Возможности продукта</h2></div><p>{record.public_pitch}</p></div><div class="features">{record.capabilities.map((capability,i)=><div class="feature"><span class="feature-index">{String(i+1).padStart(2,"0")}</span><h3>{capability}</h3></div>)}</div></section>
+{isMeta && <section class="section-divider" id="workflow">
+<div class="editorial-head"><div><span class="eyebrow">СЦЕНАРИЙ / МЕТААРХИТЕКТОР</span><h2>От задачи к системе</h2></div>
+<p>Последовательность работы системы — от входной задачи до результата.</p></div>
+<div class="pipeline">
+<div class="pipe-step"><span class="pipe-icon">01</span><h3>Вход</h3><p>Цель, роли, ограничения и исходные материалы.</p></div>
+<div class="pipe-step"><span class="pipe-icon">02</span><h3>Проектирование</h3><p>Архитектура инструкций, источников и проверок.</p></div>
+<div class="pipe-step"><span class="pipe-icon">03</span><h3>Результат</h3><p>Комплект документов, тестовые критерии и версионный выпуск.</p></div>
+</div></section>}
+
+{record.editorial_scenario && <section class="section-divider" id="workflow-example"><div class="editorial-head"><div><span class="eyebrow">ПРИМЕР СЦЕНАРИЯ</span><h2>Вход → работа → результат</h2></div><p>Один из сценариев применения продукта.</p></div>
+<div class="pipeline">
+<div class="pipe-step"><span class="pipe-icon">01 / ВХОД</span><h3>Что получает система</h3><p>{record.editorial_scenario.input}</p></div>
+<div class="pipe-step"><span class="pipe-icon">02 / ПРОЦЕСС</span><h3>Как действует</h3><p>{record.editorial_scenario.process}</p></div>
+<div class="pipe-step"><span class="pipe-icon">03 / РЕЗУЛЬТАТ</span><h3>Что получается</h3><p>{record.editorial_scenario.output}</p></div>
+</div></section>}
+{record.public_showcase && <section class="section-divider" id="evidence"><div class="editorial-head"><div><span class="eyebrow">ПОДТВЕРЖДЁННЫЕ МАТЕРИАЛЫ</span><h2>Что уже существует</h2></div><p>{record.public_showcase.lead}</p></div>
+<div class="evidence-grid">
+{record.public_showcase.artifacts.map(a=><a class="evidence-artifact" href={a.href} target="_blank" rel="noopener noreferrer">
+<span class="evidence-kind">{a.kind}</span><strong>{a.title}</strong><p>{a.detail}</p><span class="evidence-open">Посмотреть материал ↗</span></a>)}
+</div><p class="evidence-disclaimer">Представлены материалы соответствующего проекта и ссылки на его открытые ресурсы.</p>
+</section>}
+<section class="section-divider" id="audience">
+<div class="editorial-head"><div><span class="eyebrow">03 / ПРИМЕНЕНИЕ</span><h2>Для кого создан</h2></div><p>{record.audience_description}</p></div>
+<div class="audience-panel"><div><span class="eyebrow">AI LAB / ИИ-ПРОДУКТ</span><h3>Решение под вашу задачу</h3><p>Разработку можно обсудить, адаптировать под контекст и подготовить к конкретному сценарию применения.</p></div><div class="audience-sign"><img src={record.logo_path} alt="" width="88" height="88"/><span>{record.audience==="student" ? "Ученическая разработка" : "Часть AI LAB"}</span></div></div>
+{(["derma-guide","pediatric-guide","trauma-guide","psych-assistant","psi-coach"].includes(record.id))&&<p class="scope-note">Медицинская и психологическая информация не заменяет консультацию профильного специалиста, диагностику или лечение.</p>}
+{(["schoollaw","lawbiz","lawdebt","drone-permit","hr"].includes(record.id))&&<p class="scope-note">Правовые документы и решения требуют проверки ответственным специалистом и учёта действующих требований.</p>}
+</section>
+<section class="section-divider"><div class="editorial-head"><div><span class="eyebrow">04 / ДАЛЬШЕ</span><h2>Связанные направления</h2></div><p>Другие разработки этого направления.</p></div>{related.length > 0 && <div class="related-links">{related.map(r => <a class="related-link" href={r.detail}><strong>{r.title}</strong><span>{r.public_pitch}</span></a>)}</div>}<div class="detail-actions"><a class="btn-secondary" href={`/ai-portfolio/category/${record.cat}/`}>Категория ↗</a><a class="btn-primary" href="/ai-portfolio/" data-return-link>Все решения ↗</a></div></section>
+</main><footer class="footer shell"><span>AI LAB · V0.7.0</span><a href="/ai-portfolio/" data-return-link>← Назад</a></footer><script is:inline>
+(()=>{
+const from=new URLSearchParams(location.search).get("from");
+if(!from||!from.startsWith("/ai-portfolio/")||from.includes(".."))return;
+const parsed=new URL(from,location.origin);
+if(parsed.origin!==location.origin)return;
+document.querySelectorAll("[data-return-link]").forEach(a=>a.href=parsed.pathname+parsed.search);
+})();
+</script></body></html>

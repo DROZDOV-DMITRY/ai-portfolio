@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" role="img" aria-label="Фирменный знак: Сказки">
+ <defs><linearGradient id="metal" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#F7A3C6"/><stop offset="1" stop-color="#9B416E"/></linearGradient><radialGradient id="halo" cx="0.5546875" cy="0.5" r=".95"><stop stop-color="#9B416E" stop-opacity=".36"/><stop offset="1" stop-color="#291526" stop-opacity="0"/></radialGradient></defs>
+ <rect width="128" height="128" rx="29" fill="#291526"/><rect width="128" height="128" rx="29" fill="url(#halo)"/>
+ <rect x="1" y="1" width="126" height="126" rx="28" fill="none" stroke="#F7A3C6" stroke-opacity=".18" stroke-width="2"/>
+ <g transform="rotate(33 64 64)" fill="none" stroke="url(#metal)" stroke-width="5.2" stroke-linecap="round" stroke-linejoin="round"><path d="M24 95Q45 81 64 95Q83 81 104 95V37Q83 23 64 37Q45 23 24 37Z M64 37V95M34 49H53M75 49H93M34 61H53M75 61H93"/></g>
+ <g fill="none" stroke="#F7A3C6" stroke-width="2" stroke-linecap="round"><path d="M40 20H49M88 108H79" opacity=".34"/><circle cx="71" cy="64" r="2.3" fill="#F7A3C6" stroke="none" opacity=".72"/></g>
+ <path d="M16 112H34" stroke="#F7A3C6" stroke-opacity=".38" stroke-width="2" stroke-linecap="round"/>
+ </svg>

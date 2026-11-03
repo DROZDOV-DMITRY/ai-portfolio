@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" role="img" aria-label="Фирменный знак: Домашний повар">
+ <defs><linearGradient id="metal" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#A2E9C8"/><stop offset="1" stop-color="#338F70"/></linearGradient><radialGradient id="halo" cx="0.265625" cy="0.421875" r=".95"><stop stop-color="#338F70" stop-opacity=".36"/><stop offset="1" stop-color="#0C2C29" stop-opacity="0"/></radialGradient></defs>
+ <rect width="128" height="128" rx="29" fill="#0C2C29"/><rect width="128" height="128" rx="29" fill="url(#halo)"/>
+ <rect x="1" y="1" width="126" height="126" rx="28" fill="none" stroke="#A2E9C8" stroke-opacity=".18" stroke-width="2"/>
+ <g transform="rotate(-12 64 64)" fill="none" stroke="url(#metal)" stroke-width="5.2" stroke-linecap="round" stroke-linejoin="round"><path d="M41 58Q24 56 26 42Q27 26 44 28Q54 13 68 25Q88 15 95 35Q105 51 88 59V83H41Z M41 83H88V102H41Z"/></g>
+ <g fill="none" stroke="#A2E9C8" stroke-width="2" stroke-linecap="round"><path d="M20 20H29M108 108H99" opacity=".34"/><circle cx="34" cy="54" r="2.3" fill="#A2E9C8" stroke="none" opacity=".72"/></g>
+ <path d="M16 112H34" stroke="#A2E9C8" stroke-opacity=".38" stroke-width="2" stroke-linecap="round"/>
+ </svg>

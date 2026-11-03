@@ -1,14 +1,24 @@
 {
   "name": "ai-portfolio",
   "private": true,
-  "version": "0.1.0",
+  "version": "0.7.3-stage",
   "type": "module",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview"
+    "build": "node scripts/build-and-verify.mjs",
+    "preview": "astro preview",
+    "check:brand": "node scripts/check-brand.mjs",
+    "check:content": "node scripts/check-content.mjs",
+    "build:raw": "astro build",
+    "check:dist": "node scripts/check-dist.mjs",
+    "test:catalog": "node --test",
+    "check:showcase": "node scripts/check-showcase.mjs",
+    "check:marks": "node scripts/check-marks.mjs"
   },
   "dependencies": {
     "astro": "7.4.4"
+  },
+  "devDependencies": {
+    "jsdom": "24.1.1"
   }
 }

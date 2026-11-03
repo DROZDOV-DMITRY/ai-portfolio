@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" role="img" aria-label="Фирменный знак: AI новости и образование">
+ <defs><linearGradient id="metal" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#D6BAFF"/><stop offset="1" stop-color="#7563B8"/></linearGradient><radialGradient id="halo" cx="0.3203125" cy="0.25" r=".95"><stop stop-color="#7563B8" stop-opacity=".36"/><stop offset="1" stop-color="#191633" stop-opacity="0"/></radialGradient></defs>
+ <rect width="128" height="128" rx="29" fill="#191633"/><rect width="128" height="128" rx="29" fill="url(#halo)"/>
+ <rect x="1" y="1" width="126" height="126" rx="28" fill="none" stroke="#D6BAFF" stroke-opacity=".18" stroke-width="2"/>
+ <g transform="rotate(-24 64 64)" fill="none" stroke="url(#metal)" stroke-width="5.2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 31H104V99H23Z M36 44H91M36 55H91M36 68H62V88H36ZM71 68H90M71 79H90M71 89H90"/></g>
+ <g fill="none" stroke="#D6BAFF" stroke-width="2" stroke-linecap="round"><path d="M24 20H33M104 108H95" opacity=".34"/><circle cx="41" cy="32" r="2.3" fill="#D6BAFF" stroke="none" opacity=".72"/></g>
+ <path d="M16 112H34" stroke="#D6BAFF" stroke-opacity=".38" stroke-width="2" stroke-linecap="round"/>
+ </svg>
