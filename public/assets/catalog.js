@@ -26,7 +26,7 @@ import {readState,queryFromState,selectRecords,paginate,cardBadges,productHref} 
  function paint(){
   const rows=selectRecords(list,state,scope),page=paginate(rows,state.page);
   state.page=page.current;
-  counter.textContent="Найдено: "+rows.length+" из "+list.length;
+  counter.textContent=state.q.trim()?"Подобрано по запросу: "+rows.length+" из "+list.length:"Показано: "+rows.length+" из "+list.length;
   cards.innerHTML=rows.length?page.visible.map(card).join(""):'<div class="empty-state"><strong>Совпадений нет</strong><p>Уточните запрос или сбросьте фильтры.</p><button type="button" id="empty-clear">Сбросить фильтры</button></div>';
   $("empty-clear")?.addEventListener("click",reset);
   if(pager)pager.hidden=!page.hasMore;
@@ -41,6 +41,13 @@ import {readState,queryFromState,selectRecords,paginate,cardBadges,productHref} 
  }
  function change(field,value){window.clearTimeout(timer);state[field]=value;state.page=1;commit();}
  function reset(){window.clearTimeout(timer);state=readState("");commit();}
+ document.querySelectorAll("[data-search-example]").forEach(btn=>btn.addEventListener("click",()=>{
+  window.clearTimeout(timer);
+  state.q=btn.dataset.searchExample||"";
+  state.page=1;
+  commit();
+  $("catalog")?.scrollIntoView({behavior:"smooth",block:"start"});
+ }));
  search.addEventListener("input",()=>{window.clearTimeout(timer);const q=search.value;timer=window.setTimeout(()=>{state.q=q;state.page=1;commit();},200);});
  search.addEventListener("change",()=>{window.clearTimeout(timer);if(state.q!==search.value){state.q=search.value;state.page=1;commit();}});
  $("hero-search-form")?.addEventListener("submit",e=>{e.preventDefault();window.clearTimeout(timer);state.q=search.value;state.page=1;commit();$("catalog")?.scrollIntoView({behavior:"smooth",block:"start"});});

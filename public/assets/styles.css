@@ -89,3 +89,12 @@ a.evidence-artifact:hover{border-color:var(--accent)}
 @media(max-width:900px){.direction-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.direction-tile{min-height:230px}}
 @media(max-width:580px){.category-headline{align-items:start;flex-direction:column;gap:14px}.category-reset{width:100%}.direction-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin-bottom:36px}.direction-tile{min-height:213px;padding:13px;border-radius:14px}.direction-bottom{max-width:100%;padding-right:12px}.direction-bottom strong{font-size:14px}.direction-description{font-size:10px;line-height:1.38}.direction-symbol{top:39px;right:7px;width:75px;height:75px}.direction-top{font-size:9px}.direction-count{font-size:9px;padding:4px 5px}.direction-arrow{right:10px;bottom:12px;width:23px;height:23px}.product-mark{width:136px;height:136px}.audience-panel{padding:20px;align-items:start}.audience-sign{display:none}.category-heading{gap:11px}.category-heading img{width:58px;height:58px}}
 @media(prefers-reduced-motion:reduce){.direction-tile,.direction-symbol,.product-mark{transition:none}}
+
+/* Semantic search queries: deliberate, subtle buttons, not decorative media */
+.search-examples{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin:13px 0 8px}
+.search-examples-label{color:#91aba0;font-size:11px;margin-right:5px}
+.search-examples button{border:1px solid #40594f;background:#192421;color:#cde7da;border-radius:999px;padding:9px 12px;font-size:11px;line-height:1.2;cursor:pointer;transition:transform .2s ease,border-color .2s,background .2s}
+.search-examples button span{color:#84d2bc;margin-left:6px}
+.search-examples button:hover{background:#233b32;border-color:#9edec2;transform:translateY(-2px)}
+.search-examples button:focus-visible{outline:2px solid #c4f5df;outline-offset:3px}
+@media(max-width:580px){.search-examples{gap:6px}.search-examples button{font-size:10px;padding:8px 10px}.search-examples-label{width:100%;margin:0 0 3px}}

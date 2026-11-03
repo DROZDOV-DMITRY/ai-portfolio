@@ -1,3 +1,4 @@
+import {rankProducts,normalizeSearch} from "./catalog-search.mjs";
 export const PAGE_SIZE=12;
 export const normalize=value=>String(value??"").toLowerCase().replace(/ё/g,"е").replace(/\s+/g," ").trim();
 const choices={author:new Set(["all","author","student"]),school:new Set(["all","direct","support"]),status:new Set(["all","working","testing","development","historical","unverified"]),sort:new Set(["editorial","name","status"])};
@@ -20,18 +21,19 @@ export function queryFromState(s){
  return p.toString();
 }
 export function selectRecords(data,state,scope="all"){
- const needle=normalize(state.q);
+ const query=String(state.q||"").trim();
  const found=data.filter(x=>{
   if(scope!=="all"&&x.cat!==scope)return false;
   if(scope==="all"&&state.cat!=="all"&&x.cat!==state.cat)return false;
   if(state.author!=="all"&&x.audience!==state.author)return false;
   if(state.school!=="all"&&x.school!==state.school)return false;
   if(state.status!=="all"&&x.status!==state.status)return false;
-  return !needle||normalize([x.title,x.subtitle,x.problem,x.category,x.tags,...(x.capabilities||[])].join(" ")).includes(needle);
+  return true;
  });
- if(state.sort==="name")found.sort((a,b)=>a.title.localeCompare(b.title,"ru"));
- if(state.sort==="status"){const order={working:0,testing:1,development:2,unverified:3,historical:4};found.sort((a,b)=>(order[a.status]??9)-(order[b.status]??9));}
- return found;
+ const ranked=query?rankProducts(found,query):found;
+ if(state.sort==="name")ranked.sort((a,b)=>a.title.localeCompare(b.title,"ru"));
+ if(state.sort==="status"&&!query){const order={working:0,testing:1,development:2,unverified:3,historical:4};ranked.sort((a,b)=>(order[a.status]??9)-(order[b.status]??9));}
+ return ranked;
 }
 export function paginate(rows,page=1,size=PAGE_SIZE){
  const maxPage=Math.max(1,Math.ceil(rows.length/size));
