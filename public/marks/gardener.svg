@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" role="img" aria-label="Фирменный знак: Садовник">
+ <defs><linearGradient id="metal" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#80E5F5"/><stop offset="1" stop-color="#147E9C"/></linearGradient><radialGradient id="halo" cx="0.7734375" cy="0.140625" r=".95"><stop stop-color="#147E9C" stop-opacity=".36"/><stop offset="1" stop-color="#082A39" stop-opacity="0"/></radialGradient></defs>
+ <rect width="128" height="128" rx="29" fill="#082A39"/><rect width="128" height="128" rx="29" fill="url(#halo)"/>
+ <rect x="1" y="1" width="126" height="126" rx="28" fill="none" stroke="#80E5F5" stroke-opacity=".18" stroke-width="2"/>
+ <g transform="rotate(12 64 64)" fill="none" stroke="url(#metal)" stroke-width="5.2" stroke-linecap="round" stroke-linejoin="round"><path d="M29 97Q19 39 104 24Q101 106 43 104Q36 102 29 97Z M37 95Q60 70 94 42M64 71L55 49M78 57L88 65"/></g>
+ <g fill="none" stroke="#80E5F5" stroke-width="2" stroke-linecap="round"><path d="M24 20H33M104 108H95" opacity=".34"/><circle cx="99" cy="18" r="2.3" fill="#80E5F5" stroke="none" opacity=".72"/></g>
+ <path d="M16 112H34" stroke="#80E5F5" stroke-opacity=".38" stroke-width="2" stroke-linecap="round"/>
+ </svg>

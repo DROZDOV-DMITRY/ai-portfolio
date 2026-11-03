@@ -44,7 +44,10 @@
     },
     "evidence_note": "Описание механизма опирается на каноническую архитектуру V3.0. Ежедневное применение — прямое сообщение автора; независимая оценка эффективности не проводилась.",
     "editorial_version": "WRITE_V0.5.3_2026-11-03",
-    "editorial_review": "pending_fact_and_privacy_review"
+    "editorial_review": "pending_fact_and_privacy_review",
+    "logo_path": "/ai-portfolio/marks/meta.svg",
+    "public_brand": "AI LAB",
+    "public_family": "ИИ-агенты и системы"
   },
   {
     "id": "kontur",
@@ -91,7 +94,10 @@
     },
     "evidence_note": "Назначение и процесс закреплены в нормативных файлах «Контур» v3.0-rc4. Замена прежних систем ATLAS/ЯСНО и рабочее использование — по словам автора.",
     "editorial_version": "WRITE_V0.5.3_2026-11-03",
-    "editorial_review": "pending_fact_and_privacy_review"
+    "editorial_review": "pending_fact_and_privacy_review",
+    "logo_path": "/ai-portfolio/marks/kontur.svg",
+    "public_brand": "AI LAB",
+    "public_family": "ИИ-агенты и системы"
   },
   {
     "id": "course",
@@ -168,7 +174,10 @@
           "href": "https://drozdov-dmitry.github.io/school-ai-courses/adults/research/"
         }
       ]
-    }
+    },
+    "logo_path": "/ai-portfolio/marks/course.svg",
+    "public_brand": "AI LAB",
+    "public_family": "ИИ-агенты и системы"
   },
   {
     "id": "schoollaw",
@@ -215,7 +224,10 @@
     },
     "evidence_note": "Назначение подтверждается рабочим реестром; хорошая практическая оценка — сообщение автора. Независимого юридического аудита результатов нет.",
     "editorial_version": "WRITE_V0.5.3_2026-11-03",
-    "editorial_review": "pending_fact_and_privacy_review"
+    "editorial_review": "pending_fact_and_privacy_review",
+    "logo_path": "/ai-portfolio/marks/schoollaw.svg",
+    "public_brand": "AI LAB",
+    "public_family": "ИИ-агенты и системы"
   },
   {
     "id": "dispatcher",
@@ -262,7 +274,10 @@
     },
     "evidence_note": "Основание — пользовательские корректировки реестра от 03.11.2026. Автор подтвердил работоспособность; номер актуальной версии не установлен. Независимая проверка эффективности не заявлена.",
     "editorial_version": "WRITE_V0.5.4_2026-11-03",
-    "editorial_review": "pending_fact_and_privacy_review"
+    "editorial_review": "pending_fact_and_privacy_review",
+    "logo_path": "/ai-portfolio/marks/dispatcher.svg",
+    "public_brand": "AI LAB",
+    "public_family": "ИИ-агенты и системы"
   },
   {
     "id": "write",
@@ -309,7 +324,10 @@
     },
     "evidence_note": "Описание соответствует установленной методологии W.R.I.T.E. v2.0. В текущем каталоге версия авторской разработки указана как V5.0; это отдельное обозначение, и их не следует автоматически отождествлять.",
     "editorial_version": "WRITE_V0.5.3_2026-11-03",
-    "editorial_review": "pending_fact_and_privacy_review"
+    "editorial_review": "pending_fact_and_privacy_review",
+    "logo_path": "/ai-portfolio/marks/write.svg",
+    "public_brand": "AI LAB",
+    "public_family": "ИИ-агенты и системы"
   },
   {
     "id": "career",
@@ -356,7 +374,10 @@
     },
     "evidence_note": "Механика описана в архитектуре 1.2; первая редакция выпущена со слов автора. Проведённые полевые испытания и измеренные образовательные результаты не подтверждены.",
     "editorial_version": "WRITE_V0.5.3_2026-11-03",
-    "editorial_review": "pending_fact_and_privacy_review"
+    "editorial_review": "pending_fact_and_privacy_review",
+    "logo_path": "/ai-portfolio/marks/career.svg",
+    "public_brand": "AI LAB",
+    "public_family": "ИИ-агенты и системы"
   },
   {
     "id": "hr",
@@ -403,7 +424,10 @@
     },
     "evidence_note": "Основание — пользовательские корректировки реестра от 03.11.2026. Автор сообщил о работоспособности; обратная связь отдела кадров пока не получена. Независимая проверка эффективности не заявлена.",
     "editorial_version": "WRITE_V0.5.4_2026-11-03",
-    "editorial_review": "pending_fact_and_privacy_review"
+    "editorial_review": "pending_fact_and_privacy_review",
+    "logo_path": "/ai-portfolio/marks/hr.svg",
+    "public_brand": "AI LAB",
+    "public_family": "ИИ-агенты и системы"
   },
   {
     "id": "netwibe",
@@ -450,7 +474,10 @@
     },
     "evidence_note": "Работоспособность подтверждена сообщением автора, но конкретные метрики стабильности и результаты независимых испытаний не представлены.",
     "editorial_version": "WRITE_V0.5.3_2026-11-03",
-    "editorial_review": "pending_fact_and_privacy_review"
+    "editorial_review": "pending_fact_and_privacy_review",
+    "logo_path": "/ai-portfolio/marks/netwibe.svg",
+    "public_brand": "AI LAB",
+    "public_family": "ИИ-агенты и системы"
   },
   {
     "id": "film",
@@ -497,7 +524,10 @@
     },
     "evidence_note": "Основание — пользовательские корректировки реестра от 03.11.2026. Автор сообщил о значительной практике и успешном использовании, преимущественно в прошлых проектах. Независимая проверка эффективности не заявлена.",
     "editorial_version": "WRITE_V0.5.4_2026-11-03",
-    "editorial_review": "pending_fact_and_privacy_review"
+    "editorial_review": "pending_fact_and_privacy_review",
+    "logo_path": "/ai-portfolio/marks/film.svg",
+    "public_brand": "AI LAB",
+    "public_family": "ИИ-агенты и системы"
   },
   {
     "id": "lawbiz",
@@ -544,7 +574,10 @@
     },
     "evidence_note": "Основание — пользовательские корректировки реестра от 03.11.2026. Автор подтвердил успешную практическую обкатку. Независимая проверка эффективности не заявлена.",
     "editorial_version": "WRITE_V0.5.4_2026-11-03",
-    "editorial_review": "pending_fact_and_privacy_review"
+    "editorial_review": "pending_fact_and_privacy_review",
+    "logo_path": "/ai-portfolio/marks/lawbiz.svg",
+    "public_brand": "AI LAB",
+    "public_family": "ИИ-агенты и системы"
   },
   {
     "id": "lawdebt",
@@ -591,7 +624,10 @@
     },
     "evidence_note": "Основание — пользовательские корректировки реестра от 03.11.2026. Автор подтвердил успешную практическую обкатку. Независимая проверка эффективности не заявлена.",
     "editorial_version": "WRITE_V0.5.4_2026-11-03",
-    "editorial_review": "pending_fact_and_privacy_review"
+    "editorial_review": "pending_fact_and_privacy_review",
+    "logo_path": "/ai-portfolio/marks/lawdebt.svg",
+    "public_brand": "AI LAB",
+    "public_family": "ИИ-агенты и системы"
   },
   {
     "id": "student",
@@ -638,7 +674,10 @@
     },
     "evidence_note": "Основание — пользовательские корректировки реестра от 03.11.2026. Начальная стадия разработки; отдельные испытания описаны в документах, текущий релиз не подтверждён. Независимая проверка эффективности не заявлена.",
     "editorial_version": "WRITE_V0.5.4_2026-11-03",
-    "editorial_review": "pending_fact_and_privacy_review"
+    "editorial_review": "pending_fact_and_privacy_review",
+    "logo_path": "/ai-portfolio/marks/student.svg",
+    "public_brand": "AI LAB",
+    "public_family": "ИИ-агенты и системы"
   },
   {
     "id": "dissert",
@@ -721,7 +760,10 @@
           "href": "https://drozdov-dmitry.github.io/school-ai-ecosystem/downloads/ИССЛЕДОВАНИЕ_АГЕНТНОЙ_АРХИТЕКТУРЫ_V1.2.pdf"
         }
       ]
-    }
+    },
+    "logo_path": "/ai-portfolio/marks/dissert.svg",
+    "public_brand": "AI LAB",
+    "public_family": "ИИ-агенты и системы"
   },
   {
     "id": "g2m",
@@ -768,7 +810,10 @@
     },
     "evidence_note": "Основание — пользовательские корректировки реестра от 03.11.2026. Автор: «мало данных, но работает». Независимая проверка эффективности не заявлена.",
     "editorial_version": "WRITE_V0.5.4_2026-11-03",
-    "editorial_review": "pending_fact_and_privacy_review"
+    "editorial_review": "pending_fact_and_privacy_review",
+    "logo_path": "/ai-portfolio/marks/g2m.svg",
+    "public_brand": "AI LAB",
+    "public_family": "ИИ-агенты и системы"
   },
   {
     "id": "deepseek-school",
@@ -815,7 +860,10 @@
     },
     "evidence_note": "Основание — пользовательские корректировки реестра от 03.11.2026. Есть комплект роли и документации; пользователь сообщил о стадии испытаний. Независимая проверка эффективности не заявлена.",
     "editorial_version": "WRITE_V0.5.4_2026-11-03",
-    "editorial_review": "pending_fact_and_privacy_review"
+    "editorial_review": "pending_fact_and_privacy_review",
+    "logo_path": "/ai-portfolio/marks/deepseek-school.svg",
+    "public_brand": "AI LAB",
+    "public_family": "ИИ-агенты и системы"
   },
   {
     "id": "curriculum-spo",
@@ -862,7 +910,10 @@
     },
     "evidence_note": "Основание — пользовательские корректировки реестра от 03.11.2026. По словам автора, материалы разработаны, но обратной связи пока нет. Независимая проверка эффективности не заявлена.",
     "editorial_version": "WRITE_V0.5.4_2026-11-03",
-    "editorial_review": "pending_fact_and_privacy_review"
+    "editorial_review": "pending_fact_and_privacy_review",
+    "logo_path": "/ai-portfolio/marks/curriculum-spo.svg",
+    "public_brand": "AI LAB",
+    "public_family": "ИИ-агенты и системы"
   },
   {
     "id": "attestation",
@@ -909,7 +960,10 @@
     },
     "evidence_note": "Основание — пользовательские корректировки реестра от 03.11.2026. Автор подтвердил продолжение разработки. Независимая проверка эффективности не заявлена.",
     "editorial_version": "WRITE_V0.5.4_2026-11-03",
-    "editorial_review": "pending_fact_and_privacy_review"
+    "editorial_review": "pending_fact_and_privacy_review",
+    "logo_path": "/ai-portfolio/marks/attestation.svg",
+    "public_brand": "AI LAB",
+    "public_family": "ИИ-агенты и системы"
   },
   {
     "id": "physics-experiment",
@@ -956,7 +1010,10 @@
     },
     "evidence_note": "Основание — пользовательские корректировки реестра от 03.11.2026. Автор сообщил о подготовленном плане практики и конкурсной заявке. Независимая проверка эффективности не заявлена.",
     "editorial_version": "WRITE_V0.5.4_2026-11-03",
-    "editorial_review": "pending_fact_and_privacy_review"
+    "editorial_review": "pending_fact_and_privacy_review",
+    "logo_path": "/ai-portfolio/marks/physics-experiment.svg",
+    "public_brand": "AI LAB",
+    "public_family": "ИИ-агенты и системы"
   },
   {
     "id": "3d-printer",
@@ -1003,7 +1060,10 @@
     },
     "evidence_note": "Основание — пользовательские корректировки реестра от 03.11.2026. Автор сообщил о разработке и наличии полевых испытаний. Независимая проверка эффективности не заявлена.",
     "editorial_version": "WRITE_V0.5.4_2026-11-03",
-    "editorial_review": "pending_fact_and_privacy_review"
+    "editorial_review": "pending_fact_and_privacy_review",
+    "logo_path": "/ai-portfolio/marks/3d-printer.svg",
+    "public_brand": "AI LAB",
+    "public_family": "ИИ-агенты и системы"
   },
   {
     "id": "github-v2",
@@ -1050,7 +1110,10 @@
     },
     "evidence_note": "Основание — пользовательские корректировки реестра от 03.11.2026. Автор сообщает об успешном использовании. Независимая проверка эффективности не заявлена.",
     "editorial_version": "WRITE_V0.5.4_2026-11-03",
-    "editorial_review": "pending_fact_and_privacy_review"
+    "editorial_review": "pending_fact_and_privacy_review",
+    "logo_path": "/ai-portfolio/marks/github-v2.svg",
+    "public_brand": "AI LAB",
+    "public_family": "ИИ-агенты и системы"
   },
   {
     "id": "yandex-bridge",
@@ -1097,7 +1160,10 @@
     },
     "evidence_note": "Основание — пользовательские корректировки реестра от 03.11.2026. Автор подтвердил работоспособность моста; актуальность отдельных серверов требует отдельной проверки. Независимая проверка эффективности не заявлена.",
     "editorial_version": "WRITE_V0.5.4_2026-11-03",
-    "editorial_review": "pending_fact_and_privacy_review"
+    "editorial_review": "pending_fact_and_privacy_review",
+    "logo_path": "/ai-portfolio/marks/yandex-bridge.svg",
+    "public_brand": "AI LAB",
+    "public_family": "ИИ-агенты и системы"
   },
   {
     "id": "yougile-operator",
@@ -1144,7 +1210,10 @@
     },
     "evidence_note": "Основание — пользовательские корректировки реестра от 03.11.2026. Автор отметил успешную работу интеграции. Независимая проверка эффективности не заявлена.",
     "editorial_version": "WRITE_V0.5.4_2026-11-03",
-    "editorial_review": "pending_fact_and_privacy_review"
+    "editorial_review": "pending_fact_and_privacy_review",
+    "logo_path": "/ai-portfolio/marks/yougile-operator.svg",
+    "public_brand": "AI LAB",
+    "public_family": "ИИ-агенты и системы"
   },
   {
     "id": "zcode-mentor",
@@ -1191,7 +1260,10 @@
     },
     "evidence_note": "Основание — пользовательские корректировки реестра от 03.11.2026. Автор подтвердил успешное использование. Независимая проверка эффективности не заявлена.",
     "editorial_version": "WRITE_V0.5.4_2026-11-03",
-    "editorial_review": "pending_fact_and_privacy_review"
+    "editorial_review": "pending_fact_and_privacy_review",
+    "logo_path": "/ai-portfolio/marks/zcode-mentor.svg",
+    "public_brand": "AI LAB",
+    "public_family": "ИИ-агенты и системы"
   },
   {
     "id": "school-iron",
@@ -1238,7 +1310,10 @@
     },
     "evidence_note": "Основание — пользовательские корректировки реестра от 03.11.2026. Автор подтвердил работоспособность; сборка R10.6 FIX7 упоминалась 02.11.2026. Независимая проверка эффективности не заявлена.",
     "editorial_version": "WRITE_V0.5.4_2026-11-03",
-    "editorial_review": "pending_fact_and_privacy_review"
+    "editorial_review": "pending_fact_and_privacy_review",
+    "logo_path": "/ai-portfolio/marks/school-iron.svg",
+    "public_brand": "AI LAB",
+    "public_family": "ИИ-агенты и системы"
   },
   {
     "id": "pc-bridge",
@@ -1285,7 +1360,10 @@
     },
     "evidence_note": "Основание — пользовательские корректировки реестра от 03.11.2026. Автор подтвердил работоспособность разработки. Независимая проверка эффективности не заявлена.",
     "editorial_version": "WRITE_V0.5.4_2026-11-03",
-    "editorial_review": "pending_fact_and_privacy_review"
+    "editorial_review": "pending_fact_and_privacy_review",
+    "logo_path": "/ai-portfolio/marks/pc-bridge.svg",
+    "public_brand": "AI LAB",
+    "public_family": "ИИ-агенты и системы"
   },
   {
     "id": "pc-organizer",
@@ -1332,7 +1410,10 @@
     },
     "evidence_note": "Основание — пользовательская редакция реестра 03.11.2026. Автор сообщил, что ранее инструмент хорошо работал, но сейчас не используется. Подтверждённые измерения эффективности не представлены.",
     "editorial_version": "WRITE_V0.5.4_2026-11-03",
-    "editorial_review": "pending_fact_and_privacy_review"
+    "editorial_review": "pending_fact_and_privacy_review",
+    "logo_path": "/ai-portfolio/marks/pc-organizer.svg",
+    "public_brand": "AI LAB",
+    "public_family": "ИИ-агенты и системы"
   },
   {
     "id": "yougile-agent",
@@ -1379,7 +1460,10 @@
     },
     "evidence_note": "Основание — пользовательская редакция реестра 03.11.2026. Автор подтвердил работоспособность. Подтверждённые измерения эффективности не представлены.",
     "editorial_version": "WRITE_V0.5.4_2026-11-03",
-    "editorial_review": "pending_fact_and_privacy_review"
+    "editorial_review": "pending_fact_and_privacy_review",
+    "logo_path": "/ai-portfolio/marks/yougile-agent.svg",
+    "public_brand": "AI LAB",
+    "public_family": "ИИ-агенты и системы"
   },
   {
     "id": "ai-news",
@@ -1426,7 +1510,10 @@
     },
     "evidence_note": "Основание — пользовательская редакция реестра 03.11.2026. Автор сообщил, что система работает хорошо. Подтверждённые измерения эффективности не представлены.",
     "editorial_version": "WRITE_V0.5.4_2026-11-03",
-    "editorial_review": "pending_fact_and_privacy_review"
+    "editorial_review": "pending_fact_and_privacy_review",
+    "logo_path": "/ai-portfolio/marks/ai-news.svg",
+    "public_brand": "AI LAB",
+    "public_family": "ИИ-агенты и системы"
   },
   {
     "id": "meeting-summaries",
@@ -1473,7 +1560,10 @@
     },
     "evidence_note": "Основание — пользовательская редакция реестра 03.11.2026. Автор подтвердил работоспособность направления саммари. Подтверждённые измерения эффективности не представлены.",
     "editorial_version": "WRITE_V0.5.4_2026-11-03",
-    "editorial_review": "pending_fact_and_privacy_review"
+    "editorial_review": "pending_fact_and_privacy_review",
+    "logo_path": "/ai-portfolio/marks/meeting-summaries.svg",
+    "public_brand": "AI LAB",
+    "public_family": "ИИ-агенты и системы"
   },
   {
     "id": "meeting-html",
@@ -1520,7 +1610,10 @@
     },
     "evidence_note": "Основание — пользовательская редакция реестра 03.11.2026. Функционирует по сообщению автора, без свежей ревизии. Подтверждённые измерения эффективности не представлены.",
     "editorial_version": "WRITE_V0.5.4_2026-11-03",
-    "editorial_review": "pending_fact_and_privacy_review"
+    "editorial_review": "pending_fact_and_privacy_review",
+    "logo_path": "/ai-portfolio/marks/meeting-html.svg",
+    "public_brand": "AI LAB",
+    "public_family": "ИИ-агенты и системы"
   },
   {
     "id": "davinci",
@@ -1567,7 +1660,10 @@
     },
     "evidence_note": "Основание — пользовательская редакция реестра 03.11.2026. Автор сообщил об успешной эксплуатации. Подтверждённые измерения эффективности не представлены.",
     "editorial_version": "WRITE_V0.5.4_2026-11-03",
-    "editorial_review": "pending_fact_and_privacy_review"
+    "editorial_review": "pending_fact_and_privacy_review",
+    "logo_path": "/ai-portfolio/marks/davinci.svg",
+    "public_brand": "AI LAB",
+    "public_family": "ИИ-агенты и системы"
   },
   {
     "id": "ffmpeg",
@@ -1614,7 +1710,10 @@
     },
     "evidence_note": "Основание — пользовательская редакция реестра 03.11.2026. Автор подтвердил успешное применение. Подтверждённые измерения эффективности не представлены.",
     "editorial_version": "WRITE_V0.5.4_2026-11-03",
-    "editorial_review": "pending_fact_and_privacy_review"
+    "editorial_review": "pending_fact_and_privacy_review",
+    "logo_path": "/ai-portfolio/marks/ffmpeg.svg",
+    "public_brand": "AI LAB",
+    "public_family": "ИИ-агенты и системы"
   },
   {
     "id": "fairytale-illustrator",
@@ -1661,7 +1760,10 @@
     },
     "evidence_note": "Основание — пользовательская редакция реестра 03.11.2026. Автор сообщил об успешной работе. Подтверждённые измерения эффективности не представлены.",
     "editorial_version": "WRITE_V0.5.4_2026-11-03",
-    "editorial_review": "pending_fact_and_privacy_review"
+    "editorial_review": "pending_fact_and_privacy_review",
+    "logo_path": "/ai-portfolio/marks/fairytale-illustrator.svg",
+    "public_brand": "AI LAB",
+    "public_family": "ИИ-агенты и системы"
   },
   {
     "id": "comic-student",
@@ -1708,7 +1810,10 @@
     },
     "evidence_note": "Основание — пользовательская редакция реестра 03.11.2026. Автор проекта — ученик; сведения о публичном релизе и испытаниях не представлены. Подтверждённые измерения эффективности не представлены.",
     "editorial_version": "WRITE_V0.5.4_2026-11-03",
-    "editorial_review": "pending_fact_and_privacy_review"
+    "editorial_review": "pending_fact_and_privacy_review",
+    "logo_path": "/ai-portfolio/marks/comic-student.svg",
+    "public_brand": "AI LAB",
+    "public_family": "ИИ-агенты и системы"
   },
   {
     "id": "presentation-master",
@@ -1755,7 +1860,10 @@
     },
     "evidence_note": "Основание — пользовательская редакция реестра 03.11.2026. Разработка с ограниченной практикой. Подтверждённые измерения эффективности не представлены.",
     "editorial_version": "WRITE_V0.5.4_2026-11-03",
-    "editorial_review": "pending_fact_and_privacy_review"
+    "editorial_review": "pending_fact_and_privacy_review",
+    "logo_path": "/ai-portfolio/marks/presentation-master.svg",
+    "public_brand": "AI LAB",
+    "public_family": "ИИ-агенты и системы"
   },
   {
     "id": "video-descriptions",
@@ -1802,7 +1910,10 @@
     },
     "evidence_note": "Основание — пользовательская редакция реестра 03.11.2026. Автор сообщил об успешном применении. Подтверждённые измерения эффективности не представлены.",
     "editorial_version": "WRITE_V0.5.4_2026-11-03",
-    "editorial_review": "pending_fact_and_privacy_review"
+    "editorial_review": "pending_fact_and_privacy_review",
+    "logo_path": "/ai-portfolio/marks/video-descriptions.svg",
+    "public_brand": "AI LAB",
+    "public_family": "ИИ-агенты и системы"
   },
   {
     "id": "fairytales",
@@ -1849,7 +1960,10 @@
     },
     "evidence_note": "Основание — пользовательская редакция реестра 03.11.2026. Автор подтвердил успешное использование. Подтверждённые измерения эффективности не представлены.",
     "editorial_version": "WRITE_V0.5.4_2026-11-03",
-    "editorial_review": "pending_fact_and_privacy_review"
+    "editorial_review": "pending_fact_and_privacy_review",
+    "logo_path": "/ai-portfolio/marks/fairytales.svg",
+    "public_brand": "AI LAB",
+    "public_family": "ИИ-агенты и системы"
   },
   {
     "id": "syntx-video",
@@ -1896,7 +2010,10 @@
     },
     "evidence_note": "Основание — пользовательская редакция реестра 03.11.2026. Автор сообщает о хорошей работе. Подтверждённые измерения эффективности не представлены.",
     "editorial_version": "WRITE_V0.5.4_2026-11-03",
-    "editorial_review": "pending_fact_and_privacy_review"
+    "editorial_review": "pending_fact_and_privacy_review",
+    "logo_path": "/ai-portfolio/marks/syntx-video.svg",
+    "public_brand": "AI LAB",
+    "public_family": "ИИ-агенты и системы"
   },
   {
     "id": "commercial-proposal",
@@ -1943,7 +2060,10 @@
     },
     "evidence_note": "Основание — пользовательская редакция реестра 03.11.2026. Автор подтвердил работоспособность. Подтверждённые измерения эффективности не представлены.",
     "editorial_version": "WRITE_V0.5.4_2026-11-03",
-    "editorial_review": "pending_fact_and_privacy_review"
+    "editorial_review": "pending_fact_and_privacy_review",
+    "logo_path": "/ai-portfolio/marks/commercial-proposal.svg",
+    "public_brand": "AI LAB",
+    "public_family": "ИИ-агенты и системы"
   },
   {
     "id": "career-advisor",
@@ -1990,7 +2110,10 @@
     },
     "evidence_note": "Основание — пользовательская редакция реестра 03.11.2026. Автор подтвердил успешное использование. Подтверждённые измерения эффективности не представлены.",
     "editorial_version": "WRITE_V0.5.4_2026-11-03",
-    "editorial_review": "pending_fact_and_privacy_review"
+    "editorial_review": "pending_fact_and_privacy_review",
+    "logo_path": "/ai-portfolio/marks/career-advisor.svg",
+    "public_brand": "AI LAB",
+    "public_family": "ИИ-агенты и системы"
   },
   {
     "id": "drone-permit",
@@ -2037,7 +2160,10 @@
     },
     "evidence_note": "Основание — пользовательская редакция реестра 03.11.2026. Автор подтвердил успешное использование. Подтверждённые измерения эффективности не представлены.",
     "editorial_version": "WRITE_V0.5.4_2026-11-03",
-    "editorial_review": "pending_fact_and_privacy_review"
+    "editorial_review": "pending_fact_and_privacy_review",
+    "logo_path": "/ai-portfolio/marks/drone-permit.svg",
+    "public_brand": "AI LAB",
+    "public_family": "ИИ-агенты и системы"
   },
   {
     "id": "home-cook",
@@ -2084,7 +2210,10 @@
     },
     "evidence_note": "Основание — пользовательская редакция реестра 03.11.2026. Автор сообщил об успешном использовании. Подтверждённые измерения эффективности не представлены.",
     "editorial_version": "WRITE_V0.5.4_2026-11-03",
-    "editorial_review": "pending_fact_and_privacy_review"
+    "editorial_review": "pending_fact_and_privacy_review",
+    "logo_path": "/ai-portfolio/marks/home-cook.svg",
+    "public_brand": "AI LAB",
+    "public_family": "ИИ-агенты и системы"
   },
   {
     "id": "bread-baker",
@@ -2131,7 +2260,10 @@
     },
     "evidence_note": "Основание — пользовательская редакция реестра 03.11.2026. Автор подтвердил, что ассистент работает хорошо. Подтверждённые измерения эффективности не представлены.",
     "editorial_version": "WRITE_V0.5.4_2026-11-03",
-    "editorial_review": "pending_fact_and_privacy_review"
+    "editorial_review": "pending_fact_and_privacy_review",
+    "logo_path": "/ai-portfolio/marks/bread-baker.svg",
+    "public_brand": "AI LAB",
+    "public_family": "ИИ-агенты и системы"
   },
   {
     "id": "cv-editor",
@@ -2178,7 +2310,10 @@
     },
     "evidence_note": "Основание — пользовательская редакция реестра 03.11.2026. Автор сообщил об успешном применении. Подтверждённые измерения эффективности не представлены.",
     "editorial_version": "WRITE_V0.5.4_2026-11-03",
-    "editorial_review": "pending_fact_and_privacy_review"
+    "editorial_review": "pending_fact_and_privacy_review",
+    "logo_path": "/ai-portfolio/marks/cv-editor.svg",
+    "public_brand": "AI LAB",
+    "public_family": "ИИ-агенты и системы"
   },
   {
     "id": "composer",
@@ -2225,7 +2360,10 @@
     },
     "evidence_note": "Основание — пользовательская редакция реестра 03.11.2026. Автор сообщил об успешной работе, но содержательные источники пока не выверены. Подтверждённые измерения эффективности не представлены.",
     "editorial_version": "WRITE_V0.5.4_2026-11-03",
-    "editorial_review": "pending_fact_and_privacy_review"
+    "editorial_review": "pending_fact_and_privacy_review",
+    "logo_path": "/ai-portfolio/marks/composer.svg",
+    "public_brand": "AI LAB",
+    "public_family": "ИИ-агенты и системы"
   },
   {
     "id": "school-english",
@@ -2272,7 +2410,10 @@
     },
     "evidence_note": "Основание — пользовательская редакция реестра 03.11.2026. Ранняя стадия разработки. Подтверждённые измерения эффективности не представлены.",
     "editorial_version": "WRITE_V0.5.4_2026-11-03",
-    "editorial_review": "pending_fact_and_privacy_review"
+    "editorial_review": "pending_fact_and_privacy_review",
+    "logo_path": "/ai-portfolio/marks/school-english.svg",
+    "public_brand": "AI LAB",
+    "public_family": "ИИ-агенты и системы"
   },
   {
     "id": "school-tv",
@@ -2319,7 +2460,10 @@
     },
     "evidence_note": "Основание — пользовательская редакция реестра 03.11.2026. Автор сообщил, что проект использовался только для подключения и сейчас заморожен. Подтверждённые измерения эффективности не представлены.",
     "editorial_version": "WRITE_V0.5.4_2026-11-03",
-    "editorial_review": "pending_fact_and_privacy_review"
+    "editorial_review": "pending_fact_and_privacy_review",
+    "logo_path": "/ai-portfolio/marks/school-tv.svg",
+    "public_brand": "AI LAB",
+    "public_family": "ИИ-агенты и системы"
   },
   {
     "id": "dota-student",
@@ -2366,7 +2510,10 @@
     },
     "evidence_note": "Основание — пользовательская редакция реестра 03.11.2026. Подтверждено авторство ученика; техническая готовность не проверена. Подтверждённые измерения эффективности не представлены.",
     "editorial_version": "WRITE_V0.5.4_2026-11-03",
-    "editorial_review": "pending_fact_and_privacy_review"
+    "editorial_review": "pending_fact_and_privacy_review",
+    "logo_path": "/ai-portfolio/marks/dota-student.svg",
+    "public_brand": "AI LAB",
+    "public_family": "ИИ-агенты и системы"
   },
   {
     "id": "gardener",
@@ -2413,7 +2560,10 @@
     },
     "evidence_note": "Основание — пользовательская редакция реестра 03.11.2026. По прямому сообщению автора находится в начальной стадии разработки. Подтверждённые измерения эффективности не представлены.",
     "editorial_version": "WRITE_V0.5.4_2026-11-03",
-    "editorial_review": "pending_fact_and_privacy_review"
+    "editorial_review": "pending_fact_and_privacy_review",
+    "logo_path": "/ai-portfolio/marks/gardener.svg",
+    "public_brand": "AI LAB",
+    "public_family": "ИИ-агенты и системы"
   },
   {
     "id": "school-equipment",
@@ -2460,7 +2610,10 @@
     },
     "evidence_note": "Основание — пользовательская редакция реестра 03.11.2026. Автор сообщил об успешном завершении разовой работы. Подтверждённые измерения эффективности не представлены.",
     "editorial_version": "WRITE_V0.5.4_2026-11-03",
-    "editorial_review": "pending_fact_and_privacy_review"
+    "editorial_review": "pending_fact_and_privacy_review",
+    "logo_path": "/ai-portfolio/marks/school-equipment.svg",
+    "public_brand": "AI LAB",
+    "public_family": "ИИ-агенты и системы"
   },
   {
     "id": "network-mixer",
@@ -2507,7 +2660,10 @@
     },
     "evidence_note": "Основание — реестр и пользовательские исправления 03.11.2026. Идентичность и назначение установлены по ТЗ; автор не помнит текущего использования. Для заявлений об эффективности требуется отдельная проверка.",
     "editorial_version": "WRITE_V0.5.4_2026-11-03",
-    "editorial_review": "pending_fact_and_privacy_review"
+    "editorial_review": "pending_fact_and_privacy_review",
+    "logo_path": "/ai-portfolio/marks/network-mixer.svg",
+    "public_brand": "AI LAB",
+    "public_family": "ИИ-агенты и системы"
   },
   {
     "id": "reels-ideas",
@@ -2554,7 +2710,10 @@
     },
     "evidence_note": "Основание — реестр и пользовательские исправления 03.11.2026. Автор оценил разработку как почти не проверенную на практике. Для заявлений об эффективности требуется отдельная проверка.",
     "editorial_version": "WRITE_V0.5.4_2026-11-03",
-    "editorial_review": "pending_fact_and_privacy_review"
+    "editorial_review": "pending_fact_and_privacy_review",
+    "logo_path": "/ai-portfolio/marks/reels-ideas.svg",
+    "public_brand": "AI LAB",
+    "public_family": "ИИ-агенты и системы"
   },
   {
     "id": "html-presentation",
@@ -2601,7 +2760,10 @@
     },
     "evidence_note": "Основание — реестр и пользовательские исправления 03.11.2026. По сообщению автора практических случаев мало. Для заявлений об эффективности требуется отдельная проверка.",
     "editorial_version": "WRITE_V0.5.4_2026-11-03",
-    "editorial_review": "pending_fact_and_privacy_review"
+    "editorial_review": "pending_fact_and_privacy_review",
+    "logo_path": "/ai-portfolio/marks/html-presentation.svg",
+    "public_brand": "AI LAB",
+    "public_family": "ИИ-агенты и системы"
   },
   {
     "id": "voice-meta-smm",
@@ -2648,7 +2810,10 @@
     },
     "evidence_note": "Основание — реестр и пользовательские исправления 03.11.2026. В источниках найдена редакция V4.0; результативность пока не измерена. Для заявлений об эффективности требуется отдельная проверка.",
     "editorial_version": "WRITE_V0.5.4_2026-11-03",
-    "editorial_review": "pending_fact_and_privacy_review"
+    "editorial_review": "pending_fact_and_privacy_review",
+    "logo_path": "/ai-portfolio/marks/voice-meta-smm.svg",
+    "public_brand": "AI LAB",
+    "public_family": "ИИ-агенты и системы"
   },
   {
     "id": "avitolog",
@@ -2695,7 +2860,10 @@
     },
     "evidence_note": "Основание — реестр и пользовательские исправления 03.11.2026. Со слов автора, использовался раньше и работал со средним качеством. Для заявлений об эффективности требуется отдельная проверка.",
     "editorial_version": "WRITE_V0.5.4_2026-11-03",
-    "editorial_review": "pending_fact_and_privacy_review"
+    "editorial_review": "pending_fact_and_privacy_review",
+    "logo_path": "/ai-portfolio/marks/avitolog.svg",
+    "public_brand": "AI LAB",
+    "public_family": "ИИ-агенты и системы"
   },
   {
     "id": "job-search",
@@ -2742,7 +2910,10 @@
     },
     "evidence_note": "Основание — реестр и пользовательские исправления 03.11.2026. Автор подтвердил успешное применение в 2026 году. Для заявлений об эффективности требуется отдельная проверка.",
     "editorial_version": "WRITE_V0.5.4_2026-11-03",
-    "editorial_review": "pending_fact_and_privacy_review"
+    "editorial_review": "pending_fact_and_privacy_review",
+    "logo_path": "/ai-portfolio/marks/job-search.svg",
+    "public_brand": "AI LAB",
+    "public_family": "ИИ-агенты и системы"
   },
   {
     "id": "triad",
@@ -2789,7 +2960,10 @@
     },
     "evidence_note": "Основание — реестр и пользовательские исправления 03.11.2026. Автор сообщил о практической работоспособности. Для заявлений об эффективности требуется отдельная проверка.",
     "editorial_version": "WRITE_V0.5.4_2026-11-03",
-    "editorial_review": "pending_fact_and_privacy_review"
+    "editorial_review": "pending_fact_and_privacy_review",
+    "logo_path": "/ai-portfolio/marks/triad.svg",
+    "public_brand": "AI LAB",
+    "public_family": "ИИ-агенты и системы"
   },
   {
     "id": "sage",
@@ -2836,7 +3010,10 @@
     },
     "evidence_note": "Основание — реестр и пользовательские исправления 03.11.2026. Автор сообщил об успешной работе. Для заявлений об эффективности требуется отдельная проверка.",
     "editorial_version": "WRITE_V0.5.4_2026-11-03",
-    "editorial_review": "pending_fact_and_privacy_review"
+    "editorial_review": "pending_fact_and_privacy_review",
+    "logo_path": "/ai-portfolio/marks/sage.svg",
+    "public_brand": "AI LAB",
+    "public_family": "ИИ-агенты и системы"
   },
   {
     "id": "derma-guide",
@@ -2883,7 +3060,10 @@
     },
     "evidence_note": "Основание — реестр и пользовательские исправления 03.11.2026. Автор сообщил о работоспособности. Для заявлений об эффективности требуется отдельная проверка.",
     "editorial_version": "WRITE_V0.5.4_2026-11-03",
-    "editorial_review": "pending_fact_and_privacy_review"
+    "editorial_review": "pending_fact_and_privacy_review",
+    "logo_path": "/ai-portfolio/marks/derma-guide.svg",
+    "public_brand": "AI LAB",
+    "public_family": "ИИ-агенты и системы"
   },
   {
     "id": "pediatric-guide",
@@ -2930,7 +3110,10 @@
     },
     "evidence_note": "Основание — реестр и пользовательские исправления 03.11.2026. Автор подтвердил хорошую работу информационного помощника. Для заявлений об эффективности требуется отдельная проверка.",
     "editorial_version": "WRITE_V0.5.4_2026-11-03",
-    "editorial_review": "pending_fact_and_privacy_review"
+    "editorial_review": "pending_fact_and_privacy_review",
+    "logo_path": "/ai-portfolio/marks/pediatric-guide.svg",
+    "public_brand": "AI LAB",
+    "public_family": "ИИ-агенты и системы"
   },
   {
     "id": "trauma-guide",
@@ -2977,7 +3160,10 @@
     },
     "evidence_note": "Основание — реестр и пользовательские исправления 03.11.2026. Автор подтвердил успешное применение. Для заявлений об эффективности требуется отдельная проверка.",
     "editorial_version": "WRITE_V0.5.4_2026-11-03",
-    "editorial_review": "pending_fact_and_privacy_review"
+    "editorial_review": "pending_fact_and_privacy_review",
+    "logo_path": "/ai-portfolio/marks/trauma-guide.svg",
+    "public_brand": "AI LAB",
+    "public_family": "ИИ-агенты и системы"
   },
   {
     "id": "public-info-monitor",
@@ -3024,7 +3210,10 @@
     },
     "evidence_note": "Основание — реестр и пользовательские исправления 03.11.2026. Автор сообщил о работоспособности. Для заявлений об эффективности требуется отдельная проверка.",
     "editorial_version": "WRITE_V0.5.4_2026-11-03",
-    "editorial_review": "pending_fact_and_privacy_review"
+    "editorial_review": "pending_fact_and_privacy_review",
+    "logo_path": "/ai-portfolio/marks/public-info-monitor.svg",
+    "public_brand": "AI LAB",
+    "public_family": "ИИ-агенты и системы"
   },
   {
     "id": "gigaam-voice",
@@ -3071,7 +3260,10 @@
     },
     "evidence_note": "Основание — реестр и пользовательские исправления 03.11.2026. По скриншоту рабочего стола известна отдельная программа «GigaAM + говорящее». Для заявлений об эффективности требуется отдельная проверка.",
     "editorial_version": "WRITE_V0.5.4_2026-11-03",
-    "editorial_review": "pending_fact_and_privacy_review"
+    "editorial_review": "pending_fact_and_privacy_review",
+    "logo_path": "/ai-portfolio/marks/gigaam-voice.svg",
+    "public_brand": "AI LAB",
+    "public_family": "ИИ-агенты и системы"
   },
   {
     "id": "gigaam-fast",
@@ -3118,7 +3310,10 @@
     },
     "evidence_note": "Основание — реестр и пользовательские исправления 03.11.2026. По скриншоту известен отдельный ярлык «GigaAM быстро». Для заявлений об эффективности требуется отдельная проверка.",
     "editorial_version": "WRITE_V0.5.4_2026-11-03",
-    "editorial_review": "pending_fact_and_privacy_review"
+    "editorial_review": "pending_fact_and_privacy_review",
+    "logo_path": "/ai-portfolio/marks/gigaam-fast.svg",
+    "public_brand": "AI LAB",
+    "public_family": "ИИ-агенты и системы"
   },
   {
     "id": "psych-assistant",
@@ -3165,7 +3360,10 @@
     },
     "evidence_note": "Основание — реестр и пользовательские исправления 03.11.2026. Автор сообщил об ограниченной практике и необходимости расширять базу знаний. Для заявлений об эффективности требуется отдельная проверка.",
     "editorial_version": "WRITE_V0.5.4_2026-11-03",
-    "editorial_review": "pending_fact_and_privacy_review"
+    "editorial_review": "pending_fact_and_privacy_review",
+    "logo_path": "/ai-portfolio/marks/psych-assistant.svg",
+    "public_brand": "AI LAB",
+    "public_family": "ИИ-агенты и системы"
   },
   {
     "id": "co-sensus",
@@ -3212,7 +3410,10 @@
     },
     "evidence_note": "Основание — реестр и пользовательские исправления 03.11.2026. По сообщению автора, система применялась ранее. Для заявлений об эффективности требуется отдельная проверка.",
     "editorial_version": "WRITE_V0.5.4_2026-11-03",
-    "editorial_review": "pending_fact_and_privacy_review"
+    "editorial_review": "pending_fact_and_privacy_review",
+    "logo_path": "/ai-portfolio/marks/co-sensus.svg",
+    "public_brand": "AI LAB",
+    "public_family": "ИИ-агенты и системы"
   },
   {
     "id": "psi-coach",
@@ -3259,6 +3460,9 @@
     },
     "evidence_note": "Основание — реестр и пользовательские исправления 03.11.2026. Автор сообщил, что практических испытаний не было. Для заявлений об эффективности требуется отдельная проверка.",
     "editorial_version": "WRITE_V0.5.4_2026-11-03",
-    "editorial_review": "pending_fact_and_privacy_review"
+    "editorial_review": "pending_fact_and_privacy_review",
+    "logo_path": "/ai-portfolio/marks/psi-coach.svg",
+    "public_brand": "AI LAB",
+    "public_family": "ИИ-агенты и системы"
   }
 ]

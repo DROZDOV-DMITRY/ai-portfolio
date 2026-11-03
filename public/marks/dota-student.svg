@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" role="img" aria-label="Фирменный знак: DOTA AI COMPANION">
+ <defs><linearGradient id="metal" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#82E4BA"/><stop offset="1" stop-color="#1B7D69"/></linearGradient><radialGradient id="halo" cx="0.6640625" cy="0.3125" r=".95"><stop stop-color="#1B7D69" stop-opacity=".36"/><stop offset="1" stop-color="#071F21" stop-opacity="0"/></radialGradient></defs>
+ <rect width="128" height="128" rx="29" fill="#071F21"/><rect width="128" height="128" rx="29" fill="url(#halo)"/>
+ <rect x="1" y="1" width="126" height="126" rx="28" fill="none" stroke="#82E4BA" stroke-opacity=".18" stroke-width="2"/>
+ <g transform="rotate(0 64 64)" fill="none" stroke="url(#metal)" stroke-width="5.2" stroke-linecap="round" stroke-linejoin="round"><path d="M37 48H92Q108 48 110 78L107 98Q103 111 86 93L74 83H54L42 93Q25 111 21 98L18 78Q20 48 37 48Z M42 63V86M30 75H54M84 67H87M97 78H100"/></g>
+ <g fill="none" stroke="#82E4BA" stroke-width="2" stroke-linecap="round"><path d="M20 20H29M108 108H99" opacity=".34"/><circle cx="85" cy="40" r="2.3" fill="#82E4BA" stroke="none" opacity=".72"/></g>
+ <path d="M16 112H34" stroke="#82E4BA" stroke-opacity=".38" stroke-width="2" stroke-linecap="round"/>
+ </svg>
