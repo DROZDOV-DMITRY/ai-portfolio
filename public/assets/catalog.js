@@ -8,7 +8,7 @@ import {readState,queryFromState,selectRecords,paginate,cardBadges,productHref} 
  const status=null,sidebar=$("sidebar"),toggle=$("filter-toggle");
  const pager=$("pager"),loadMore=$("load-more"),pagerStatus=$("pager-status");
  const esc=s=>String(s??"").replace(/[&<>"']/g,ch=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[ch]));
- let state=readState(window.location.search),timer=0;
+ let state=readState(window.location.search),timer=0;state.status="all";
  function applyControls(){
   search.value=state.q;if(sort)sort.value=state.sort;if(status)status.value=state.status;
   document.querySelectorAll("[data-cat]").forEach(e=>{const active=e.dataset.cat===state.cat;e.classList.toggle("active",active);e.setAttribute("aria-pressed",String(active));});
@@ -52,6 +52,6 @@ import {readState,queryFromState,selectRecords,paginate,cardBadges,productHref} 
  $("clear-filters")?.addEventListener("click",reset);
  loadMore?.addEventListener("click",()=>{state.page++;commit();});
  toggle?.addEventListener("click",()=>{const open=sidebar?.classList.toggle("open")??false;toggle.setAttribute("aria-expanded",String(open));});
- window.addEventListener("popstate",()=>{window.clearTimeout(timer);state=readState(window.location.search);paint();});
+ window.addEventListener("popstate",()=>{window.clearTimeout(timer);state=readState(window.location.search);state.status="all";paint();});
  paint();
 })();

@@ -12,8 +12,15 @@ const categoryDescriptions={
  personal:"Практические помощники для повседневной жизни"
 };
 const categoryColors={education:"#70E7B0",business:"#8AC7FF",marketing:"#FEB487",media:"#F5A0CC",docs:"#B1ABFF",research:"#C8A7FF",it:"#7AE7F0",personal:"#9DE6C6"};
-const directions=categories.map(c=>({...c,short:categoryDescriptions[c.slug],color:categoryColors[c.slug],count:records.filter(r=>r.cat===c.slug).length}));
+
 const records = visibleRecords();
+const directions=categories.map(c=>({...c,short:categoryDescriptions[c.slug],color:categoryColors[c.slug],count:records.filter(r=>r.cat===c.slug).length}));
+const cardsForClient = records.map(r=>({
+ id:r.id,title:r.title,subtitle:r.public_pitch,public_pitch:r.public_pitch,public_label:r.public_label,
+ cat:r.cat,category:r.category,kind:r.kind,audience:r.audience,school:r.school,
+ status:"all",version:r.version,cover:r.cover,num:r.num,tags:r.tags,problem:r.problem,
+ capabilities:r.capabilities,detail:r.detail,logo_path:r.logo_path
+}));
 ---
 <!doctype html>
 <html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark"><meta name="robots" content={isEditorialPreview ? "noindex,nofollow" : "index,follow"}><title>AI LAB — 68 ИИ-агентов и систем</title><meta name="description" content="Авторская экосистема из 68 ИИ-продуктов: агенты, системы, инструменты и интеллектуальные сервисы."><link rel="stylesheet" href="/ai-portfolio/assets/styles.css"><link rel="icon" type="image/svg+xml" href="/ai-portfolio/brand/mark.svg" />
@@ -41,5 +48,5 @@ const records = visibleRecords();
 </button>)}</div></section>
 <section class="shell" id="catalog"><div class="section-row" style="padding-top:12px"><div><span class="eyebrow">02 / КАТАЛОГ</span><h2 class="section-heading">Каталог ИИ-продуктов</h2></div><span class="section-meta">68 продуктов · 8 направлений</span></div><div class="catalog-layout"><aside class="sidebar" id="sidebar" aria-label="Фильтры"><div class="side-group"><div class="side-heading">Для кого <span>01</span></div><label class="check-row"><input type="radio" name="author" value="all" checked> Все продукты</label><label class="check-row"><input type="radio" name="author" value="author"> Авторские разработки</label><label class="check-row"><input type="radio" name="author" value="student"> Ученические работы</label></div><div class="side-group"><div class="side-heading">Применимость к школе <span>02</span></div><label class="check-row"><input type="radio" name="school" value="all" checked> Все направления</label><label class="check-row"><input type="radio" name="school" value="direct"> Прямое школьное назначение</label><label class="check-row"><input type="radio" name="school" value="support"> Поддержка школьной работы</label></div><div class="side-note">Выбирайте продукт по задаче, направлению и области применения.</div></aside><div class="catalog-main"><div class="controls"><span class="result-count" id="count" aria-live="polite"></span><div class="control-right"><button class="filter-toggle" id="filter-toggle" type="button" aria-expanded="false" aria-controls="sidebar">☷ Фильтры</button><span class="sort-label">Сортировка:</span><select class="sort-select" id="sort" aria-label="Сортировать"><option value="editorial">По подборке</option><option value="name">По названию</option><option value="status">По стадии</option></select><button class="clear-btn" id="clear-filters" type="button">Сброс</button></div></div><div class="cards" id="cards" aria-live="polite"></div><div class="catalog-more" id="pager" hidden><span id="pager-status"></span><button type="button" id="load-more">Показать ещё ↓</button></div></div></div></section></main>
 <footer class="footer shell" id="about"><span>AI LAB · ИИ-АГЕНТЫ И СИСТЕМЫ · V0.7.0</span><span>68 продуктов · 8 направлений</span></footer>
-<script is:inline define:vars={{records}}>window.PORTFOLIO_RECORDS = records; window.PORTFOLIO_SCOPE = "all";</script><script is:inline type="module" src="/ai-portfolio/assets/catalog.js"></script></body></html>
+<script is:inline define:vars={{records:cardsForClient}}>window.PORTFOLIO_RECORDS = records; window.PORTFOLIO_SCOPE = "all";</script><script is:inline type="module" src="/ai-portfolio/assets/catalog.js"></script></body></html>
 

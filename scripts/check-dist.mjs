@@ -18,6 +18,22 @@ assert.equal(cats.length,categories.length,"Category count "+mode);
 assert(existsSync(join(root,"about","index.html")),"Missing about page");
 assert(readFileSync(join(root,"404.html"),"utf8").includes('name="q"'),"404 search missing");
 assert(html.includes('id="cards"')&&html.includes('id="search"'),"Catalog UI missing");
+for(const record of records){
+ const logo=join(root,"marks",record.id+".svg");
+ assert(existsSync(logo),"Product logo missing: "+record.id);
+}
+for(const category of categories){
+ assert(existsSync(join(root,"marks","category-"+category.slug+".svg")),"Category logo missing: "+category.slug);
+}
+for(const forbidden of ["statusLabel","result_state","evidence_note","limitations","editorial_review","source_basis","publication_status"]){
+ assert(!html.includes('"'+forbidden+'":'),"Internal metadata leaked into homepage: "+forbidden);
+}
+for(const category of categories){
+ const page=readFileSync(join(root,"category",category.slug,"index.html"),"utf8");
+ assert(!page.includes('"statusLabel":'),"Readiness metadata leaked into category: "+category.slug);
+}
+if(mode==="preview")assert(html.includes('class="direction-grid"'),"New category gallery missing");
+
 for(const item of shown)assert(existsSync(join(root,item.route_kind,item.slug,"index.html")),"Missing "+item.id);
 if(mode==="public"){
  assert(!html.includes("РЕДАКЦИОННЫЙ ПРЕДПРОСМОТР"),"Preview in public HTML");

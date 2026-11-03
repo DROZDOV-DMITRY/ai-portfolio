@@ -6,6 +6,12 @@ export function getStaticPaths() {
 }
 const {category}=Astro.props;
 const records=categoryRecords(category.slug);
+const cardsForClient = records.map(r=>({
+ id:r.id,title:r.title,subtitle:r.public_pitch,public_pitch:r.public_pitch,public_label:r.public_label,
+ cat:r.cat,category:r.category,kind:r.kind,audience:r.audience,school:r.school,
+ status:"all",version:r.version,cover:r.cover,num:r.num,tags:r.tags,problem:r.problem,
+ capabilities:r.capabilities,detail:r.detail,logo_path:r.logo_path
+}));
 const canonical="https://drozdov-dmitry.github.io/ai-portfolio/category/"+category.slug+"/";
 ---
 <!doctype html><html lang="ru"><head>
@@ -45,6 +51,6 @@ const canonical="https://drozdov-dmitry.github.io/ai-portfolio/category/"+catego
 <div class="cards" id="cards" aria-live="polite"></div>
 <div class="catalog-more" id="pager" hidden><span id="pager-status"></span><button type="button" id="load-more">Показать ещё ↓</button></div>
 </div></div></section></main><footer class="footer shell"><span>AI / ПОРТФОЛИО</span><a href="/ai-portfolio/">Главная</a></footer>
-<script is:inline define:vars={{records,scope:category.slug}}>window.PORTFOLIO_RECORDS=records;window.PORTFOLIO_SCOPE=scope;</script>
+<script is:inline define:vars={{records:cardsForClient,scope:category.slug}}>window.PORTFOLIO_RECORDS=records;window.PORTFOLIO_SCOPE=scope;</script>
 <script is:inline type="module" src="/ai-portfolio/assets/catalog.js"></script>
 </body></html>

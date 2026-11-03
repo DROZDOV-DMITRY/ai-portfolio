@@ -12,7 +12,8 @@
     "build:raw": "astro build",
     "check:dist": "node scripts/check-dist.mjs",
     "test:catalog": "node --test",
-    "check:showcase": "node scripts/check-showcase.mjs"
+    "check:showcase": "node scripts/check-showcase.mjs",
+    "check:marks": "node scripts/check-marks.mjs"
   },
   "dependencies": {
     "astro": "7.4.4"
