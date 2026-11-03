@@ -1,41 +1,58 @@
-(function(){
-  const list=window.PORTFOLIO_RECORDS||[];
-  const elCards=document.getElementById('cards');
-  const elSearch=document.getElementById('search');
-  const elCount=document.getElementById('count');
-  const elSort=document.getElementById('sort');
-  const elClear=document.getElementById('clear-filters');
-  const elSide=document.getElementById('sidebar');
-  const elToggle=document.getElementById('filter-toggle');
-  const normalize = s=>(s||'').toString().toLowerCase().replace(/ё/g,'е').replace(/\s+/g,' ').trim();
-  const esc = s => String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-  const params=new URLSearchParams(location.search);
-  const state={q:params.get('q')||'',cat:params.get('category')||'all',audience:params.get('author')||'all',school:params.get('school')||'all',sort:params.get('sort')||'editorial'};
-  if (elSearch) elSearch.value=state.q; if(elSort) elSort.value=state.sort;
-  function save(){const p=new URLSearchParams();Object.entries(state).forEach(([k,v])=>{const key=k==='cat'?'category':k==='audience'?'author':k;if(v&&v!=='all'&&v!=='editorial')p.set(key,v)});try{history.replaceState(null,'',location.pathname+(p.toString()?'?'+p.toString():''))}catch(e){}}
-  function cover(d){return `<div class="card-graphic"><span class="ring r1"></span><span class="ring r2"></span><span class="ring r3"></span><span class="big-letter">${({meta:'M',kontur:'◉',school:'AI·14',law:'§',dispatcher:'⌘',write:'W.',career:'↗',hr:'HR',net:'N',film:'F',lawbiz:'§',debt:'§',student:'G',research:'R',marketing:'→'})[d.cover]||'AI'}</span><span class="visual-sub">${esc(d.num)} / AI LAB</span></div>`}
-  function card(d){const wrap=d.detail?'a':'div';const href=d.detail?` href="${esc(d.detail)}"`:'';const chip=d.status==='working'?' is-bright':'';return `<article class="product-card"><${wrap} class="card-visual ${esc(d.cover)}"${href} aria-label="${d.detail?'Подробнее: ':''}${esc(d.title)}"><span class="card-badge">${esc(d.kind)}</span>${cover(d)}</${wrap}><div class="product-info"><div class="product-top"><span>${esc(d.category)}</span><span>${esc(d.version)}</span></div><h3 class="product-name">${d.detail?`<a href="${esc(d.detail)}">${esc(d.title)}</a>`:esc(d.title)}</h3><p class="product-description">${esc(d.subtitle)}</p><div class="product-foot"><span class="foot-chip${chip}">${esc(d.statusLabel)}</span>${d.school==='direct'?'<span class="foot-chip">Для школы №14</span>':d.audience==='student'?'<span class="foot-chip">Ученическая работа</span>':''}</div></div></article>`}
-  function render(){
-    document.querySelectorAll('[data-cat]').forEach(x=>{x.classList.toggle('active',x.dataset.cat===state.cat);x.setAttribute('aria-pressed',String(x.dataset.cat===state.cat))});
-    document.querySelectorAll('input[name="author"]').forEach(x=>x.checked=x.value===state.audience);
-    document.querySelectorAll('input[name="school"]').forEach(x=>x.checked=x.value===state.school);
-    const q=normalize(state.q);let rows=list.filter(x=>(state.cat==='all'||x.cat===state.cat)&&(state.audience==='all'||x.audience===state.audience)&&(state.school==='all'||(state.school==='direct'?x.school==='direct':x.school==='support'))&&(!q||normalize([x.title,x.subtitle,x.problem,x.category,x.tags,(x.capabilities||[]).join(" ")].join(" ")).includes(q)));
-    if(state.sort==='name') rows.sort((a,b)=>a.title.localeCompare(b.title,'ru'));
-    if(state.sort==='status'){const order={working:0,testing:1,development:2,unverified:3,historical:4};rows.sort((a,b)=>(order[a.status]??9)-(order[b.status]??9));}
-    elCount.innerHTML=`Найдено <strong>${rows.length}</strong> ${rows.length===1?'решение':rows.length<5?'решения':'решений'} <span style="color:#6d7d73">из ${list.length} карточек для проверки</span>`;
-    elCards.innerHTML=rows.length?rows.map(card).join(''):'<div class="empty-state"><strong>Совпадений нет</strong><p>Уточните запрос или сбросьте выбранные фильтры.</p><button type="button" id="empty-clear">Сбросить фильтры</button></div>';
-    document.getElementById('empty-clear')?.addEventListener('click',reset);
-    save();
-  }
-  function reset(){state.q='';state.cat='all';state.audience='all';state.school='all';state.sort='editorial';elSearch.value='';elSort.value='editorial';render()}
-  document.querySelectorAll('[data-cat]').forEach(x=>x.addEventListener('click',()=>{state.cat=x.dataset.cat;render()}));
-  document.querySelectorAll('input[name="author"]').forEach(x=>x.addEventListener('change',()=>{state.audience=x.value;render()}));
-  document.querySelectorAll('input[name="school"]').forEach(x=>x.addEventListener('change',()=>{state.school=x.value;render()}));
-  elSearch.addEventListener('input',()=>{state.q=elSearch.value;render()});
-  elSort.addEventListener('change',()=>{state.sort=elSort.value;render()});
-  elClear.addEventListener('click',reset);
-  elToggle.addEventListener('click',()=>{const opened=elSide.classList.toggle('open');elToggle.setAttribute('aria-expanded',String(opened))});
-  document.getElementById('hero-search-form')?.addEventListener('submit',e=>{e.preventDefault();document.getElementById('catalog')?.scrollIntoView({behavior:'smooth'})});
-  window.addEventListener('popstate',()=>{const p=new URLSearchParams(location.search);state.q=p.get('q')||'';state.cat=p.get('category')||'all';state.audience=p.get('author')||'all';state.school=p.get('school')||'all';state.sort=p.get('sort')||'editorial';elSearch.value=state.q;elSort.value=state.sort;render()});
-  render();
+import {readState,queryFromState,selectRecords,paginate,cardBadges,productHref} from "./catalog-core.mjs";
+(()=>{
+ const list=Array.isArray(window.PORTFOLIO_RECORDS)?window.PORTFOLIO_RECORDS:[];
+ const scope=window.PORTFOLIO_SCOPE||"all";
+ const $=id=>document.getElementById(id);
+ const cards=$("cards"),search=$("search"),counter=$("count"),sort=$("sort");
+ if(!cards||!search||!counter)return;
+ const status=$("status"),sidebar=$("sidebar"),toggle=$("filter-toggle");
+ const pager=$("pager"),loadMore=$("load-more"),pagerStatus=$("pager-status");
+ const esc=s=>String(s??"").replace(/[&<>"']/g,ch=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[ch]));
+ const accents={meta:"M",kontur:"◉",school:"AI·14",law:"§",dispatcher:"⌘",write:"W.",career:"↗",hr:"HR",net:"N",film:"F",lawbiz:"§",debt:"§",student:"G",research:"R",marketing:"→"};
+ let state=readState(window.location.search),timer=0;
+ function applyControls(){
+  search.value=state.q;if(sort)sort.value=state.sort;if(status)status.value=state.status;
+  document.querySelectorAll("[data-cat]").forEach(e=>{const active=e.dataset.cat===state.cat;e.classList.toggle("active",active);e.setAttribute("aria-pressed",String(active));});
+  for(const [name,key] of [["author","author"],["school","school"]])document.querySelectorAll('input[name="'+name+'"]').forEach(e=>e.checked=e.value===state[key]);
+ }
+ function card(record){
+  const href=esc(productHref(record,window.location.pathname+window.location.search));
+  const badges=cardBadges(record).map(t=>'<span class="foot-chip">'+esc(t)+'</span>').join("");
+  const graphic='<div class="card-graphic"><span class="ring r1"></span><span class="ring r2"></span><span class="ring r3"></span><span class="big-letter">'+esc(accents[record.cover]||"AI")+'</span><span class="visual-sub">'+esc(record.num)+' / AI LAB</span></div>';
+  return '<article class="product-card"><a class="card-visual '+esc(record.cover)+'" href="'+href+'" aria-label="Подробнее: '+esc(record.title)+'"><span class="card-badge">'+esc(record.kind)+'</span>'+graphic+'</a>'+
+   '<div class="product-info"><div class="product-top"><span>'+esc(record.category)+'</span><span>'+esc(record.version==="—"?"Версия уточняется":record.version)+'</span></div>'+
+   '<h3 class="product-name"><a href="'+href+'">'+esc(record.title)+'</a></h3><p class="product-description">'+esc(record.subtitle)+'</p>'+
+   '<div class="product-foot"><span class="foot-chip'+(record.status==="working"?" is-bright":"")+'">'+esc(record.statusLabel)+'</span>'+badges+'</div></div></article>';
+ }
+ function paint(){
+  const rows=selectRecords(list,state,scope),page=paginate(rows,state.page);
+  state.page=page.current;
+  counter.textContent="Найдено: "+rows.length+" из "+list.length;
+  cards.innerHTML=rows.length?page.visible.map(card).join(""):'<div class="empty-state"><strong>Совпадений нет</strong><p>Уточните запрос или сбросьте фильтры.</p><button type="button" id="empty-clear">Сбросить фильтры</button></div>';
+  $("empty-clear")?.addEventListener("click",reset);
+  if(pager)pager.hidden=!page.hasMore;
+  if(loadMore)loadMore.disabled=!page.hasMore;
+  if(pagerStatus)pagerStatus.textContent="Показано "+page.visible.length+" из "+rows.length;
+  applyControls();
+ }
+ function commit(mode="push"){
+  const next=queryFromState(state),url=window.location.pathname+(next?"?"+next:"");
+  if(url!==window.location.pathname+window.location.search)window.history[mode==="replace"?"replaceState":"pushState"](null,"",url);
+  paint();
+ }
+ function change(field,value){window.clearTimeout(timer);state[field]=value;state.page=1;commit();}
+ function reset(){window.clearTimeout(timer);state=readState("");commit();}
+ search.addEventListener("input",()=>{window.clearTimeout(timer);const q=search.value;timer=window.setTimeout(()=>{state.q=q;state.page=1;commit();},200);});
+ search.addEventListener("change",()=>{window.clearTimeout(timer);if(state.q!==search.value){state.q=search.value;state.page=1;commit();}});
+ $("hero-search-form")?.addEventListener("submit",e=>{e.preventDefault();window.clearTimeout(timer);state.q=search.value;state.page=1;commit();$("catalog")?.scrollIntoView({behavior:"smooth",block:"start"});});
+ document.querySelectorAll("[data-cat]").forEach(e=>e.addEventListener("click",()=>change("cat",e.dataset.cat)));
+ document.querySelectorAll('input[name="author"]').forEach(e=>e.addEventListener("change",()=>change("author",e.value)));
+ document.querySelectorAll('input[name="school"]').forEach(e=>e.addEventListener("change",()=>change("school",e.value)));
+ sort?.addEventListener("change",()=>change("sort",sort.value));
+ status?.addEventListener("change",()=>change("status",status.value));
+ $("clear-filters")?.addEventListener("click",reset);
+ loadMore?.addEventListener("click",()=>{state.page++;commit();});
+ toggle?.addEventListener("click",()=>{const open=sidebar?.classList.toggle("open")??false;toggle.setAttribute("aria-expanded",String(open));});
+ window.addEventListener("popstate",()=>{window.clearTimeout(timer);state=readState(window.location.search);paint();});
+ paint();
 })();
