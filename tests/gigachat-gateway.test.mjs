@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {GET,POST,OPTIONS} from '../api/search.mjs';
+import {GET,POST,OPTIONS} from '../search-gateway/api/search.mjs';
 
 test('GET health does not reveal secrets',async()=>{
  const r=await GET();const body=await r.json();assert.equal(r.status,200);assert.equal(body.connected,false);
