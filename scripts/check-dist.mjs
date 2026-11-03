@@ -23,5 +23,14 @@ if(mode==="public"){
  assert(!html.includes("РЕДАКЦИОННЫЙ ПРЕДПРОСМОТР"),"Preview in public HTML");
  const publicText=outputs.filter(p=>/\.(?:html|js|json|xml|txt|css)$/i.test(p)).map(p=>readFileSync(p,"utf8")).join("\n");
  for(const item of records.filter(x=>!approved.includes(x)))assert(!publicText.includes(item.title),"Draft leaked: "+item.id);
-}else assert(html.includes("РЕДАКЦИОННЫЙ ПРЕДПРОСМОТР"),"Preview banner absent");
+}else {
+ assert(html.includes("РЕДАКЦИОННЫЙ ПРЕДПРОСМОТР"),"Preview banner absent");
+ for(const [id,file] of [["course","course-logo.webp"],["dissert","school-ai-mark.svg"]]){
+  const r=records.find(x=>x.id===id);
+  const content=readFileSync(join(root,r.route_kind,r.slug,"index.html"),"utf8");
+  assert(content.includes("showcase/"+file),"Original proof image not rendered in "+id);
+  assert(content.includes("ПОДТВЕРЖДЁННЫЕ МАТЕРИАЛЫ"),"Proof gallery missing for "+id);
+  assert(!content.includes("ВНУТРЕННИЙ ИСТОЧНИК"),"Internal proof unexpectedly rendered");
+ }
+}
 console.log("Verified "+mode+" output: "+products.length+" cards, "+cats.length+" categories");
