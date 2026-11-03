@@ -10,6 +10,14 @@ const needed=["id","title","subtitle","cat","kind","status","statusLabel","versi
 for(const [i,r] of records.entries()){
   const check=(ok,msg)=>{if(!ok)failures.push(`#${i+1} ${r.id||"UNKNOWN"}: ${msg}`)};
   for(const key of needed)check(r[key]!==undefined && r[key]!==null && String(r[key]).trim().length>0,`Missing field ${key}`);
+
+  for(const key of ["audience_description","evidence_note","editorial_version","editorial_review"])
+    check(typeof r[key]==="string" && r[key].trim().length >= 15,`Editorial field incomplete: ${key}`);
+  check(typeof r.editorial_scenario==="object" && r.editorial_scenario!==null,"Missing editorial scenario");
+  if(r.editorial_scenario)for(const key of ["input","process","output"])
+    check(typeof r.editorial_scenario[key]==="string" && r.editorial_scenario[key].trim().length >= 14,`Missing scenario part: ${key}`);
+  const editorialText=[r.audience_description,r.evidence_note,r.editorial_scenario?.input,r.editorial_scenario?.process,r.editorial_scenario?.output].join(" ");
+  check(!/https?:\/\/|(?:[A-Za-z]:\\)|(?:bearer\s+[\w.-]+)|(?:api[_ -]?key\s*[:=])/i.test(editorialText),"Private information in editorial metadata");
   check(!ids.has(r.id),"Duplicate ID");ids.add(r.id);
   check(cats.has(r.cat),"Unknown category");
   check(allowed.has(r.status),"Unrecognized status");
