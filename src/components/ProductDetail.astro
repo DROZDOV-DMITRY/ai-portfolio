@@ -1,0 +1,30 @@
+---
+import { categoryBySlug } from "../lib/catalog.js";
+const { record } = Astro.props;
+const category = categoryBySlug(record.cat);
+const canonical = `https://drozdov-dmitry.github.io/ai-portfolio/${record.route_kind}/${record.slug}/`;
+---
+<!doctype html>
+<html lang="ru"><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<meta name="color-scheme" content="dark"/><meta name="robots" content="noindex,nofollow"/>
+<title>{record.title} — AI / Портфолио</title>
+<meta name="description" content={record.long_description}/>
+<link rel="canonical" href={canonical}/>
+<link rel="stylesheet" href="/ai-portfolio/assets/styles.css"/>
+</head><body>
+<div class="topline">ДИЗАЙН-МАКЕТ V0.2 · 03.11.2026 &nbsp; / &nbsp; <strong>не публичный релиз</strong></div>
+<header class="header shell"><a class="brand" href="/ai-portfolio/"><span class="brand-emblem">A.</span><span class="brand-copy"><span class="brand-name">AI / ПОРТФОЛИО</span><span class="brand-sub">Авторские интеллектуальные системы</span></span></a><nav class="navigation"><a href="/ai-portfolio/">Все решения</a><a href="/ai-portfolio/#categories">Категории</a><a href="/ai-portfolio/#catalog">Проекты</a></nav><div class="nav-actions"><a class="small-outline" href="/ai-portfolio/">← Каталог решений</a></div></header>
+<main class="detail-main shell">
+<div class="breadcrumb"><a href="/ai-portfolio/">Все решения</a><span class="slash">/</span><a href={`/ai-portfolio/category/${record.cat}/`}>{category?.name ?? record.category}</a><span class="slash">/</span><span class="current">{record.title}</span></div>
+<section class="detail-hero"><div><div class="detail-overline"><span class="eyebrow">AI / {record.kind}</span><span class="prototype-flag">{record.statusLabel} · {record.audience === "student" ? "ученическая работа" : "по сведениям автора"}</span></div>
+<h1>{record.title}</h1><p class="detail-lead">{record.long_description}</p>
+<div class="detail-statbar"><div><span>Тип системы</span><strong>{record.kind}</strong></div><div><span>Версия</span><strong>{record.version === "—" ? "Не установлена" : record.version}</strong></div><div><span>Доступ</span><strong>Описание без публичного запуска</strong></div></div>
+<div class="detail-actions"><a class="btn-primary" href="#tasks">Возможности <span>↗</span></a><a class="btn-secondary" href="#access">Статус и ограничения ↓</a></div></div>
+<div class={`detail-visual ${record.cover}`} role="img" aria-label={`Концептуальная обложка разработки ${record.title}, не скриншот продукта`}><span class="visual-count">AI / PORTFOLIO</span><span class="meta-logo">{record.num}</span><span class="visual-caption">STAGING / 2026</span></div>
+</section>
+<section class="section-divider" id="tasks"><div class="editorial-head"><div><span class="eyebrow">01 / ВОЗМОЖНОСТИ</span><h2>Что делает</h2></div><p>{record.long_description}</p></div><div class="features">{record.capabilities.map((capability,i)=><div class="feature"><span class="feature-index">{String(i+1).padStart(2,"0")}</span><h3>{capability}</h3></div>)}</div></section>
+<section class="section-divider" id="access"><div class="editorial-head"><div><span class="eyebrow">02 / ИСПОЛЬЗОВАНИЕ</span><h2>Статус и доступ</h2></div><p>Публичная ссылка запуска не предоставлена. Данные о работоспособности могут основываться на сообщении автора.</p></div>
+<div class="detail-grid"><div class="text-panel"><h3>Текущее состояние</h3><ul><li>{record.statusLabel}</li><li>{record.category}</li><li>{record.school === "direct" ? "Предназначен для школы №14" : record.school === "support" ? "Может поддерживать школьную работу" : "Школьное применение не подтверждено"}</li></ul></div><div class="text-panel"><h3>Ограничения</h3><p>{record.limitations}</p><p>Закрытые инструкции и частные исходные данные не публикуются.</p></div></div><div class="warning">Это проектная страница. Она не является публичным запуском AI-системы или подтверждением независимой проверки результата.</div></section>
+<section class="section-divider"><div class="editorial-head"><div><span class="eyebrow">03 / ДАЛЬШЕ</span><h2>Связанные направления</h2></div><p>Исследуйте другие разработки по той же задаче.</p></div><div class="detail-actions"><a class="btn-secondary" href={`/ai-portfolio/category/${record.cat}/`}>Категория ↗</a><a class="btn-primary" href="/ai-portfolio/">Все решения ↗</a></div></section>
+</main><footer class="footer shell"><span>AI / ПОРТФОЛИО · STAGING V0.2</span><a href="/ai-portfolio/">← Назад</a></footer></body></html>

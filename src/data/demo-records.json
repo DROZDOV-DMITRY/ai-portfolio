@@ -16,7 +16,21 @@
     "tags": "проектирование архитектура агенты GPT разработка",
     "detail": "/ai-portfolio/agent/metaarchitect/",
     "publication_status": "design_preview_only",
-    "evidence_level": "author_reported_or_source_derived"
+    "evidence_level": "author_reported_or_source_derived",
+    "slug": "metaarchitect",
+    "route_kind": "agent",
+    "long_description": "Проектирование, ревизия и выпуск AI-агентов",
+    "capabilities": [
+      "Формализует требования и критерии качества",
+      "Проектирует архитектуру инструкций и источников",
+      "Проводит ревизии, проверку и версионирование"
+    ],
+    "limitations": "Закрытые инструкции и конфигурации не раскрываются.",
+    "visibility": "draft",
+    "content_review": "pending",
+    "privacy_review": "pending",
+    "access_mode": "description_only",
+    "authorship": "author"
   },
   {
     "id": "kontur",
@@ -33,9 +47,23 @@
     "cover": "kontur",
     "num": "02",
     "tags": "ассистент память задачи yougile организация",
-    "detail": null,
+    "detail": "/ai-portfolio/project/kontur/",
     "publication_status": "design_preview_only",
-    "evidence_level": "author_reported_or_source_derived"
+    "evidence_level": "author_reported_or_source_derived",
+    "slug": "kontur",
+    "route_kind": "project",
+    "long_description": "Операционная память, проекты, связи и текущие дела",
+    "capabilities": [
+      "Связывает текущие дела с источниками и решениями",
+      "Помогает восстанавливать контекст проектов",
+      "Поддерживает работу с задачами и зависимостями"
+    ],
+    "limitations": "Не предоставляет доступ к личной памяти, задачам или подключённым сервисам.",
+    "visibility": "draft",
+    "content_review": "pending",
+    "privacy_review": "pending",
+    "access_mode": "description_only",
+    "authorship": "author"
   },
   {
     "id": "course",
@@ -52,9 +80,23 @@
     "cover": "school",
     "num": "03",
     "tags": "дети взрослые преподаватели уроки курсы обучение",
-    "detail": null,
+    "detail": "/ai-portfolio/project/course/",
     "publication_status": "design_preview_only",
-    "evidence_level": "author_reported_or_source_derived"
+    "evidence_level": "author_reported_or_source_derived",
+    "slug": "course",
+    "route_kind": "project",
+    "long_description": "Обучение школьников и взрослых работе с ИИ",
+    "capabilities": [
+      "Проводит обучение школьников и взрослых",
+      "Содержит уроки и практические материалы",
+      "Развивается как образовательная среда школы"
+    ],
+    "limitations": "Отдельные разделы находятся в обкатке; статистика эффективности не подтверждена.",
+    "visibility": "draft",
+    "content_review": "pending",
+    "privacy_review": "pending",
+    "access_mode": "description_only",
+    "authorship": "author"
   },
   {
     "id": "schoollaw",
@@ -71,9 +113,23 @@
     "cover": "law",
     "num": "04",
     "tags": "право школа акты законы кадры",
-    "detail": null,
+    "detail": "/ai-portfolio/agent/schoollaw/",
     "publication_status": "design_preview_only",
-    "evidence_level": "author_reported_or_source_derived"
+    "evidence_level": "author_reported_or_source_derived",
+    "slug": "schoollaw",
+    "route_kind": "agent",
+    "long_description": "Правовые и административные задачи школы",
+    "capabilities": [
+      "Анализирует применимые нормы",
+      "Структурирует административные и кадровые вопросы",
+      "Готовит материалы к проверке специалистом"
+    ],
+    "limitations": "Не заменяет профессиональное юридическое заключение.",
+    "visibility": "draft",
+    "content_review": "pending",
+    "privacy_review": "pending",
+    "access_mode": "description_only",
+    "authorship": "author"
   },
   {
     "id": "dispatcher",
@@ -90,9 +146,23 @@
     "cover": "dispatcher",
     "num": "05",
     "tags": "windows процессор процесс мониторинг qwen gigachat api",
-    "detail": null,
+    "detail": "/ai-portfolio/project/dispatcher/",
     "publication_status": "design_preview_only",
-    "evidence_level": "author_reported_or_source_derived"
+    "evidence_level": "author_reported_or_source_derived",
+    "slug": "dispatcher",
+    "route_kind": "project",
+    "long_description": "Мониторинг ПК и интеграция с Qwen / GigaChat",
+    "capabilities": [
+      "Мониторит состояние Windows-ПК",
+      "Поддерживает работу с Qwen/GigaChat API по сообщению автора",
+      "Помогает анализировать техническое состояние компьютера"
+    ],
+    "limitations": "Информация не предоставляет удалённого доступа к программе или API.",
+    "visibility": "draft",
+    "content_review": "pending",
+    "privacy_review": "pending",
+    "access_mode": "description_only",
+    "authorship": "author"
   },
   {
     "id": "write",
@@ -109,9 +179,23 @@
     "cover": "write",
     "num": "06",
     "tags": "редактор тексты стилистика написание",
-    "detail": null,
+    "detail": "/ai-portfolio/agent/write/",
     "publication_status": "design_preview_only",
-    "evidence_level": "author_reported_or_source_derived"
+    "evidence_level": "author_reported_or_source_derived",
+    "slug": "write",
+    "route_kind": "agent",
+    "long_description": "Создание и редактирование текстов через экспертные роли",
+    "capabilities": [
+      "Создаёт и редактирует профессиональные тексты",
+      "Использует роли и редакционные критерии",
+      "Помогает проверять структуру и качество материала"
+    ],
+    "limitations": "Содержание и фактическую точность результата нужно проверять.",
+    "visibility": "draft",
+    "content_review": "pending",
+    "privacy_review": "pending",
+    "access_mode": "description_only",
+    "authorship": "author"
   },
   {
     "id": "career",
@@ -128,9 +212,23 @@
     "cover": "career",
     "num": "07",
     "tags": "профориентация ученики профессия выбор",
-    "detail": null,
+    "detail": "/ai-portfolio/project/career/",
     "publication_status": "design_preview_only",
-    "evidence_level": "author_reported_or_source_derived"
+    "evidence_level": "author_reported_or_source_derived",
+    "slug": "career",
+    "route_kind": "project",
+    "long_description": "Интересы, пробы и образовательные маршруты",
+    "capabilities": [
+      "Помогает исследовать интересы школьников",
+      "Связывает профессиональные пробы с образовательными маршрутами",
+      "Подготовлен к следующим полевым испытаниям"
+    ],
+    "limitations": "Полевые испытания первой редакции ещё впереди.",
+    "visibility": "draft",
+    "content_review": "pending",
+    "privacy_review": "pending",
+    "access_mode": "description_only",
+    "authorship": "author"
   },
   {
     "id": "hr",
@@ -147,9 +245,23 @@
     "cover": "hr",
     "num": "08",
     "tags": "приказы кадровые документы отпуск школа",
-    "detail": null,
+    "detail": "/ai-portfolio/agent/hr/",
     "publication_status": "design_preview_only",
-    "evidence_level": "author_reported_or_source_derived"
+    "evidence_level": "author_reported_or_source_derived",
+    "slug": "hr",
+    "route_kind": "agent",
+    "long_description": "Подготовка приказов и кадровых документов школы",
+    "capabilities": [
+      "Помогает подготовить кадровые документы",
+      "Учитывает процедурные требования",
+      "Ожидает обратной связи кадровой службы"
+    ],
+    "limitations": "Обратная связь кадровой службы пока не получена.",
+    "visibility": "draft",
+    "content_review": "pending",
+    "privacy_review": "pending",
+    "access_mode": "description_only",
+    "authorship": "author"
   },
   {
     "id": "netwibe",
@@ -166,9 +278,23 @@
     "cover": "net",
     "num": "09",
     "tags": "vpn vless сеть настройки",
-    "detail": null,
+    "detail": "/ai-portfolio/project/netwibe/",
     "publication_status": "design_preview_only",
-    "evidence_level": "author_reported_or_source_derived"
+    "evidence_level": "author_reported_or_source_derived",
+    "slug": "netwibe",
+    "route_kind": "project",
+    "long_description": "Сопровождение VPN/VLESS и сетевой инфраструктуры",
+    "capabilities": [
+      "Поддерживает эксплуатацию VPN/VLESS",
+      "Помогает диагностировать подключения",
+      "Сопровождает изменения сетевых настроек"
+    ],
+    "limitations": "Служебные адреса, ключи и конфигурации не публикуются.",
+    "visibility": "draft",
+    "content_review": "pending",
+    "privacy_review": "pending",
+    "access_mode": "description_only",
+    "authorship": "author"
   },
   {
     "id": "film",
@@ -185,9 +311,23 @@
     "cover": "film",
     "num": "10",
     "tags": "кино сценарий режиссер фильм",
-    "detail": null,
+    "detail": "/ai-portfolio/project/film/",
     "publication_status": "design_preview_only",
-    "evidence_level": "author_reported_or_source_derived"
+    "evidence_level": "author_reported_or_source_derived",
+    "slug": "film",
+    "route_kind": "project",
+    "long_description": "Сценарии, постановка и подготовка кинопроизводства",
+    "capabilities": [
+      "Помогает разработать сценарий",
+      "Поддерживает организацию съёмочного процесса",
+      "Структурирует творческие и производственные задачи"
+    ],
+    "limitations": "Результаты показываются только при наличии разрешённых материалов.",
+    "visibility": "draft",
+    "content_review": "pending",
+    "privacy_review": "pending",
+    "access_mode": "description_only",
+    "authorship": "author"
   },
   {
     "id": "lawbiz",
@@ -204,9 +344,23 @@
     "cover": "lawbiz",
     "num": "11",
     "tags": "бизнес юридическое лицо ооо договоры",
-    "detail": null,
+    "detail": "/ai-portfolio/agent/lawbiz/",
     "publication_status": "design_preview_only",
-    "evidence_level": "author_reported_or_source_derived"
+    "evidence_level": "author_reported_or_source_derived",
+    "slug": "lawbiz",
+    "route_kind": "agent",
+    "long_description": "Юридическая поддержка деятельности организации",
+    "capabilities": [
+      "Анализирует юридические вопросы ООО",
+      "Помогает систематизировать правовые документы",
+      "Применялся автором на практике"
+    ],
+    "limitations": "Не заменяет квалифицированную юридическую помощь; конкретные дела конфиденциальны.",
+    "visibility": "draft",
+    "content_review": "pending",
+    "privacy_review": "pending",
+    "access_mode": "description_only",
+    "authorship": "author"
   },
   {
     "id": "lawdebt",
@@ -223,9 +377,23 @@
     "cover": "debt",
     "num": "12",
     "tags": "долги взыскание исполнительные производства",
-    "detail": null,
+    "detail": "/ai-portfolio/agent/lawdebt/",
     "publication_status": "design_preview_only",
-    "evidence_level": "author_reported_or_source_derived"
+    "evidence_level": "author_reported_or_source_derived",
+    "slug": "lawdebt",
+    "route_kind": "agent",
+    "long_description": "Сопровождение долговых и исполнительных вопросов",
+    "capabilities": [
+      "Помогает в долговых и исполнительных вопросах",
+      "Структурирует документы и варианты действий",
+      "Применялся автором на практике"
+    ],
+    "limitations": "Не заменяет квалифицированную юридическую помощь; конкретные дела конфиденциальны.",
+    "visibility": "draft",
+    "content_review": "pending",
+    "privacy_review": "pending",
+    "access_mode": "description_only",
+    "authorship": "author"
   },
   {
     "id": "student",
@@ -242,9 +410,23 @@
     "cover": "student",
     "num": "13",
     "tags": "ученик голос озвучивание gigachat",
-    "detail": null,
+    "detail": "/ai-portfolio/project/student/",
     "publication_status": "design_preview_only",
-    "evidence_level": "author_reported_or_source_derived"
+    "evidence_level": "author_reported_or_source_derived",
+    "slug": "student",
+    "route_kind": "project",
+    "long_description": "Ученический голосовой AI-помощник с озвучиванием",
+    "capabilities": [
+      "Разрабатывается учеником под руководством преподавателя",
+      "Работает с голосовыми запросами",
+      "Использует GigaChat и озвучивание"
+    ],
+    "limitations": "Авторство принадлежит ученику; персональные данные не публикуются.",
+    "visibility": "draft",
+    "content_review": "pending",
+    "privacy_review": "pending",
+    "access_mode": "description_only",
+    "authorship": "student"
   },
   {
     "id": "dissert",
@@ -261,9 +443,23 @@
     "cover": "research",
     "num": "14",
     "tags": "диссертация статья эксперимент исследование школа",
-    "detail": null,
+    "detail": "/ai-portfolio/project/dissert/",
     "publication_status": "design_preview_only",
-    "evidence_level": "author_reported_or_source_derived"
+    "evidence_level": "author_reported_or_source_derived",
+    "slug": "dissert",
+    "route_kind": "project",
+    "long_description": "Исследование локальной интеллектуальной образовательной среды",
+    "capabilities": [
+      "Исследует локальную AI-экосистему школы",
+      "Связывает обучение, преподавание и управление",
+      "На текущем этапе подготовлены исследование и статья"
+    ],
+    "limitations": "Подготовленные исследование и статья не доказывают эффекта внедрения.",
+    "visibility": "draft",
+    "content_review": "pending",
+    "privacy_review": "pending",
+    "access_mode": "description_only",
+    "authorship": "author"
   },
   {
     "id": "g2m",
@@ -280,8 +476,22 @@
     "cover": "marketing",
     "num": "15",
     "tags": "маркетинг рынок продукт запуск",
-    "detail": null,
+    "detail": "/ai-portfolio/agent/g2m/",
     "publication_status": "design_preview_only",
-    "evidence_level": "author_reported_or_source_derived"
+    "evidence_level": "author_reported_or_source_derived",
+    "slug": "g2m",
+    "route_kind": "agent",
+    "long_description": "Анализ рынка и планирование выхода продукта",
+    "capabilities": [
+      "Анализирует рынок и аудитории",
+      "Формирует гипотезы позиционирования",
+      "Строит план выхода продукта на рынок"
+    ],
+    "limitations": "Рыночные гипотезы требуют отдельной проверки данными.",
+    "visibility": "draft",
+    "content_review": "pending",
+    "privacy_review": "pending",
+    "access_mode": "description_only",
+    "authorship": "author"
   }
 ]

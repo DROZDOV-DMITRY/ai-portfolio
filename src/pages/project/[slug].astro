@@ -1,0 +1,10 @@
+---
+import Detail from "../../components/ProductDetail.astro";
+import { previewRecords } from "../../lib/catalog.js";
+export function getStaticPaths(){
+  return previewRecords().filter(r=>r.route_kind === "project")
+    .map(record=>({params:{slug:record.slug},props:{record}}));
+}
+const { record } = Astro.props;
+---
+<Detail record={record} />
