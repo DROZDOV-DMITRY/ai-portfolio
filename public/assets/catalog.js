@@ -19,10 +19,10 @@
     document.querySelectorAll('[data-cat]').forEach(x=>{x.classList.toggle('active',x.dataset.cat===state.cat);x.setAttribute('aria-pressed',String(x.dataset.cat===state.cat))});
     document.querySelectorAll('input[name="author"]').forEach(x=>x.checked=x.value===state.audience);
     document.querySelectorAll('input[name="school"]').forEach(x=>x.checked=x.value===state.school);
-    const q=normalize(state.q);let rows=list.filter(x=>(state.cat==='all'||x.cat===state.cat)&&(state.audience==='all'||x.audience===state.audience)&&(state.school==='all'||(state.school==='direct'?x.school==='direct':x.school==='support'))&&(!q||normalize([x.title,x.subtitle,x.category,x.tags].join(' ')).includes(q)));
+    const q=normalize(state.q);let rows=list.filter(x=>(state.cat==='all'||x.cat===state.cat)&&(state.audience==='all'||x.audience===state.audience)&&(state.school==='all'||(state.school==='direct'?x.school==='direct':x.school==='support'))&&(!q||normalize([x.title,x.subtitle,x.problem,x.category,x.tags,(x.capabilities||[]).join(" ")].join(" ")).includes(q)));
     if(state.sort==='name') rows.sort((a,b)=>a.title.localeCompare(b.title,'ru'));
-    if(state.sort==='status')rows.sort((a,b)=>['working','testing','development','historical'].indexOf(a.status)-['working','testing','development','historical'].indexOf(b.status));
-    elCount.innerHTML=`Найдено <strong>${rows.length}</strong> ${rows.length===1?'решение':rows.length<5?'решения':'решений'} <span style="color:#6d7d73">из ${list.length} демонстрационных записей</span>`;
+    if(state.sort==='status'){const order={working:0,testing:1,development:2,unverified:3,historical:4};rows.sort((a,b)=>(order[a.status]??9)-(order[b.status]??9));}
+    elCount.innerHTML=`Найдено <strong>${rows.length}</strong> ${rows.length===1?'решение':rows.length<5?'решения':'решений'} <span style="color:#6d7d73">из ${list.length} карточек для проверки</span>`;
     elCards.innerHTML=rows.length?rows.map(card).join(''):'<div class="empty-state"><strong>Совпадений нет</strong><p>Уточните запрос или сбросьте выбранные фильтры.</p><button type="button" id="empty-clear">Сбросить фильтры</button></div>';
     document.getElementById('empty-clear')?.addEventListener('click',reset);
     save();

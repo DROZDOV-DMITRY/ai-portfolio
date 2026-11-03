@@ -1,13 +1,14 @@
 {
   "name": "ai-portfolio",
   "private": true,
-  "version": "0.3.1-stage",
+  "version": "0.4.0-stage",
   "type": "module",
   "scripts": {
     "dev": "astro dev",
-    "build": "npm run check:brand && astro build",
+    "build": "npm run check:brand && npm run check:content && astro build",
     "preview": "astro preview",
-    "check:brand": "node scripts/check-brand.mjs"
+    "check:brand": "node scripts/check-brand.mjs",
+    "check:content": "node scripts/check-content.mjs"
   },
   "dependencies": {
     "astro": "7.4.4"
