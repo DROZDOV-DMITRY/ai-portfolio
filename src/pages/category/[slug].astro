@@ -1,5 +1,7 @@
 ---
 import categories from "../../data/categories.json";
+const aiEndpoint=import.meta.env.PUBLIC_AI_SEARCH_ENDPOINT||"";
+const turnstileKey=import.meta.env.PUBLIC_TURNSTILE_SITE_KEY||"";
 import { categoryRecords, isEditorialPreview } from "../../lib/catalog.js";
 export function getStaticPaths() {
  return categories.map(category=>({params:{slug:category.slug},props:{category}}));
@@ -51,6 +53,6 @@ const canonical="https://drozdov-dmitry.github.io/ai-portfolio/category/"+catego
 <div class="cards" id="cards" aria-live="polite"></div>
 <div class="catalog-more" id="pager" hidden><span id="pager-status"></span><button type="button" id="load-more">Показать ещё ↓</button></div>
 </div></div></section></main><footer class="footer shell"><span>AI / ПОРТФОЛИО</span><a href="/ai-portfolio/">Главная</a></footer>
-<script is:inline define:vars={{records:cardsForClient,scope:category.slug}}>window.PORTFOLIO_RECORDS=records;window.PORTFOLIO_SCOPE=scope;</script>
+<script is:inline define:vars={{records:cardsForClient,scope:category.slug,aiEndpoint,turnstileKey}}>window.PORTFOLIO_RECORDS=records;window.PORTFOLIO_SCOPE=scope;window.AI_SEARCH_ENDPOINT=aiEndpoint;window.AI_TURNSTILE_SITE_KEY=turnstileKey;</script>
 <script is:inline type="module" src="/ai-portfolio/assets/catalog.js"></script>
 </body></html>

@@ -18,6 +18,11 @@ assert.equal(cats.length,categories.length,"Category count "+mode);
 assert(existsSync(join(root,"about","index.html")),"Missing about page");
 assert(readFileSync(join(root,"404.html"),"utf8").includes('name="q"'),"404 search missing");
 assert(html.includes('id="cards"')&&html.includes('id="search"'),"Catalog UI missing");
+const searchIndex=JSON.parse(readFileSync(join(root,"data","search-index.json"),"utf8"));
+assert.equal(searchIndex.schema,1,"Invalid search index schema");
+assert.equal(searchIndex.products.length,shown.length,"Search index must respect publication mode");
+assert(searchIndex.products.every(p=>Object.keys(p).every(k=>["id","title","href","category","description","keywords"].includes(k))),"Search index has unexpected fields");
+assert(!html.includes("<h1>ИИ-агенты."),"Main heading ends with period");
 for(const record of records){
  const logo=join(root,"marks",record.id+".svg");
  assert(existsSync(logo),"Product logo missing: "+record.id);
