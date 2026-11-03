@@ -15,6 +15,8 @@ const products=outputs.filter(p=>/\/(agent|project)\/[^/]+\/index\.html$/.test(p
 const cats=outputs.filter(p=>/\/category\/[^/]+\/index\.html$/.test(p.replaceAll("\\","/")));
 assert.equal(products.length,shown.length,"Product count "+mode);
 assert.equal(cats.length,categories.length,"Category count "+mode);
+assert(existsSync(join(root,"about","index.html")),"Missing about page");
+assert(readFileSync(join(root,"404.html"),"utf8").includes('name="q"'),"404 search missing");
 assert(html.includes('id="cards"')&&html.includes('id="search"'),"Catalog UI missing");
 for(const item of shown)assert(existsSync(join(root,item.route_kind,item.slug,"index.html")),"Missing "+item.id);
 if(mode==="public"){

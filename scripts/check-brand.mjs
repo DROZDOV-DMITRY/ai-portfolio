@@ -18,6 +18,7 @@ const pages = [
   "src/pages/category/[slug].astro",
   "src/components/ProductDetail.astro",
   "src/pages/404.astro",
+  "src/pages/about/index.astro",
 ];
 const errors = [];
 for (const [relative, dimensions] of assets) {
