@@ -33,8 +33,15 @@ const canonical = `https://drozdov-dmitry.github.io/ai-portfolio/${record.route_
 <section class="detail-hero"><div><div class="detail-overline"><span class="eyebrow">AI / {record.kind}</span><span class="prototype-flag">{record.statusLabel} · {record.audience === "student" ? "ученическая работа" : "по сведениям автора"}</span></div>
 <h1>{isMeta ? <>Метаархитектор<em> AI-систем.</em></> : record.title}</h1><p class="detail-lead">{record.long_description}</p>
 <div class="detail-statbar"><div><span>Тип системы</span><strong>{record.kind}</strong></div><div><span>Версия</span><strong>{record.version === "—" ? "Не установлена" : record.version}</strong></div><div><span>Доступ</span><strong>Описание без публичного запуска</strong></div></div>
-<div class="detail-actions"><a class="btn-primary" href="#tasks">Возможности <span>↗</span></a><a class="btn-secondary" href="#access">Статус и ограничения ↓</a></div></div>
-<div class={`detail-visual ${record.cover}`} role="img" aria-label={`Концептуальная обложка разработки ${record.title}, не скриншот продукта`}><span class="visual-count">AI / PORTFOLIO</span><span class="meta-logo">{record.num}</span><span class="visual-caption">STAGING / 2026</span></div>
+<div class="detail-actions"><a class="btn-primary" href="#tasks">Возможности <span>↗</span></a><a class="btn-secondary" href="#access">Статус и ограничения ↓</a></div>
+{record.public_showcase && <p class="showcase-hero-link"><a href={record.public_showcase.action_href} rel="noopener noreferrer" target="_blank">{record.public_showcase.action_label} <span aria-hidden="true">↗</span></a></p>}</div>
+{record.public_showcase ?
+<div class="detail-visual real-showcase" role="group" aria-label={record.public_showcase.label}>
+<span class="showcase-eyebrow">ОРИГИНАЛЬНЫЙ МАТЕРИАЛ</span>
+<div class="showcase-media"><img src={record.public_showcase.image_src} alt={record.public_showcase.image_alt} loading="lazy" decoding="async"/></div>
+<span class="showcase-image-note">{record.public_showcase.image_note}</span>
+</div> :
+<div class={`detail-visual ${record.cover}`} role="img" aria-label={`Концептуальная обложка разработки ${record.title}, не скриншот продукта`}><span class="visual-count">AI / PORTFOLIO</span><span class="meta-logo">{record.num}</span><span class="visual-caption">STAGING / 2026</span></div>}
 </section>
 <section class="section-divider" id="problem"><div class="editorial-head"><div><span class="eyebrow">01 / КОНТЕКСТ</span><h2>Какую задачу решает</h2></div><p>{record.problem || record.long_description}</p></div></section>
 <section class="section-divider" id="tasks"><div class="editorial-head"><div><span class="eyebrow">02 / ВОЗМОЖНОСТИ</span><h2>Что делает</h2></div><p>{record.long_description}</p></div><div class="features">{record.capabilities.map((capability,i)=><div class="feature"><span class="feature-index">{String(i+1).padStart(2,"0")}</span><h3>{capability}</h3></div>)}</div></section>
@@ -53,6 +60,15 @@ const canonical = `https://drozdov-dmitry.github.io/ai-portfolio/${record.route_
 <div class="pipe-step"><span class="pipe-icon">02 / ПРОЦЕСС</span><h3>Как действует</h3><p>{record.editorial_scenario.process}</p></div>
 <div class="pipe-step"><span class="pipe-icon">03 / РЕЗУЛЬТАТ</span><h3>Что получается</h3><p>{record.editorial_scenario.output}</p></div>
 </div></section>}
+{record.public_showcase && <section class="section-divider" id="evidence"><div class="editorial-head"><div><span class="eyebrow">ПОДТВЕРЖДЁННЫЕ МАТЕРИАЛЫ</span><h2>Что уже существует</h2></div><p>{record.public_showcase.lead}</p></div>
+<div class="evidence-grid">
+{record.public_showcase.artifacts.map(a=><a class="evidence-artifact" href={a.href} target="_blank" rel="noopener noreferrer">
+<span class="evidence-kind">{a.kind}</span><strong>{a.title}</strong><p>{a.detail}</p><span class="evidence-open">Посмотреть материал ↗</span></a>)}
+</div><p class="evidence-disclaimer">{record.public_showcase.proof_method}</p>
+</section>}
+{isEditorialPreview && record.internal_source_evidence && <section class="section-divider" id="private-evidence"><div class="editorial-head"><div><span class="eyebrow">ВНУТРЕННИЙ ИСТОЧНИК · ТОЛЬКО ПРЕДПРОСМОТР</span><h2>На чём основано описание</h2></div><p>Документы проверены, но не размещаются для публичного доступа и не доказывают эксплуатационные результаты.</p></div>
+<div class="evidence-grid">{record.internal_source_evidence.map(a=><div class="evidence-artifact evidence-internal"><span class="evidence-kind">{a.kind}</span><strong>{a.title}</strong><p>{a.fact}</p><p class="evidence-caveat">{a.caveat}</p></div>)}</div>
+</section>}
 <section class="section-divider" id="access"><div class="editorial-head"><div><span class="eyebrow">03 / СОСТОЯНИЕ</span><h2>Статус и доступ</h2></div><p>Публикационный допуск пока не выдан. Статусы основаны на материалах разработки и сообщениях автора, а не на независимой сертификации.</p></div>
 <div class="detail-grid"><div class="text-panel"><h3>Состояние и подтверждённые результаты</h3><p>{record.result_state || record.statusLabel}</p>{record.evidence_note && <p class="evidence-note"><strong>Основание:</strong> {record.evidence_note}</p>}<ul><li>{record.statusLabel}</li><li>{record.category}</li><li>{record.school === "direct" ? "Предназначен для школы №14" : record.school === "support" ? "Может поддерживать школьную работу" : "Школьное применение не подтверждено"}</li></ul></div><div class="text-panel"><h3>Кому полезно и ограничения</h3>{record.audience_description && <p>{record.audience_description}</p>}<p>{record.limitations}</p><p>Закрытые инструкции и частные исходные данные не публикуются.</p></div></div><div class="warning">Редакционный черновик. Факт работоспособности, указанный со слов автора, не является независимой технической проверкой или разрешением на публичный доступ.</div></section>
 <section class="section-divider"><div class="editorial-head"><div><span class="eyebrow">04 / ДАЛЬШЕ</span><h2>Связанные направления</h2></div><p>Другие разработки этого направления.</p></div>{related.length > 0 && <div class="related-links">{related.map(r => <a class="related-link" href={r.detail}><strong>{r.title}</strong><span>{r.subtitle}</span></a>)}</div>}<div class="detail-actions"><a class="btn-secondary" href={`/ai-portfolio/category/${record.cat}/`}>Категория ↗</a><a class="btn-primary" href="/ai-portfolio/" data-return-link>Все решения ↗</a></div></section>

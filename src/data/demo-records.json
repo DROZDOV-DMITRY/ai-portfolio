@@ -44,7 +44,15 @@
     },
     "evidence_note": "Описание механизма опирается на каноническую архитектуру V3.0. Ежедневное применение — прямое сообщение автора; независимая оценка эффективности не проводилась.",
     "editorial_version": "WRITE_V0.5.3_2026-11-03",
-    "editorial_review": "pending_fact_and_privacy_review"
+    "editorial_review": "pending_fact_and_privacy_review",
+    "internal_source_evidence": [
+      {
+        "title": "Каноническая архитектура V3.0",
+        "kind": "Внутренний проектный документ",
+        "fact": "В документе от 21.09.2026 описаны минимально достаточное решение, проектирование AI-систем, проверка результата и передача сборки.",
+        "caveat": "Исторический документ имел статус архитектурного кандидата; нынешнее ежедневное использование подтверждено сообщением автора, а не этим файлом."
+      }
+    ]
   },
   {
     "id": "kontur",
@@ -91,7 +99,15 @@
     },
     "evidence_note": "Назначение и процесс закреплены в нормативных файлах «Контур» v3.0-rc4. Замена прежних систем ATLAS/ЯСНО и рабочее использование — по словам автора.",
     "editorial_version": "WRITE_V0.5.3_2026-11-03",
-    "editorial_review": "pending_fact_and_privacy_review"
+    "editorial_review": "pending_fact_and_privacy_review",
+    "internal_source_evidence": [
+      {
+        "title": "Нормативный комплект «Контур» v3.0-rc4",
+        "kind": "Внутренние проектные источники",
+        "fact": "В проектных файлах 00–09 закреплены карта системы, память, источники, сущности, задачи и планирование действий.",
+        "caveat": "Это подтверждение архитектурной документации, а не независимая проверка работающих интеграций."
+      }
+    ]
   },
   {
     "id": "course",
@@ -138,7 +154,37 @@
     },
     "evidence_note": "Наличие сайта и разделов подтверждено автором; общая логика обучения описана в материалах курса. Данные об учебной результативности и эффекте для школы не представлены.",
     "editorial_version": "WRITE_V0.5.3_2026-11-03",
-    "editorial_review": "pending_fact_and_privacy_review"
+    "editorial_review": "pending_fact_and_privacy_review",
+    "public_showcase": {
+      "label": "Опубликованный образовательный сайт",
+      "image_src": "https://drozdov-dmitry.github.io/school-ai-courses/assets/home/logo-ai.webp",
+      "image_alt": "Оригинальный логотип опубликованного сайта «Курс ИИ»",
+      "image_note": "Реальный графический файл сайта, не снимок интерфейса",
+      "lead": "В открытом исходном коде подтверждены страницы школьного курса, самостоятельный курс для взрослых и раздел методических источников.",
+      "action_label": "Посмотреть сайт курса",
+      "action_href": "https://drozdov-dmitry.github.io/school-ai-courses/",
+      "proof_method": "Файлы main проекта DROZDOV-DMITRY/drozdov-dmitry.github.io; проверены HTML и графические активы 03.11.2026. Доступность сайта по HTTP в этой проверке не установлена.",
+      "artifacts": [
+        {
+          "kind": "Раздел сайта",
+          "title": "Школьный курс",
+          "detail": "Разделы «Компьютер», «Инструменты», «Игры», «Сайты», «Блогинг», «3D-печать» и расписание подтверждены в исходной странице.",
+          "href": "https://drozdov-dmitry.github.io/school-ai-courses/"
+        },
+        {
+          "kind": "Раздел сайта",
+          "title": "Практика для взрослых",
+          "detail": "Подтверждены отдельные страницы о роли AI, работе преподавателя и повседневных задачах.",
+          "href": "https://drozdov-dmitry.github.io/school-ai-courses/adults/"
+        },
+        {
+          "kind": "Библиотека источников",
+          "title": "Исследования и методическая основа",
+          "detail": "В источнике присутствуют разделы методических материалов и исследований для взрослого курса.",
+          "href": "https://drozdov-dmitry.github.io/school-ai-courses/adults/research/"
+        }
+      ]
+    }
   },
   {
     "id": "schoollaw",
@@ -655,7 +701,43 @@
     },
     "evidence_note": "По сообщению автора подготовлена статья на основе проведённого исследования; эффективность экосистемы в школе на данный момент не доказана.",
     "editorial_version": "WRITE_V0.5.3_2026-11-03",
-    "editorial_review": "pending_fact_and_privacy_review"
+    "editorial_review": "pending_fact_and_privacy_review",
+    "public_showcase": {
+      "label": "Публичные материалы исследования",
+      "image_src": "https://drozdov-dmitry.github.io/school-ai-ecosystem/images/school-ai-mark.svg",
+      "image_alt": "Оригинальный знак сайта «Школьная ИИ-экосистема»",
+      "image_note": "Фирменный SVG из исходного сайта, не снимок интерфейса",
+      "lead": "Опубликован исходный текст статьи, исследовательская страница и два PDF-файла редакции V1.2. Эти материалы подтверждают наличие публикаций, но не эффективность внедрения.",
+      "action_label": "Посмотреть статью",
+      "action_href": "https://drozdov-dmitry.github.io/school-ai-ecosystem/index.html",
+      "proof_method": "Файлы main проекта DROZDOV-DMITRY/school-ai-ecosystem, включая HTML и PDF V1.2; проверены 03.11.2026. Факт HTTP-доступности не проверен.",
+      "artifacts": [
+        {
+          "kind": "Публикация",
+          "title": "Статья об агентной архитектуре",
+          "detail": "Исходная страница статьи «Оценка вклада агентной архитектуры в школьных образовательных сценариях».",
+          "href": "https://drozdov-dmitry.github.io/school-ai-ecosystem/index.html"
+        },
+        {
+          "kind": "Исследовательский материал",
+          "title": "Исследование локальных школьных систем",
+          "detail": "Отдельная страница с исследовательским вопросом, сравнительной схемой и анализом источников.",
+          "href": "https://drozdov-dmitry.github.io/school-ai-ecosystem/research/"
+        },
+        {
+          "kind": "PDF · V1.2",
+          "title": "Статья — PDF",
+          "detail": "PDF-файл статьи присутствует в публичном репозитории.",
+          "href": "https://drozdov-dmitry.github.io/school-ai-ecosystem/downloads/ARTICLE_V1.2.pdf"
+        },
+        {
+          "kind": "PDF · V1.2",
+          "title": "Исследование — PDF",
+          "detail": "PDF-файл исследовательского материала присутствует в публичном репозитории.",
+          "href": "https://drozdov-dmitry.github.io/school-ai-ecosystem/downloads/ИССЛЕДОВАНИЕ_АГЕНТНОЙ_АРХИТЕКТУРЫ_V1.2.pdf"
+        }
+      ]
+    }
   },
   {
     "id": "g2m",
